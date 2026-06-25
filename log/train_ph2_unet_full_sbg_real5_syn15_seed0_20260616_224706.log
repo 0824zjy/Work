@@ -1,0 +1,3633 @@
+[INFO] Using device: cuda:0
+[INFO] Model: unet
+[INFO] train_mode1: isic
+[INFO] train_mode2: paired
+[INFO] test_mode: isic
+[TXT LOAD] /data/zjy_work/data_txt/train_PH2_5p.txt
+  image_root: /data/zjy_work/PH2/train/Images
+  gt_root   : /data/zjy_work/PH2/train/Masks
+  mode      : isic
+  ids=160, pairs=0, miss_img=0, miss_mask=160
+  missing mask examples:
+    id=IMD002, tried=['IMD002_segmentation', 'IMD002']
+    id=IMD004, tried=['IMD004_segmentation', 'IMD004']
+    id=IMD006, tried=['IMD006_segmentation', 'IMD006']
+    id=IMD008, tried=['IMD008_segmentation', 'IMD008']
+    id=IMD009, tried=['IMD009_segmentation', 'IMD009']
+[TXT LOAD] /data/zjy_work/data_txt/train_PH2_full_sbg_real5_syn15_seed0.txt
+  image_root: /data/zjy_work/BGDiff/Ours/ablation_sbg/results/full_sbg_real5_syn15/images
+  gt_root   : /data/zjy_work/BGDiff/Ours/ablation_sbg/results/full_sbg_real5_syn15/masks
+  mode      : paired
+  ids=387, pairs=387, miss_img=0, miss_mask=0
+[FILTER] valid=387, drop_size_mismatch=0, drop_open_error=0
+[TRAIN DATASET] augmentation=False
+[TRAIN DATASET] total size=387
+[INFO] image_roots = ['/data/zjy_work/PH2/train/Images', '/data/zjy_work/BGDiff/Ours/ablation_sbg/results/full_sbg_real5_syn15/images']
+[INFO] gt_roots    = ['/data/zjy_work/PH2/train/Masks', '/data/zjy_work/BGDiff/Ours/ablation_sbg/results/full_sbg_real5_syn15/masks']
+[INFO] list_txts   = ['/data/zjy_work/data_txt/train_PH2_5p.txt', '/data/zjy_work/data_txt/train_PH2_full_sbg_real5_syn15_seed0.txt']
+[INFO] modes       = ['isic', 'paired']
+[INFO] total_step  = 96
+#################### Start Training unet ####################
+[LR] Epoch 001, lr=0.00010000
+2026-06-16 22:47:24.152275 Epoch [001/200], Step [0050/0096], loss=0.9071, bce=0.4429, dice_loss=0.4642, max_mem=9534.03 MB
+2026-06-16 22:47:30.315868 Epoch [001/200], Step [0096/0096], loss=0.7599, bce=0.3807, dice_loss=0.3792, max_mem=9534.03 MB
+[TIME] Epoch 001, time=19.08s, total=19.08s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 002, lr=0.00010000
+2026-06-16 22:47:38.492849 Epoch [002/200], Step [0050/0096], loss=0.7146, bce=0.3367, dice_loss=0.3779, max_mem=3537.92 MB
+2026-06-16 22:47:44.654137 Epoch [002/200], Step [0096/0096], loss=0.6926, bce=0.3344, dice_loss=0.3583, max_mem=3537.92 MB
+[TIME] Epoch 002, time=14.15s, total=33.22s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 003, lr=0.00010000
+2026-06-16 22:47:53.108937 Epoch [003/200], Step [0050/0096], loss=0.6233, bce=0.3099, dice_loss=0.3134, max_mem=3537.92 MB
+2026-06-16 22:47:59.267904 Epoch [003/200], Step [0096/0096], loss=0.6325, bce=0.2929, dice_loss=0.3396, max_mem=3537.92 MB
+[TIME] Epoch 003, time=14.24s, total=47.47s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 004, lr=0.00010000
+2026-06-16 22:48:07.675513 Epoch [004/200], Step [0050/0096], loss=0.5917, bce=0.2873, dice_loss=0.3045, max_mem=3537.92 MB
+2026-06-16 22:48:13.862547 Epoch [004/200], Step [0096/0096], loss=0.6110, bce=0.2908, dice_loss=0.3203, max_mem=3537.92 MB
+[TIME] Epoch 004, time=14.22s, total=61.69s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 005, lr=0.00010000
+2026-06-16 22:48:22.228771 Epoch [005/200], Step [0050/0096], loss=0.6080, bce=0.2895, dice_loss=0.3184, max_mem=3537.92 MB
+2026-06-16 22:48:28.400859 Epoch [005/200], Step [0096/0096], loss=0.5840, bce=0.2696, dice_loss=0.3144, max_mem=3537.92 MB
+[TIME] Epoch 005, time=14.17s, total=75.86s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 006, lr=0.00010000
+2026-06-16 22:48:36.951774 Epoch [006/200], Step [0050/0096], loss=0.4933, bce=0.2410, dice_loss=0.2523, max_mem=3537.92 MB
+2026-06-16 22:48:43.110243 Epoch [006/200], Step [0096/0096], loss=0.5295, bce=0.2590, dice_loss=0.2706, max_mem=3537.92 MB
+[TIME] Epoch 006, time=14.34s, total=90.20s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 007, lr=0.00010000
+2026-06-16 22:48:51.497894 Epoch [007/200], Step [0050/0096], loss=0.5153, bce=0.2531, dice_loss=0.2622, max_mem=3537.92 MB
+2026-06-16 22:48:57.665329 Epoch [007/200], Step [0096/0096], loss=0.5011, bce=0.2483, dice_loss=0.2529, max_mem=3537.92 MB
+[TIME] Epoch 007, time=14.22s, total=104.42s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 008, lr=0.00010000
+2026-06-16 22:49:06.163931 Epoch [008/200], Step [0050/0096], loss=0.4728, bce=0.2227, dice_loss=0.2501, max_mem=3537.92 MB
+2026-06-16 22:49:12.327806 Epoch [008/200], Step [0096/0096], loss=0.5150, bce=0.2440, dice_loss=0.2710, max_mem=3537.92 MB
+[TIME] Epoch 008, time=14.28s, total=118.70s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 009, lr=0.00010000
+2026-06-16 22:49:20.852823 Epoch [009/200], Step [0050/0096], loss=0.4674, bce=0.2253, dice_loss=0.2421, max_mem=3537.92 MB
+2026-06-16 22:49:27.044917 Epoch [009/200], Step [0096/0096], loss=0.4728, bce=0.2341, dice_loss=0.2387, max_mem=3537.92 MB
+[TIME] Epoch 009, time=14.36s, total=133.06s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 010, lr=0.00010000
+2026-06-16 22:49:35.500804 Epoch [010/200], Step [0050/0096], loss=0.4960, bce=0.2392, dice_loss=0.2569, max_mem=3537.92 MB
+2026-06-16 22:49:41.683801 Epoch [010/200], Step [0096/0096], loss=0.4985, bce=0.2413, dice_loss=0.2572, max_mem=3537.92 MB
+[TIME] Epoch 010, time=14.27s, total=147.33s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 011, lr=0.00010000
+2026-06-16 22:49:50.229911 Epoch [011/200], Step [0050/0096], loss=0.4643, bce=0.2378, dice_loss=0.2265, max_mem=3537.92 MB
+2026-06-16 22:49:56.423265 Epoch [011/200], Step [0096/0096], loss=0.4245, bce=0.2058, dice_loss=0.2186, max_mem=3537.92 MB
+[TIME] Epoch 011, time=14.36s, total=161.69s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 012, lr=0.00010000
+2026-06-16 22:50:04.871507 Epoch [012/200], Step [0050/0096], loss=0.4249, bce=0.2080, dice_loss=0.2169, max_mem=3537.92 MB
+2026-06-16 22:50:11.077741 Epoch [012/200], Step [0096/0096], loss=0.3978, bce=0.1957, dice_loss=0.2021, max_mem=3537.92 MB
+[TIME] Epoch 012, time=14.33s, total=176.03s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 013, lr=0.00010000
+2026-06-16 22:50:19.599364 Epoch [013/200], Step [0050/0096], loss=0.3753, bce=0.1770, dice_loss=0.1983, max_mem=3537.92 MB
+2026-06-16 22:50:25.796788 Epoch [013/200], Step [0096/0096], loss=0.4557, bce=0.2257, dice_loss=0.2301, max_mem=3537.92 MB
+[TIME] Epoch 013, time=14.37s, total=190.40s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 014, lr=0.00010000
+2026-06-16 22:50:34.414910 Epoch [014/200], Step [0050/0096], loss=0.4049, bce=0.1992, dice_loss=0.2057, max_mem=3537.92 MB
+2026-06-16 22:50:40.622374 Epoch [014/200], Step [0096/0096], loss=0.3876, bce=0.1975, dice_loss=0.1901, max_mem=3537.92 MB
+[TIME] Epoch 014, time=14.45s, total=204.84s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 015, lr=0.00010000
+2026-06-16 22:50:49.202208 Epoch [015/200], Step [0050/0096], loss=0.4227, bce=0.2186, dice_loss=0.2041, max_mem=3537.92 MB
+2026-06-16 22:50:55.408723 Epoch [015/200], Step [0096/0096], loss=0.3299, bce=0.1662, dice_loss=0.1637, max_mem=3537.92 MB
+[TIME] Epoch 015, time=14.43s, total=219.27s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 016, lr=0.00010000
+2026-06-16 22:51:03.997304 Epoch [016/200], Step [0050/0096], loss=0.3409, bce=0.1655, dice_loss=0.1753, max_mem=3537.92 MB
+2026-06-16 22:51:10.210090 Epoch [016/200], Step [0096/0096], loss=0.3985, bce=0.2026, dice_loss=0.1959, max_mem=3537.92 MB
+[TIME] Epoch 016, time=14.40s, total=233.67s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 017, lr=0.00010000
+2026-06-16 22:51:18.770774 Epoch [017/200], Step [0050/0096], loss=0.3146, bce=0.1580, dice_loss=0.1566, max_mem=3537.92 MB
+2026-06-16 22:51:24.978529 Epoch [017/200], Step [0096/0096], loss=0.3454, bce=0.1798, dice_loss=0.1657, max_mem=3537.92 MB
+[TIME] Epoch 017, time=14.46s, total=248.13s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 018, lr=0.00010000
+2026-06-16 22:51:33.543148 Epoch [018/200], Step [0050/0096], loss=0.3931, bce=0.1871, dice_loss=0.2061, max_mem=3537.92 MB
+2026-06-16 22:51:39.748609 Epoch [018/200], Step [0096/0096], loss=0.3220, bce=0.1660, dice_loss=0.1560, max_mem=3537.92 MB
+[TIME] Epoch 018, time=14.34s, total=262.47s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 019, lr=0.00010000
+2026-06-16 22:51:48.348877 Epoch [019/200], Step [0050/0096], loss=0.3401, bce=0.1709, dice_loss=0.1692, max_mem=3537.92 MB
+2026-06-16 22:51:54.549774 Epoch [019/200], Step [0096/0096], loss=0.3368, bce=0.1747, dice_loss=0.1621, max_mem=3537.92 MB
+[TIME] Epoch 019, time=14.45s, total=276.92s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 020, lr=0.00010000
+2026-06-16 22:52:03.024224 Epoch [020/200], Step [0050/0096], loss=0.2887, bce=0.1401, dice_loss=0.1486, max_mem=3537.92 MB
+2026-06-16 22:52:09.226571 Epoch [020/200], Step [0096/0096], loss=0.3056, bce=0.1611, dice_loss=0.1445, max_mem=3537.92 MB
+[TIME] Epoch 020, time=14.34s, total=291.26s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 021, lr=0.00010000
+2026-06-16 22:52:17.915461 Epoch [021/200], Step [0050/0096], loss=0.2453, bce=0.1217, dice_loss=0.1236, max_mem=3537.92 MB
+2026-06-16 22:52:24.116053 Epoch [021/200], Step [0096/0096], loss=0.2998, bce=0.1641, dice_loss=0.1358, max_mem=3537.92 MB
+[TIME] Epoch 021, time=14.53s, total=305.79s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 022, lr=0.00010000
+2026-06-16 22:52:32.534567 Epoch [022/200], Step [0050/0096], loss=0.2531, bce=0.1308, dice_loss=0.1223, max_mem=3537.92 MB
+2026-06-16 22:52:38.744810 Epoch [022/200], Step [0096/0096], loss=0.2869, bce=0.1518, dice_loss=0.1350, max_mem=3537.92 MB
+[TIME] Epoch 022, time=14.23s, total=320.02s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 023, lr=0.00010000
+2026-06-16 22:52:47.400086 Epoch [023/200], Step [0050/0096], loss=0.2657, bce=0.1346, dice_loss=0.1311, max_mem=3537.92 MB
+2026-06-16 22:52:53.612418 Epoch [023/200], Step [0096/0096], loss=0.2542, bce=0.1237, dice_loss=0.1305, max_mem=3537.92 MB
+[TIME] Epoch 023, time=14.50s, total=334.52s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 024, lr=0.00010000
+2026-06-16 22:53:01.981343 Epoch [024/200], Step [0050/0096], loss=0.2497, bce=0.1263, dice_loss=0.1234, max_mem=3537.92 MB
+2026-06-16 22:53:08.191452 Epoch [024/200], Step [0096/0096], loss=0.2631, bce=0.1386, dice_loss=0.1245, max_mem=3537.92 MB
+[TIME] Epoch 024, time=14.26s, total=348.78s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 025, lr=0.00010000
+2026-06-16 22:53:16.621959 Epoch [025/200], Step [0050/0096], loss=0.2759, bce=0.1443, dice_loss=0.1316, max_mem=3537.92 MB
+2026-06-16 22:53:22.836737 Epoch [025/200], Step [0096/0096], loss=0.2357, bce=0.1247, dice_loss=0.1111, max_mem=3537.92 MB
+[TIME] Epoch 025, time=14.27s, total=363.05s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 026, lr=0.00010000
+2026-06-16 22:53:31.336842 Epoch [026/200], Step [0050/0096], loss=0.1965, bce=0.0994, dice_loss=0.0971, max_mem=3537.92 MB
+2026-06-16 22:53:37.539647 Epoch [026/200], Step [0096/0096], loss=0.2873, bce=0.1492, dice_loss=0.1381, max_mem=3537.92 MB
+[TIME] Epoch 026, time=14.27s, total=377.32s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 027, lr=0.00010000
+2026-06-16 22:53:46.130407 Epoch [027/200], Step [0050/0096], loss=0.1918, bce=0.1005, dice_loss=0.0913, max_mem=3537.92 MB
+2026-06-16 22:53:52.326079 Epoch [027/200], Step [0096/0096], loss=0.2081, bce=0.1087, dice_loss=0.0994, max_mem=3537.92 MB
+[TIME] Epoch 027, time=14.43s, total=391.75s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 028, lr=0.00010000
+2026-06-16 22:54:00.849508 Epoch [028/200], Step [0050/0096], loss=0.2001, bce=0.1097, dice_loss=0.0903, max_mem=3537.92 MB
+2026-06-16 22:54:07.044822 Epoch [028/200], Step [0096/0096], loss=0.2214, bce=0.1175, dice_loss=0.1039, max_mem=3537.92 MB
+[TIME] Epoch 028, time=14.36s, total=406.11s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 029, lr=0.00010000
+2026-06-16 22:54:15.508705 Epoch [029/200], Step [0050/0096], loss=0.2166, bce=0.1131, dice_loss=0.1035, max_mem=3537.92 MB
+2026-06-16 22:54:21.705069 Epoch [029/200], Step [0096/0096], loss=0.1832, bce=0.0917, dice_loss=0.0915, max_mem=3537.92 MB
+[TIME] Epoch 029, time=14.31s, total=420.41s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 030, lr=0.00010000
+2026-06-16 22:54:30.113986 Epoch [030/200], Step [0050/0096], loss=0.1780, bce=0.0903, dice_loss=0.0877, max_mem=3537.92 MB
+2026-06-16 22:54:36.332933 Epoch [030/200], Step [0096/0096], loss=0.1791, bce=0.0932, dice_loss=0.0859, max_mem=3537.92 MB
+[TIME] Epoch 030, time=14.26s, total=434.68s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 031, lr=0.00010000
+2026-06-16 22:54:44.870036 Epoch [031/200], Step [0050/0096], loss=0.1877, bce=0.1019, dice_loss=0.0858, max_mem=3537.92 MB
+2026-06-16 22:54:51.073332 Epoch [031/200], Step [0096/0096], loss=0.2207, bce=0.1141, dice_loss=0.1066, max_mem=3537.92 MB
+[TIME] Epoch 031, time=14.34s, total=449.02s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 032, lr=0.00010000
+2026-06-16 22:54:59.671817 Epoch [032/200], Step [0050/0096], loss=0.1822, bce=0.0934, dice_loss=0.0888, max_mem=3537.92 MB
+2026-06-16 22:55:05.880211 Epoch [032/200], Step [0096/0096], loss=0.1652, bce=0.0894, dice_loss=0.0759, max_mem=3537.92 MB
+[TIME] Epoch 032, time=14.45s, total=463.47s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 033, lr=0.00010000
+2026-06-16 22:55:14.345077 Epoch [033/200], Step [0050/0096], loss=0.1635, bce=0.0824, dice_loss=0.0811, max_mem=3537.92 MB
+2026-06-16 22:55:20.552337 Epoch [033/200], Step [0096/0096], loss=0.1729, bce=0.0899, dice_loss=0.0830, max_mem=3537.92 MB
+[TIME] Epoch 033, time=14.26s, total=477.73s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 034, lr=0.00010000
+2026-06-16 22:55:29.072685 Epoch [034/200], Step [0050/0096], loss=0.1481, bce=0.0791, dice_loss=0.0690, max_mem=3537.92 MB
+2026-06-16 22:55:35.276635 Epoch [034/200], Step [0096/0096], loss=0.1727, bce=0.0847, dice_loss=0.0880, max_mem=3537.92 MB
+[TIME] Epoch 034, time=14.39s, total=492.12s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 035, lr=0.00010000
+2026-06-16 22:55:43.843574 Epoch [035/200], Step [0050/0096], loss=0.1534, bce=0.0821, dice_loss=0.0714, max_mem=3537.92 MB
+2026-06-16 22:55:50.058504 Epoch [035/200], Step [0096/0096], loss=0.1436, bce=0.0778, dice_loss=0.0658, max_mem=3537.92 MB
+[TIME] Epoch 035, time=14.42s, total=506.54s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 036, lr=0.00010000
+2026-06-16 22:55:58.686442 Epoch [036/200], Step [0050/0096], loss=0.1564, bce=0.0765, dice_loss=0.0799, max_mem=3537.92 MB
+2026-06-16 22:56:04.898638 Epoch [036/200], Step [0096/0096], loss=0.1508, bce=0.0737, dice_loss=0.0772, max_mem=3537.92 MB
+[TIME] Epoch 036, time=14.45s, total=520.99s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 037, lr=0.00010000
+2026-06-16 22:56:13.238023 Epoch [037/200], Step [0050/0096], loss=0.1618, bce=0.0832, dice_loss=0.0786, max_mem=3537.92 MB
+2026-06-16 22:56:19.464230 Epoch [037/200], Step [0096/0096], loss=0.1231, bce=0.0633, dice_loss=0.0598, max_mem=3537.92 MB
+[TIME] Epoch 037, time=14.24s, total=535.23s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 038, lr=0.00010000
+2026-06-16 22:56:28.023408 Epoch [038/200], Step [0050/0096], loss=0.0993, bce=0.0533, dice_loss=0.0460, max_mem=3537.92 MB
+2026-06-16 22:56:34.240474 Epoch [038/200], Step [0096/0096], loss=0.1014, bce=0.0530, dice_loss=0.0484, max_mem=3537.92 MB
+[TIME] Epoch 038, time=14.40s, total=549.62s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 039, lr=0.00010000
+2026-06-16 22:56:42.849181 Epoch [039/200], Step [0050/0096], loss=0.1221, bce=0.0668, dice_loss=0.0554, max_mem=3537.92 MB
+2026-06-16 22:56:49.052582 Epoch [039/200], Step [0096/0096], loss=0.1285, bce=0.0622, dice_loss=0.0664, max_mem=3537.92 MB
+[TIME] Epoch 039, time=14.41s, total=564.04s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 040, lr=0.00010000
+2026-06-16 22:56:57.705752 Epoch [040/200], Step [0050/0096], loss=0.1147, bce=0.0570, dice_loss=0.0577, max_mem=3537.92 MB
+2026-06-16 22:57:03.912342 Epoch [040/200], Step [0096/0096], loss=0.1571, bce=0.0812, dice_loss=0.0759, max_mem=3537.92 MB
+[TIME] Epoch 040, time=14.49s, total=578.52s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 041, lr=0.00010000
+2026-06-16 22:57:12.529707 Epoch [041/200], Step [0050/0096], loss=0.1148, bce=0.0638, dice_loss=0.0510, max_mem=3537.92 MB
+2026-06-16 22:57:18.734728 Epoch [041/200], Step [0096/0096], loss=0.1076, bce=0.0519, dice_loss=0.0557, max_mem=3537.92 MB
+[TIME] Epoch 041, time=14.40s, total=592.92s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 042, lr=0.00010000
+2026-06-16 22:57:27.186720 Epoch [042/200], Step [0050/0096], loss=0.1084, bce=0.0532, dice_loss=0.0552, max_mem=3537.92 MB
+2026-06-16 22:57:33.410966 Epoch [042/200], Step [0096/0096], loss=0.1824, bce=0.1039, dice_loss=0.0785, max_mem=3537.92 MB
+[TIME] Epoch 042, time=14.27s, total=607.19s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 043, lr=0.00010000
+2026-06-16 22:57:41.882978 Epoch [043/200], Step [0050/0096], loss=0.1070, bce=0.0544, dice_loss=0.0525, max_mem=3537.92 MB
+2026-06-16 22:57:48.091090 Epoch [043/200], Step [0096/0096], loss=0.1118, bce=0.0594, dice_loss=0.0524, max_mem=3537.92 MB
+[TIME] Epoch 043, time=14.29s, total=621.48s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 044, lr=0.00010000
+2026-06-16 22:57:56.578310 Epoch [044/200], Step [0050/0096], loss=0.1002, bce=0.0526, dice_loss=0.0477, max_mem=3537.92 MB
+2026-06-16 22:58:02.798204 Epoch [044/200], Step [0096/0096], loss=0.0925, bce=0.0495, dice_loss=0.0430, max_mem=3537.92 MB
+[TIME] Epoch 044, time=14.35s, total=635.83s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 045, lr=0.00010000
+2026-06-16 22:58:11.231686 Epoch [045/200], Step [0050/0096], loss=0.0892, bce=0.0442, dice_loss=0.0450, max_mem=3537.92 MB
+2026-06-16 22:58:17.434468 Epoch [045/200], Step [0096/0096], loss=0.0947, bce=0.0463, dice_loss=0.0485, max_mem=3537.92 MB
+[TIME] Epoch 045, time=14.27s, total=650.09s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 046, lr=0.00010000
+2026-06-16 22:58:25.938054 Epoch [046/200], Step [0050/0096], loss=0.0830, bce=0.0428, dice_loss=0.0403, max_mem=3537.92 MB
+2026-06-16 22:58:32.164338 Epoch [046/200], Step [0096/0096], loss=0.0888, bce=0.0459, dice_loss=0.0428, max_mem=3537.92 MB
+[TIME] Epoch 046, time=14.33s, total=664.43s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 047, lr=0.00010000
+2026-06-16 22:58:40.763279 Epoch [047/200], Step [0050/0096], loss=0.0736, bce=0.0359, dice_loss=0.0378, max_mem=3537.92 MB
+2026-06-16 22:58:46.974739 Epoch [047/200], Step [0096/0096], loss=0.0716, bce=0.0371, dice_loss=0.0345, max_mem=3537.92 MB
+[TIME] Epoch 047, time=14.50s, total=678.93s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 048, lr=0.00010000
+2026-06-16 22:58:55.659954 Epoch [048/200], Step [0050/0096], loss=0.1078, bce=0.0574, dice_loss=0.0504, max_mem=3537.92 MB
+2026-06-16 22:59:01.864207 Epoch [048/200], Step [0096/0096], loss=0.1083, bce=0.0506, dice_loss=0.0577, max_mem=3537.92 MB
+[TIME] Epoch 048, time=14.46s, total=693.39s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 049, lr=0.00010000
+2026-06-16 22:59:10.429172 Epoch [049/200], Step [0050/0096], loss=0.0787, bce=0.0397, dice_loss=0.0390, max_mem=3537.92 MB
+2026-06-16 22:59:16.639509 Epoch [049/200], Step [0096/0096], loss=0.0716, bce=0.0368, dice_loss=0.0348, max_mem=3537.92 MB
+[TIME] Epoch 049, time=14.29s, total=707.68s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 050, lr=0.00010000
+2026-06-16 22:59:24.979391 Epoch [050/200], Step [0050/0096], loss=0.0739, bce=0.0380, dice_loss=0.0359, max_mem=3537.92 MB
+2026-06-16 22:59:31.189380 Epoch [050/200], Step [0096/0096], loss=0.0698, bce=0.0349, dice_loss=0.0349, max_mem=3537.92 MB
+[TIME] Epoch 050, time=14.15s, total=721.83s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 051, lr=0.00010000
+2026-06-16 22:59:39.780562 Epoch [051/200], Step [0050/0096], loss=0.0727, bce=0.0381, dice_loss=0.0346, max_mem=3537.92 MB
+2026-06-16 22:59:45.993632 Epoch [051/200], Step [0096/0096], loss=0.0788, bce=0.0397, dice_loss=0.0391, max_mem=3537.92 MB
+[TIME] Epoch 051, time=14.47s, total=736.30s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 052, lr=0.00010000
+2026-06-16 22:59:54.489667 Epoch [052/200], Step [0050/0096], loss=0.0653, bce=0.0336, dice_loss=0.0317, max_mem=3537.92 MB
+2026-06-16 23:00:00.712389 Epoch [052/200], Step [0096/0096], loss=0.0625, bce=0.0299, dice_loss=0.0325, max_mem=3537.92 MB
+[TIME] Epoch 052, time=14.38s, total=750.68s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 053, lr=0.00010000
+2026-06-16 23:00:09.115468 Epoch [053/200], Step [0050/0096], loss=0.0576, bce=0.0298, dice_loss=0.0279, max_mem=3537.92 MB
+2026-06-16 23:00:15.323047 Epoch [053/200], Step [0096/0096], loss=0.0553, bce=0.0272, dice_loss=0.0281, max_mem=3537.92 MB
+[TIME] Epoch 053, time=14.23s, total=764.90s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 054, lr=0.00010000
+2026-06-16 23:00:23.848004 Epoch [054/200], Step [0050/0096], loss=0.0546, bce=0.0280, dice_loss=0.0266, max_mem=3537.92 MB
+2026-06-16 23:00:30.059656 Epoch [054/200], Step [0096/0096], loss=0.0536, bce=0.0264, dice_loss=0.0271, max_mem=3537.92 MB
+[TIME] Epoch 054, time=14.37s, total=779.27s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 055, lr=0.00010000
+2026-06-16 23:00:38.752488 Epoch [055/200], Step [0050/0096], loss=0.0523, bce=0.0266, dice_loss=0.0258, max_mem=3537.92 MB
+2026-06-16 23:00:44.962667 Epoch [055/200], Step [0096/0096], loss=0.0525, bce=0.0259, dice_loss=0.0266, max_mem=3537.92 MB
+[TIME] Epoch 055, time=14.55s, total=793.83s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 056, lr=0.00010000
+2026-06-16 23:00:53.332520 Epoch [056/200], Step [0050/0096], loss=0.0523, bce=0.0252, dice_loss=0.0271, max_mem=3537.92 MB
+2026-06-16 23:00:59.545249 Epoch [056/200], Step [0096/0096], loss=0.0522, bce=0.0254, dice_loss=0.0268, max_mem=3537.92 MB
+[TIME] Epoch 056, time=14.29s, total=808.11s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 057, lr=0.00010000
+2026-06-16 23:01:08.042074 Epoch [057/200], Step [0050/0096], loss=0.0514, bce=0.0253, dice_loss=0.0262, max_mem=3537.92 MB
+2026-06-16 23:01:14.256543 Epoch [057/200], Step [0096/0096], loss=0.0539, bce=0.0251, dice_loss=0.0288, max_mem=3537.92 MB
+[TIME] Epoch 057, time=14.29s, total=822.40s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 058, lr=0.00010000
+2026-06-16 23:01:22.940018 Epoch [058/200], Step [0050/0096], loss=0.0511, bce=0.0266, dice_loss=0.0245, max_mem=3537.92 MB
+2026-06-16 23:01:29.159085 Epoch [058/200], Step [0096/0096], loss=0.0466, bce=0.0203, dice_loss=0.0262, max_mem=3537.92 MB
+[TIME] Epoch 058, time=14.52s, total=836.91s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 059, lr=0.00010000
+2026-06-16 23:01:37.713288 Epoch [059/200], Step [0050/0096], loss=0.0455, bce=0.0223, dice_loss=0.0232, max_mem=3537.92 MB
+2026-06-16 23:01:43.916923 Epoch [059/200], Step [0096/0096], loss=0.0486, bce=0.0240, dice_loss=0.0246, max_mem=3537.92 MB
+[TIME] Epoch 059, time=14.36s, total=851.27s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 060, lr=0.00010000
+2026-06-16 23:01:52.486269 Epoch [060/200], Step [0050/0096], loss=0.0442, bce=0.0208, dice_loss=0.0235, max_mem=3537.92 MB
+2026-06-16 23:01:58.704139 Epoch [060/200], Step [0096/0096], loss=0.0475, bce=0.0225, dice_loss=0.0250, max_mem=3537.92 MB
+[TIME] Epoch 060, time=14.45s, total=865.73s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 061, lr=0.00010000
+2026-06-16 23:02:07.161408 Epoch [061/200], Step [0050/0096], loss=0.0432, bce=0.0217, dice_loss=0.0215, max_mem=3537.92 MB
+2026-06-16 23:02:13.365452 Epoch [061/200], Step [0096/0096], loss=0.2095, bce=0.1119, dice_loss=0.0976, max_mem=3537.92 MB
+[TIME] Epoch 061, time=14.32s, total=880.05s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 062, lr=0.00010000
+2026-06-16 23:02:21.884503 Epoch [062/200], Step [0050/0096], loss=0.1419, bce=0.0696, dice_loss=0.0723, max_mem=3537.92 MB
+2026-06-16 23:02:28.087321 Epoch [062/200], Step [0096/0096], loss=0.1583, bce=0.0806, dice_loss=0.0777, max_mem=3537.92 MB
+[TIME] Epoch 062, time=14.34s, total=894.38s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 063, lr=0.00010000
+2026-06-16 23:02:36.637655 Epoch [063/200], Step [0050/0096], loss=0.1864, bce=0.0929, dice_loss=0.0935, max_mem=3537.92 MB
+2026-06-16 23:02:42.849309 Epoch [063/200], Step [0096/0096], loss=0.1184, bce=0.0591, dice_loss=0.0593, max_mem=3537.92 MB
+[TIME] Epoch 063, time=14.39s, total=908.77s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 064, lr=0.00010000
+2026-06-16 23:02:51.396923 Epoch [064/200], Step [0050/0096], loss=0.0821, bce=0.0426, dice_loss=0.0395, max_mem=3537.92 MB
+2026-06-16 23:02:57.599976 Epoch [064/200], Step [0096/0096], loss=0.0658, bce=0.0328, dice_loss=0.0331, max_mem=3537.92 MB
+[TIME] Epoch 064, time=14.41s, total=923.18s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 065, lr=0.00010000
+2026-06-16 23:03:06.159314 Epoch [065/200], Step [0050/0096], loss=0.0806, bce=0.0352, dice_loss=0.0454, max_mem=3537.92 MB
+2026-06-16 23:03:12.365931 Epoch [065/200], Step [0096/0096], loss=0.1285, bce=0.0782, dice_loss=0.0503, max_mem=3537.92 MB
+[TIME] Epoch 065, time=14.36s, total=937.55s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 066, lr=0.00010000
+2026-06-16 23:03:20.978087 Epoch [066/200], Step [0050/0096], loss=0.0589, bce=0.0285, dice_loss=0.0305, max_mem=3537.92 MB
+2026-06-16 23:03:27.192498 Epoch [066/200], Step [0096/0096], loss=0.0531, bce=0.0259, dice_loss=0.0272, max_mem=3537.92 MB
+[TIME] Epoch 066, time=14.45s, total=952.00s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 067, lr=0.00010000
+2026-06-16 23:03:35.824192 Epoch [067/200], Step [0050/0096], loss=0.0449, bce=0.0224, dice_loss=0.0224, max_mem=3537.92 MB
+2026-06-16 23:03:42.042638 Epoch [067/200], Step [0096/0096], loss=0.0487, bce=0.0231, dice_loss=0.0256, max_mem=3537.92 MB
+[TIME] Epoch 067, time=14.47s, total=966.47s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 068, lr=0.00010000
+2026-06-16 23:03:50.493096 Epoch [068/200], Step [0050/0096], loss=0.0410, bce=0.0200, dice_loss=0.0210, max_mem=3537.92 MB
+2026-06-16 23:03:56.715677 Epoch [068/200], Step [0096/0096], loss=0.0477, bce=0.0232, dice_loss=0.0245, max_mem=3537.92 MB
+[TIME] Epoch 068, time=14.34s, total=980.81s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 069, lr=0.00010000
+2026-06-16 23:04:05.355983 Epoch [069/200], Step [0050/0096], loss=0.0421, bce=0.0203, dice_loss=0.0219, max_mem=3537.92 MB
+2026-06-16 23:04:11.579121 Epoch [069/200], Step [0096/0096], loss=0.0431, bce=0.0226, dice_loss=0.0205, max_mem=3537.92 MB
+[TIME] Epoch 069, time=14.50s, total=995.31s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 070, lr=0.00010000
+2026-06-16 23:04:20.089582 Epoch [070/200], Step [0050/0096], loss=0.0394, bce=0.0187, dice_loss=0.0207, max_mem=3537.92 MB
+2026-06-16 23:04:26.309325 Epoch [070/200], Step [0096/0096], loss=0.0385, bce=0.0182, dice_loss=0.0204, max_mem=3537.92 MB
+[TIME] Epoch 070, time=14.36s, total=1009.67s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 071, lr=0.00010000
+2026-06-16 23:04:34.899142 Epoch [071/200], Step [0050/0096], loss=0.0371, bce=0.0176, dice_loss=0.0195, max_mem=3537.92 MB
+2026-06-16 23:04:41.106614 Epoch [071/200], Step [0096/0096], loss=0.0373, bce=0.0189, dice_loss=0.0184, max_mem=3537.92 MB
+[TIME] Epoch 071, time=14.39s, total=1024.05s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 072, lr=0.00010000
+2026-06-16 23:04:49.740385 Epoch [072/200], Step [0050/0096], loss=0.0345, bce=0.0161, dice_loss=0.0184, max_mem=3537.92 MB
+2026-06-16 23:04:55.956178 Epoch [072/200], Step [0096/0096], loss=0.0353, bce=0.0169, dice_loss=0.0185, max_mem=3537.92 MB
+[TIME] Epoch 072, time=14.44s, total=1038.49s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 073, lr=0.00010000
+2026-06-16 23:05:04.418794 Epoch [073/200], Step [0050/0096], loss=0.0408, bce=0.0181, dice_loss=0.0226, max_mem=3537.92 MB
+2026-06-16 23:05:10.629397 Epoch [073/200], Step [0096/0096], loss=0.0377, bce=0.0178, dice_loss=0.0200, max_mem=3537.92 MB
+[TIME] Epoch 073, time=14.38s, total=1052.87s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 074, lr=0.00010000
+2026-06-16 23:05:19.050238 Epoch [074/200], Step [0050/0096], loss=0.0339, bce=0.0162, dice_loss=0.0177, max_mem=3537.92 MB
+2026-06-16 23:05:25.275370 Epoch [074/200], Step [0096/0096], loss=0.0328, bce=0.0157, dice_loss=0.0171, max_mem=3537.92 MB
+[TIME] Epoch 074, time=14.28s, total=1067.15s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 075, lr=0.00010000
+2026-06-16 23:05:33.917612 Epoch [075/200], Step [0050/0096], loss=0.0329, bce=0.0158, dice_loss=0.0171, max_mem=3537.92 MB
+2026-06-16 23:05:40.130295 Epoch [075/200], Step [0096/0096], loss=0.0330, bce=0.0156, dice_loss=0.0175, max_mem=3537.92 MB
+[TIME] Epoch 075, time=14.48s, total=1081.63s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 076, lr=0.00010000
+2026-06-16 23:05:48.525662 Epoch [076/200], Step [0050/0096], loss=0.0310, bce=0.0147, dice_loss=0.0163, max_mem=3537.92 MB
+2026-06-16 23:05:54.757257 Epoch [076/200], Step [0096/0096], loss=0.0323, bce=0.0150, dice_loss=0.0174, max_mem=3537.92 MB
+[TIME] Epoch 076, time=14.24s, total=1095.87s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 077, lr=0.00010000
+2026-06-16 23:06:03.313174 Epoch [077/200], Step [0050/0096], loss=0.0290, bce=0.0139, dice_loss=0.0151, max_mem=3537.92 MB
+2026-06-16 23:06:09.525715 Epoch [077/200], Step [0096/0096], loss=0.0378, bce=0.0174, dice_loss=0.0204, max_mem=3537.92 MB
+[TIME] Epoch 077, time=14.36s, total=1110.23s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 078, lr=0.00010000
+2026-06-16 23:06:17.996304 Epoch [078/200], Step [0050/0096], loss=0.0398, bce=0.0185, dice_loss=0.0213, max_mem=3537.92 MB
+2026-06-16 23:06:24.201151 Epoch [078/200], Step [0096/0096], loss=0.0396, bce=0.0182, dice_loss=0.0214, max_mem=3537.92 MB
+[TIME] Epoch 078, time=14.37s, total=1124.60s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 079, lr=0.00010000
+2026-06-16 23:06:32.714972 Epoch [079/200], Step [0050/0096], loss=0.0391, bce=0.0182, dice_loss=0.0209, max_mem=3537.92 MB
+2026-06-16 23:06:38.916262 Epoch [079/200], Step [0096/0096], loss=0.0356, bce=0.0162, dice_loss=0.0193, max_mem=3537.92 MB
+[TIME] Epoch 079, time=14.34s, total=1138.94s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 080, lr=0.00010000
+2026-06-16 23:06:47.424479 Epoch [080/200], Step [0050/0096], loss=0.0332, bce=0.0152, dice_loss=0.0180, max_mem=3537.92 MB
+2026-06-16 23:06:53.642332 Epoch [080/200], Step [0096/0096], loss=0.0345, bce=0.0150, dice_loss=0.0195, max_mem=3537.92 MB
+[TIME] Epoch 080, time=14.31s, total=1153.25s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 081, lr=0.00010000
+2026-06-16 23:07:02.201041 Epoch [081/200], Step [0050/0096], loss=0.0322, bce=0.0149, dice_loss=0.0173, max_mem=3537.92 MB
+2026-06-16 23:07:08.412390 Epoch [081/200], Step [0096/0096], loss=0.0318, bce=0.0154, dice_loss=0.0164, max_mem=3537.92 MB
+[TIME] Epoch 081, time=14.42s, total=1167.67s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 082, lr=0.00010000
+2026-06-16 23:07:16.923938 Epoch [082/200], Step [0050/0096], loss=0.0313, bce=0.0143, dice_loss=0.0170, max_mem=3537.92 MB
+2026-06-16 23:07:23.273100 Epoch [082/200], Step [0096/0096], loss=0.0559, bce=0.0267, dice_loss=0.0291, max_mem=3537.92 MB
+[TIME] Epoch 082, time=14.41s, total=1182.09s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 083, lr=0.00010000
+2026-06-16 23:07:31.697683 Epoch [083/200], Step [0050/0096], loss=0.0541, bce=0.0272, dice_loss=0.0269, max_mem=3537.92 MB
+2026-06-16 23:07:37.908361 Epoch [083/200], Step [0096/0096], loss=0.2199, bce=0.1180, dice_loss=0.1019, max_mem=3537.92 MB
+[TIME] Epoch 083, time=14.25s, total=1196.34s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 084, lr=0.00010000
+2026-06-16 23:07:46.440861 Epoch [084/200], Step [0050/0096], loss=0.1947, bce=0.1094, dice_loss=0.0852, max_mem=3537.92 MB
+2026-06-16 23:07:52.657176 Epoch [084/200], Step [0096/0096], loss=0.1455, bce=0.0736, dice_loss=0.0719, max_mem=3537.92 MB
+[TIME] Epoch 084, time=14.36s, total=1210.70s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 085, lr=0.00010000
+2026-06-16 23:08:01.129806 Epoch [085/200], Step [0050/0096], loss=0.0855, bce=0.0402, dice_loss=0.0453, max_mem=3537.92 MB
+2026-06-16 23:08:07.333599 Epoch [085/200], Step [0096/0096], loss=0.0621, bce=0.0310, dice_loss=0.0311, max_mem=3537.92 MB
+[TIME] Epoch 085, time=14.30s, total=1225.00s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 086, lr=0.00010000
+2026-06-16 23:08:15.792336 Epoch [086/200], Step [0050/0096], loss=0.0647, bce=0.0314, dice_loss=0.0333, max_mem=3537.92 MB
+2026-06-16 23:08:22.018482 Epoch [086/200], Step [0096/0096], loss=0.0458, bce=0.0220, dice_loss=0.0238, max_mem=3537.92 MB
+[TIME] Epoch 086, time=14.33s, total=1239.33s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 087, lr=0.00010000
+2026-06-16 23:08:30.525348 Epoch [087/200], Step [0050/0096], loss=0.0418, bce=0.0206, dice_loss=0.0212, max_mem=3537.92 MB
+2026-06-16 23:08:36.748283 Epoch [087/200], Step [0096/0096], loss=0.0359, bce=0.0166, dice_loss=0.0193, max_mem=3537.92 MB
+[TIME] Epoch 087, time=14.36s, total=1253.69s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 088, lr=0.00010000
+2026-06-16 23:08:45.355519 Epoch [088/200], Step [0050/0096], loss=0.0336, bce=0.0151, dice_loss=0.0184, max_mem=3537.92 MB
+2026-06-16 23:08:51.574912 Epoch [088/200], Step [0096/0096], loss=0.0331, bce=0.0162, dice_loss=0.0169, max_mem=3537.92 MB
+[TIME] Epoch 088, time=14.43s, total=1268.13s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 089, lr=0.00010000
+2026-06-16 23:08:59.989997 Epoch [089/200], Step [0050/0096], loss=0.0308, bce=0.0141, dice_loss=0.0167, max_mem=3537.92 MB
+2026-06-16 23:09:06.198158 Epoch [089/200], Step [0096/0096], loss=0.0515, bce=0.0245, dice_loss=0.0270, max_mem=3537.92 MB
+[TIME] Epoch 089, time=14.31s, total=1282.44s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 090, lr=0.00010000
+2026-06-16 23:09:14.645160 Epoch [090/200], Step [0050/0096], loss=0.0367, bce=0.0169, dice_loss=0.0198, max_mem=3537.92 MB
+2026-06-16 23:09:20.859982 Epoch [090/200], Step [0096/0096], loss=0.0304, bce=0.0136, dice_loss=0.0167, max_mem=3537.92 MB
+[TIME] Epoch 090, time=14.34s, total=1296.77s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 091, lr=0.00010000
+2026-06-16 23:09:29.236622 Epoch [091/200], Step [0050/0096], loss=0.0293, bce=0.0129, dice_loss=0.0164, max_mem=3537.92 MB
+2026-06-16 23:09:35.450870 Epoch [091/200], Step [0096/0096], loss=0.0300, bce=0.0146, dice_loss=0.0154, max_mem=3537.92 MB
+[TIME] Epoch 091, time=14.26s, total=1311.03s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 092, lr=0.00010000
+2026-06-16 23:09:43.884421 Epoch [092/200], Step [0050/0096], loss=0.0285, bce=0.0129, dice_loss=0.0157, max_mem=3537.92 MB
+2026-06-16 23:09:50.096057 Epoch [092/200], Step [0096/0096], loss=0.0300, bce=0.0142, dice_loss=0.0158, max_mem=3537.92 MB
+[TIME] Epoch 092, time=14.28s, total=1325.31s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 093, lr=0.00010000
+2026-06-16 23:09:58.619551 Epoch [093/200], Step [0050/0096], loss=0.0327, bce=0.0157, dice_loss=0.0170, max_mem=3537.92 MB
+2026-06-16 23:10:04.832204 Epoch [093/200], Step [0096/0096], loss=0.0302, bce=0.0134, dice_loss=0.0168, max_mem=3537.92 MB
+[TIME] Epoch 093, time=14.43s, total=1339.74s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 094, lr=0.00010000
+2026-06-16 23:10:13.331585 Epoch [094/200], Step [0050/0096], loss=0.0282, bce=0.0128, dice_loss=0.0154, max_mem=3537.92 MB
+2026-06-16 23:10:19.554391 Epoch [094/200], Step [0096/0096], loss=0.0264, bce=0.0119, dice_loss=0.0144, max_mem=3537.92 MB
+[TIME] Epoch 094, time=14.38s, total=1354.12s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 095, lr=0.00010000
+2026-06-16 23:10:28.120457 Epoch [095/200], Step [0050/0096], loss=0.0280, bce=0.0136, dice_loss=0.0144, max_mem=3537.92 MB
+2026-06-16 23:10:34.349857 Epoch [095/200], Step [0096/0096], loss=0.0273, bce=0.0123, dice_loss=0.0150, max_mem=3537.92 MB
+[TIME] Epoch 095, time=14.37s, total=1368.49s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 096, lr=0.00010000
+2026-06-16 23:10:42.904920 Epoch [096/200], Step [0050/0096], loss=0.0263, bce=0.0118, dice_loss=0.0145, max_mem=3537.92 MB
+2026-06-16 23:10:49.127769 Epoch [096/200], Step [0096/0096], loss=0.0256, bce=0.0114, dice_loss=0.0142, max_mem=3537.92 MB
+[TIME] Epoch 096, time=14.40s, total=1382.89s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 097, lr=0.00010000
+2026-06-16 23:10:57.774782 Epoch [097/200], Step [0050/0096], loss=0.0255, bce=0.0119, dice_loss=0.0137, max_mem=3537.92 MB
+2026-06-16 23:11:03.996933 Epoch [097/200], Step [0096/0096], loss=0.0253, bce=0.0110, dice_loss=0.0143, max_mem=3537.92 MB
+[TIME] Epoch 097, time=14.48s, total=1397.37s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 098, lr=0.00010000
+2026-06-16 23:11:12.544145 Epoch [098/200], Step [0050/0096], loss=0.0260, bce=0.0111, dice_loss=0.0149, max_mem=3537.92 MB
+2026-06-16 23:11:18.768189 Epoch [098/200], Step [0096/0096], loss=0.0249, bce=0.0120, dice_loss=0.0129, max_mem=3537.92 MB
+[TIME] Epoch 098, time=14.43s, total=1411.80s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 099, lr=0.00010000
+2026-06-16 23:11:27.252851 Epoch [099/200], Step [0050/0096], loss=0.0246, bce=0.0109, dice_loss=0.0137, max_mem=3537.92 MB
+2026-06-16 23:11:33.470504 Epoch [099/200], Step [0096/0096], loss=0.0241, bce=0.0112, dice_loss=0.0129, max_mem=3537.92 MB
+[TIME] Epoch 099, time=14.29s, total=1426.09s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 100, lr=0.00010000
+2026-06-16 23:11:41.991418 Epoch [100/200], Step [0050/0096], loss=0.0243, bce=0.0103, dice_loss=0.0140, max_mem=3537.92 MB
+2026-06-16 23:11:48.212279 Epoch [100/200], Step [0096/0096], loss=0.0248, bce=0.0119, dice_loss=0.0129, max_mem=3537.92 MB
+[TIME] Epoch 100, time=14.37s, total=1440.46s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 101, lr=0.00010000
+2026-06-16 23:11:56.775565 Epoch [101/200], Step [0050/0096], loss=0.0242, bce=0.0107, dice_loss=0.0135, max_mem=3537.92 MB
+2026-06-16 23:12:02.993599 Epoch [101/200], Step [0096/0096], loss=0.0243, bce=0.0115, dice_loss=0.0128, max_mem=3537.92 MB
+[TIME] Epoch 101, time=14.40s, total=1454.85s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 102, lr=0.00010000
+2026-06-16 23:12:11.546762 Epoch [102/200], Step [0050/0096], loss=0.0257, bce=0.0118, dice_loss=0.0139, max_mem=3537.92 MB
+2026-06-16 23:12:17.757738 Epoch [102/200], Step [0096/0096], loss=0.0232, bce=0.0107, dice_loss=0.0125, max_mem=3537.92 MB
+[TIME] Epoch 102, time=14.44s, total=1469.29s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 103, lr=0.00010000
+2026-06-16 23:12:26.283091 Epoch [103/200], Step [0050/0096], loss=0.0225, bce=0.0106, dice_loss=0.0119, max_mem=3537.92 MB
+2026-06-16 23:12:32.507111 Epoch [103/200], Step [0096/0096], loss=0.0249, bce=0.0105, dice_loss=0.0144, max_mem=3537.92 MB
+[TIME] Epoch 103, time=14.35s, total=1483.64s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 104, lr=0.00010000
+2026-06-16 23:12:41.077295 Epoch [104/200], Step [0050/0096], loss=0.0242, bce=0.0109, dice_loss=0.0133, max_mem=3537.92 MB
+2026-06-16 23:12:47.303106 Epoch [104/200], Step [0096/0096], loss=0.0236, bce=0.0100, dice_loss=0.0136, max_mem=3537.92 MB
+[TIME] Epoch 104, time=14.40s, total=1498.04s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 105, lr=0.00010000
+2026-06-16 23:12:55.864840 Epoch [105/200], Step [0050/0096], loss=0.0254, bce=0.0119, dice_loss=0.0134, max_mem=3537.92 MB
+2026-06-16 23:13:02.083836 Epoch [105/200], Step [0096/0096], loss=0.0248, bce=0.0106, dice_loss=0.0142, max_mem=3537.92 MB
+[TIME] Epoch 105, time=14.41s, total=1512.45s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 106, lr=0.00010000
+2026-06-16 23:13:10.525777 Epoch [106/200], Step [0050/0096], loss=0.2079, bce=0.1185, dice_loss=0.0895, max_mem=3537.92 MB
+2026-06-16 23:13:16.738164 Epoch [106/200], Step [0096/0096], loss=0.1657, bce=0.0853, dice_loss=0.0804, max_mem=3537.92 MB
+[TIME] Epoch 106, time=14.27s, total=1526.72s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 107, lr=0.00010000
+2026-06-16 23:13:25.392225 Epoch [107/200], Step [0050/0096], loss=0.0635, bce=0.0345, dice_loss=0.0291, max_mem=3537.92 MB
+2026-06-16 23:13:31.604766 Epoch [107/200], Step [0096/0096], loss=0.0565, bce=0.0280, dice_loss=0.0285, max_mem=3537.92 MB
+[TIME] Epoch 107, time=14.53s, total=1541.25s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 108, lr=0.00010000
+2026-06-16 23:13:40.113405 Epoch [108/200], Step [0050/0096], loss=0.0352, bce=0.0173, dice_loss=0.0179, max_mem=3537.92 MB
+2026-06-16 23:13:46.334841 Epoch [108/200], Step [0096/0096], loss=0.0302, bce=0.0143, dice_loss=0.0159, max_mem=3537.92 MB
+[TIME] Epoch 108, time=14.33s, total=1555.58s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 109, lr=0.00010000
+2026-06-16 23:13:55.057017 Epoch [109/200], Step [0050/0096], loss=0.0265, bce=0.0117, dice_loss=0.0149, max_mem=3537.92 MB
+2026-06-16 23:14:01.264865 Epoch [109/200], Step [0096/0096], loss=0.0277, bce=0.0130, dice_loss=0.0147, max_mem=3537.92 MB
+[TIME] Epoch 109, time=14.54s, total=1570.12s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 110, lr=0.00010000
+2026-06-16 23:14:09.785852 Epoch [110/200], Step [0050/0096], loss=0.0279, bce=0.0115, dice_loss=0.0164, max_mem=3537.92 MB
+2026-06-16 23:14:15.998800 Epoch [110/200], Step [0096/0096], loss=0.0276, bce=0.0129, dice_loss=0.0147, max_mem=3537.92 MB
+[TIME] Epoch 110, time=14.39s, total=1584.51s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 111, lr=0.00010000
+2026-06-16 23:14:24.756261 Epoch [111/200], Step [0050/0096], loss=0.0253, bce=0.0116, dice_loss=0.0136, max_mem=3537.92 MB
+2026-06-16 23:14:30.972293 Epoch [111/200], Step [0096/0096], loss=0.0307, bce=0.0136, dice_loss=0.0170, max_mem=3537.92 MB
+[TIME] Epoch 111, time=14.56s, total=1599.07s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 112, lr=0.00010000
+2026-06-16 23:14:39.506793 Epoch [112/200], Step [0050/0096], loss=0.0329, bce=0.0146, dice_loss=0.0183, max_mem=3537.92 MB
+2026-06-16 23:14:45.711517 Epoch [112/200], Step [0096/0096], loss=0.0773, bce=0.0355, dice_loss=0.0417, max_mem=3537.92 MB
+[TIME] Epoch 112, time=14.34s, total=1613.41s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 113, lr=0.00010000
+2026-06-16 23:14:54.189719 Epoch [113/200], Step [0050/0096], loss=0.0501, bce=0.0235, dice_loss=0.0266, max_mem=3537.92 MB
+2026-06-16 23:15:00.401929 Epoch [113/200], Step [0096/0096], loss=0.0361, bce=0.0180, dice_loss=0.0180, max_mem=3537.92 MB
+[TIME] Epoch 113, time=14.35s, total=1627.76s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 114, lr=0.00010000
+2026-06-16 23:15:08.939868 Epoch [114/200], Step [0050/0096], loss=0.0272, bce=0.0116, dice_loss=0.0156, max_mem=3537.92 MB
+2026-06-16 23:15:15.148851 Epoch [114/200], Step [0096/0096], loss=0.0280, bce=0.0134, dice_loss=0.0145, max_mem=3537.92 MB
+[TIME] Epoch 114, time=14.35s, total=1642.11s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 115, lr=0.00010000
+2026-06-16 23:15:23.825122 Epoch [115/200], Step [0050/0096], loss=0.0239, bce=0.0113, dice_loss=0.0126, max_mem=3537.92 MB
+2026-06-16 23:15:30.033132 Epoch [115/200], Step [0096/0096], loss=0.0250, bce=0.0108, dice_loss=0.0142, max_mem=3537.92 MB
+[TIME] Epoch 115, time=14.56s, total=1656.67s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 116, lr=0.00010000
+2026-06-16 23:15:38.583471 Epoch [116/200], Step [0050/0096], loss=0.0221, bce=0.0100, dice_loss=0.0121, max_mem=3537.92 MB
+2026-06-16 23:15:44.791274 Epoch [116/200], Step [0096/0096], loss=0.0224, bce=0.0099, dice_loss=0.0125, max_mem=3537.92 MB
+[TIME] Epoch 116, time=14.36s, total=1671.03s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 117, lr=0.00010000
+2026-06-16 23:15:53.267167 Epoch [117/200], Step [0050/0096], loss=0.0242, bce=0.0098, dice_loss=0.0144, max_mem=3537.92 MB
+2026-06-16 23:15:59.481394 Epoch [117/200], Step [0096/0096], loss=0.0220, bce=0.0101, dice_loss=0.0119, max_mem=3537.92 MB
+[TIME] Epoch 117, time=14.36s, total=1685.39s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 118, lr=0.00010000
+2026-06-16 23:16:07.979637 Epoch [118/200], Step [0050/0096], loss=0.0210, bce=0.0093, dice_loss=0.0117, max_mem=3537.92 MB
+2026-06-16 23:16:14.319631 Epoch [118/200], Step [0096/0096], loss=0.0216, bce=0.0092, dice_loss=0.0123, max_mem=3537.92 MB
+[TIME] Epoch 118, time=14.46s, total=1699.85s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 119, lr=0.00010000
+2026-06-16 23:16:22.953167 Epoch [119/200], Step [0050/0096], loss=0.0314, bce=0.0135, dice_loss=0.0179, max_mem=3537.92 MB
+2026-06-16 23:16:29.171120 Epoch [119/200], Step [0096/0096], loss=0.0255, bce=0.0119, dice_loss=0.0136, max_mem=3537.92 MB
+[TIME] Epoch 119, time=14.49s, total=1714.34s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 120, lr=0.00010000
+2026-06-16 23:16:37.703225 Epoch [120/200], Step [0050/0096], loss=0.0242, bce=0.0110, dice_loss=0.0133, max_mem=3537.92 MB
+2026-06-16 23:16:43.931759 Epoch [120/200], Step [0096/0096], loss=0.0247, bce=0.0111, dice_loss=0.0136, max_mem=3537.92 MB
+[TIME] Epoch 120, time=14.40s, total=1728.74s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 121, lr=0.00010000
+2026-06-16 23:16:52.529504 Epoch [121/200], Step [0050/0096], loss=0.0218, bce=0.0102, dice_loss=0.0116, max_mem=3537.92 MB
+2026-06-16 23:16:58.755193 Epoch [121/200], Step [0096/0096], loss=0.0227, bce=0.0097, dice_loss=0.0130, max_mem=3537.92 MB
+[TIME] Epoch 121, time=14.44s, total=1743.18s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 122, lr=0.00010000
+2026-06-16 23:17:07.294709 Epoch [122/200], Step [0050/0096], loss=0.0217, bce=0.0091, dice_loss=0.0126, max_mem=3537.92 MB
+2026-06-16 23:17:13.505257 Epoch [122/200], Step [0096/0096], loss=0.0208, bce=0.0090, dice_loss=0.0118, max_mem=3537.92 MB
+[TIME] Epoch 122, time=14.33s, total=1757.52s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 123, lr=0.00010000
+2026-06-16 23:17:21.933565 Epoch [123/200], Step [0050/0096], loss=0.0201, bce=0.0090, dice_loss=0.0111, max_mem=3537.92 MB
+2026-06-16 23:17:28.156897 Epoch [123/200], Step [0096/0096], loss=0.0215, bce=0.0093, dice_loss=0.0122, max_mem=3537.92 MB
+[TIME] Epoch 123, time=14.30s, total=1771.82s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 124, lr=0.00010000
+2026-06-16 23:17:36.578422 Epoch [124/200], Step [0050/0096], loss=0.0202, bce=0.0088, dice_loss=0.0114, max_mem=3537.92 MB
+2026-06-16 23:17:42.788292 Epoch [124/200], Step [0096/0096], loss=0.0209, bce=0.0094, dice_loss=0.0116, max_mem=3537.92 MB
+[TIME] Epoch 124, time=14.23s, total=1786.05s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 125, lr=0.00010000
+2026-06-16 23:17:51.224106 Epoch [125/200], Step [0050/0096], loss=0.0197, bce=0.0084, dice_loss=0.0114, max_mem=3537.92 MB
+2026-06-16 23:17:57.435754 Epoch [125/200], Step [0096/0096], loss=0.0201, bce=0.0086, dice_loss=0.0115, max_mem=3537.92 MB
+[TIME] Epoch 125, time=14.27s, total=1800.32s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 126, lr=0.00010000
+2026-06-16 23:18:05.819620 Epoch [126/200], Step [0050/0096], loss=0.0195, bce=0.0089, dice_loss=0.0106, max_mem=3537.92 MB
+2026-06-16 23:18:12.033850 Epoch [126/200], Step [0096/0096], loss=0.0211, bce=0.0092, dice_loss=0.0119, max_mem=3537.92 MB
+[TIME] Epoch 126, time=14.19s, total=1814.51s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 127, lr=0.00010000
+2026-06-16 23:18:20.553155 Epoch [127/200], Step [0050/0096], loss=0.0194, bce=0.0089, dice_loss=0.0106, max_mem=3537.92 MB
+2026-06-16 23:18:26.767248 Epoch [127/200], Step [0096/0096], loss=0.0203, bce=0.0086, dice_loss=0.0117, max_mem=3537.92 MB
+[TIME] Epoch 127, time=14.34s, total=1828.85s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 128, lr=0.00010000
+2026-06-16 23:18:35.399836 Epoch [128/200], Step [0050/0096], loss=0.0204, bce=0.0094, dice_loss=0.0110, max_mem=3537.92 MB
+2026-06-16 23:18:41.606856 Epoch [128/200], Step [0096/0096], loss=0.0184, bce=0.0075, dice_loss=0.0109, max_mem=3537.92 MB
+[TIME] Epoch 128, time=14.46s, total=1843.31s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 129, lr=0.00010000
+2026-06-16 23:18:50.043439 Epoch [129/200], Step [0050/0096], loss=0.0189, bce=0.0083, dice_loss=0.0106, max_mem=3537.92 MB
+2026-06-16 23:18:56.249176 Epoch [129/200], Step [0096/0096], loss=0.0182, bce=0.0079, dice_loss=0.0103, max_mem=3537.92 MB
+[TIME] Epoch 129, time=14.27s, total=1857.58s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 130, lr=0.00010000
+2026-06-16 23:19:04.977159 Epoch [130/200], Step [0050/0096], loss=0.0184, bce=0.0079, dice_loss=0.0105, max_mem=3537.92 MB
+2026-06-16 23:19:11.210082 Epoch [130/200], Step [0096/0096], loss=0.0196, bce=0.0082, dice_loss=0.0114, max_mem=3537.92 MB
+[TIME] Epoch 130, time=14.62s, total=1872.19s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 131, lr=0.00010000
+2026-06-16 23:19:19.629883 Epoch [131/200], Step [0050/0096], loss=0.0183, bce=0.0079, dice_loss=0.0104, max_mem=3537.92 MB
+2026-06-16 23:19:25.860800 Epoch [131/200], Step [0096/0096], loss=0.0187, bce=0.0079, dice_loss=0.0109, max_mem=3537.92 MB
+[TIME] Epoch 131, time=14.35s, total=1886.54s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 132, lr=0.00010000
+2026-06-16 23:19:34.584195 Epoch [132/200], Step [0050/0096], loss=0.0185, bce=0.0079, dice_loss=0.0106, max_mem=3537.92 MB
+2026-06-16 23:19:40.807421 Epoch [132/200], Step [0096/0096], loss=0.0189, bce=0.0077, dice_loss=0.0113, max_mem=3537.92 MB
+[TIME] Epoch 132, time=14.50s, total=1901.05s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 133, lr=0.00010000
+2026-06-16 23:19:49.329070 Epoch [133/200], Step [0050/0096], loss=0.0189, bce=0.0078, dice_loss=0.0111, max_mem=3537.92 MB
+2026-06-16 23:19:55.534432 Epoch [133/200], Step [0096/0096], loss=0.0186, bce=0.0082, dice_loss=0.0104, max_mem=3537.92 MB
+[TIME] Epoch 133, time=14.35s, total=1915.40s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 134, lr=0.00010000
+2026-06-16 23:20:03.939127 Epoch [134/200], Step [0050/0096], loss=0.0196, bce=0.0079, dice_loss=0.0117, max_mem=3537.92 MB
+2026-06-16 23:20:10.168809 Epoch [134/200], Step [0096/0096], loss=0.0202, bce=0.0087, dice_loss=0.0116, max_mem=3537.92 MB
+[TIME] Epoch 134, time=14.26s, total=1929.66s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 135, lr=0.00010000
+2026-06-16 23:20:18.695046 Epoch [135/200], Step [0050/0096], loss=0.0190, bce=0.0085, dice_loss=0.0106, max_mem=3537.92 MB
+2026-06-16 23:20:24.915007 Epoch [135/200], Step [0096/0096], loss=0.0188, bce=0.0081, dice_loss=0.0107, max_mem=3537.92 MB
+[TIME] Epoch 135, time=14.38s, total=1944.03s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 136, lr=0.00010000
+2026-06-16 23:20:33.421169 Epoch [136/200], Step [0050/0096], loss=0.0191, bce=0.0081, dice_loss=0.0109, max_mem=3537.92 MB
+2026-06-16 23:20:39.630646 Epoch [136/200], Step [0096/0096], loss=0.0185, bce=0.0081, dice_loss=0.0104, max_mem=3537.92 MB
+[TIME] Epoch 136, time=14.36s, total=1958.39s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 137, lr=0.00010000
+2026-06-16 23:20:48.182270 Epoch [137/200], Step [0050/0096], loss=0.0181, bce=0.0079, dice_loss=0.0102, max_mem=3537.92 MB
+2026-06-16 23:20:54.410503 Epoch [137/200], Step [0096/0096], loss=0.0191, bce=0.0078, dice_loss=0.0114, max_mem=3537.92 MB
+[TIME] Epoch 137, time=14.39s, total=1972.79s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 138, lr=0.00010000
+2026-06-16 23:21:02.824071 Epoch [138/200], Step [0050/0096], loss=0.0198, bce=0.0081, dice_loss=0.0117, max_mem=3537.92 MB
+2026-06-16 23:21:09.030050 Epoch [138/200], Step [0096/0096], loss=0.0185, bce=0.0078, dice_loss=0.0107, max_mem=3537.92 MB
+[TIME] Epoch 138, time=14.25s, total=1987.03s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 139, lr=0.00010000
+2026-06-16 23:21:17.548423 Epoch [139/200], Step [0050/0096], loss=0.0200, bce=0.0085, dice_loss=0.0115, max_mem=3537.92 MB
+2026-06-16 23:21:23.753243 Epoch [139/200], Step [0096/0096], loss=0.0200, bce=0.0087, dice_loss=0.0113, max_mem=3537.92 MB
+[TIME] Epoch 139, time=14.35s, total=2001.38s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 140, lr=0.00010000
+2026-06-16 23:21:32.013799 Epoch [140/200], Step [0050/0096], loss=0.0189, bce=0.0081, dice_loss=0.0108, max_mem=3537.92 MB
+2026-06-16 23:21:38.223739 Epoch [140/200], Step [0096/0096], loss=0.1899, bce=0.1007, dice_loss=0.0892, max_mem=3537.92 MB
+[TIME] Epoch 140, time=14.15s, total=2015.54s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 141, lr=0.00010000
+2026-06-16 23:21:46.751560 Epoch [141/200], Step [0050/0096], loss=0.1848, bce=0.0872, dice_loss=0.0977, max_mem=3537.92 MB
+2026-06-16 23:21:52.950250 Epoch [141/200], Step [0096/0096], loss=0.1758, bce=0.0963, dice_loss=0.0795, max_mem=3537.92 MB
+[TIME] Epoch 141, time=14.36s, total=2029.89s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 142, lr=0.00010000
+2026-06-16 23:22:01.464017 Epoch [142/200], Step [0050/0096], loss=0.0843, bce=0.0447, dice_loss=0.0396, max_mem=3537.92 MB
+2026-06-16 23:22:07.675849 Epoch [142/200], Step [0096/0096], loss=0.0474, bce=0.0242, dice_loss=0.0231, max_mem=3537.92 MB
+[TIME] Epoch 142, time=14.35s, total=2044.24s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 143, lr=0.00010000
+2026-06-16 23:22:16.317760 Epoch [143/200], Step [0050/0096], loss=0.0299, bce=0.0144, dice_loss=0.0155, max_mem=3537.92 MB
+2026-06-16 23:22:22.538201 Epoch [143/200], Step [0096/0096], loss=0.0275, bce=0.0120, dice_loss=0.0155, max_mem=3537.92 MB
+[TIME] Epoch 143, time=14.51s, total=2058.75s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 144, lr=0.00010000
+2026-06-16 23:22:31.193506 Epoch [144/200], Step [0050/0096], loss=0.0257, bce=0.0113, dice_loss=0.0144, max_mem=3537.92 MB
+2026-06-16 23:22:37.413269 Epoch [144/200], Step [0096/0096], loss=0.0240, bce=0.0109, dice_loss=0.0131, max_mem=3537.92 MB
+[TIME] Epoch 144, time=14.51s, total=2073.26s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 145, lr=0.00010000
+2026-06-16 23:22:45.895972 Epoch [145/200], Step [0050/0096], loss=0.0214, bce=0.0104, dice_loss=0.0110, max_mem=3537.92 MB
+2026-06-16 23:22:52.101283 Epoch [145/200], Step [0096/0096], loss=0.0238, bce=0.0105, dice_loss=0.0133, max_mem=3537.92 MB
+[TIME] Epoch 145, time=14.33s, total=2087.59s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 146, lr=0.00010000
+2026-06-16 23:23:00.478091 Epoch [146/200], Step [0050/0096], loss=0.0229, bce=0.0098, dice_loss=0.0132, max_mem=3537.92 MB
+2026-06-16 23:23:06.681877 Epoch [146/200], Step [0096/0096], loss=0.0205, bce=0.0096, dice_loss=0.0109, max_mem=3537.92 MB
+[TIME] Epoch 146, time=14.23s, total=2101.82s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 147, lr=0.00010000
+2026-06-16 23:23:15.129254 Epoch [147/200], Step [0050/0096], loss=0.0194, bce=0.0085, dice_loss=0.0109, max_mem=3537.92 MB
+2026-06-16 23:23:21.339194 Epoch [147/200], Step [0096/0096], loss=0.0188, bce=0.0082, dice_loss=0.0106, max_mem=3537.92 MB
+[TIME] Epoch 147, time=14.33s, total=2116.15s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 148, lr=0.00010000
+2026-06-16 23:23:29.792757 Epoch [148/200], Step [0050/0096], loss=0.0188, bce=0.0088, dice_loss=0.0101, max_mem=3537.92 MB
+2026-06-16 23:23:36.011614 Epoch [148/200], Step [0096/0096], loss=0.0188, bce=0.0080, dice_loss=0.0108, max_mem=3537.92 MB
+[TIME] Epoch 148, time=14.33s, total=2130.48s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 149, lr=0.00010000
+2026-06-16 23:23:44.551228 Epoch [149/200], Step [0050/0096], loss=0.0179, bce=0.0081, dice_loss=0.0099, max_mem=3537.92 MB
+2026-06-16 23:23:50.752942 Epoch [149/200], Step [0096/0096], loss=0.0176, bce=0.0072, dice_loss=0.0105, max_mem=3537.92 MB
+[TIME] Epoch 149, time=14.30s, total=2144.78s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 150, lr=0.00010000
+2026-06-16 23:23:59.300977 Epoch [150/200], Step [0050/0096], loss=0.0177, bce=0.0080, dice_loss=0.0097, max_mem=3537.92 MB
+2026-06-16 23:24:05.526904 Epoch [150/200], Step [0096/0096], loss=0.0173, bce=0.0074, dice_loss=0.0099, max_mem=3537.92 MB
+[TIME] Epoch 150, time=14.41s, total=2159.19s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 151, lr=0.00010000
+2026-06-16 23:24:14.210423 Epoch [151/200], Step [0050/0096], loss=0.0172, bce=0.0076, dice_loss=0.0096, max_mem=3537.92 MB
+2026-06-16 23:24:20.432489 Epoch [151/200], Step [0096/0096], loss=0.0173, bce=0.0074, dice_loss=0.0099, max_mem=3537.92 MB
+[TIME] Epoch 151, time=14.52s, total=2173.71s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 152, lr=0.00010000
+2026-06-16 23:24:28.901508 Epoch [152/200], Step [0050/0096], loss=0.0169, bce=0.0078, dice_loss=0.0091, max_mem=3537.92 MB
+2026-06-16 23:24:35.109380 Epoch [152/200], Step [0096/0096], loss=0.0177, bce=0.0071, dice_loss=0.0107, max_mem=3537.92 MB
+[TIME] Epoch 152, time=14.33s, total=2188.04s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 153, lr=0.00010000
+2026-06-16 23:24:43.642612 Epoch [153/200], Step [0050/0096], loss=0.0173, bce=0.0074, dice_loss=0.0098, max_mem=3537.92 MB
+2026-06-16 23:24:49.859273 Epoch [153/200], Step [0096/0096], loss=0.0173, bce=0.0071, dice_loss=0.0101, max_mem=3537.92 MB
+[TIME] Epoch 153, time=14.37s, total=2202.40s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 154, lr=0.00010000
+2026-06-16 23:24:58.568625 Epoch [154/200], Step [0050/0096], loss=0.0159, bce=0.0069, dice_loss=0.0090, max_mem=3537.92 MB
+2026-06-16 23:25:04.923945 Epoch [154/200], Step [0096/0096], loss=0.0170, bce=0.0071, dice_loss=0.0099, max_mem=3537.92 MB
+[TIME] Epoch 154, time=14.69s, total=2217.09s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 155, lr=0.00010000
+2026-06-16 23:25:13.370527 Epoch [155/200], Step [0050/0096], loss=0.0173, bce=0.0068, dice_loss=0.0105, max_mem=3537.92 MB
+2026-06-16 23:25:19.588446 Epoch [155/200], Step [0096/0096], loss=0.0161, bce=0.0074, dice_loss=0.0086, max_mem=3537.92 MB
+[TIME] Epoch 155, time=14.29s, total=2231.38s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 156, lr=0.00010000
+2026-06-16 23:25:28.126537 Epoch [156/200], Step [0050/0096], loss=0.0168, bce=0.0071, dice_loss=0.0097, max_mem=3537.92 MB
+2026-06-16 23:25:34.334860 Epoch [156/200], Step [0096/0096], loss=0.0171, bce=0.0077, dice_loss=0.0094, max_mem=3537.92 MB
+[TIME] Epoch 156, time=14.35s, total=2245.73s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 157, lr=0.00010000
+2026-06-16 23:25:42.902540 Epoch [157/200], Step [0050/0096], loss=0.0153, bce=0.0062, dice_loss=0.0091, max_mem=3537.92 MB
+2026-06-16 23:25:49.116874 Epoch [157/200], Step [0096/0096], loss=0.0182, bce=0.0078, dice_loss=0.0104, max_mem=3537.92 MB
+[TIME] Epoch 157, time=14.45s, total=2260.18s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 158, lr=0.00010000
+2026-06-16 23:25:57.553805 Epoch [158/200], Step [0050/0096], loss=0.0174, bce=0.0074, dice_loss=0.0100, max_mem=3537.92 MB
+2026-06-16 23:26:03.767928 Epoch [158/200], Step [0096/0096], loss=0.0158, bce=0.0066, dice_loss=0.0092, max_mem=3537.92 MB
+[TIME] Epoch 158, time=14.34s, total=2274.51s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 159, lr=0.00010000
+2026-06-16 23:26:12.438569 Epoch [159/200], Step [0050/0096], loss=0.0173, bce=0.0078, dice_loss=0.0094, max_mem=3537.92 MB
+2026-06-16 23:26:18.656969 Epoch [159/200], Step [0096/0096], loss=0.0156, bce=0.0068, dice_loss=0.0089, max_mem=3537.92 MB
+[TIME] Epoch 159, time=14.50s, total=2289.01s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 160, lr=0.00010000
+2026-06-16 23:26:27.252166 Epoch [160/200], Step [0050/0096], loss=0.0168, bce=0.0071, dice_loss=0.0097, max_mem=3537.92 MB
+2026-06-16 23:26:33.470279 Epoch [160/200], Step [0096/0096], loss=0.0159, bce=0.0064, dice_loss=0.0095, max_mem=3537.92 MB
+[TIME] Epoch 160, time=14.43s, total=2303.44s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 161, lr=0.00010000
+2026-06-16 23:26:42.025869 Epoch [161/200], Step [0050/0096], loss=0.0167, bce=0.0071, dice_loss=0.0097, max_mem=3537.92 MB
+2026-06-16 23:26:48.246359 Epoch [161/200], Step [0096/0096], loss=0.0165, bce=0.0065, dice_loss=0.0100, max_mem=3537.92 MB
+[TIME] Epoch 161, time=14.41s, total=2317.85s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 162, lr=0.00010000
+2026-06-16 23:26:56.591544 Epoch [162/200], Step [0050/0096], loss=0.0166, bce=0.0076, dice_loss=0.0090, max_mem=3537.92 MB
+2026-06-16 23:27:02.810000 Epoch [162/200], Step [0096/0096], loss=0.0163, bce=0.0065, dice_loss=0.0098, max_mem=3537.92 MB
+[TIME] Epoch 162, time=14.22s, total=2332.07s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 163, lr=0.00010000
+2026-06-16 23:27:11.314259 Epoch [163/200], Step [0050/0096], loss=0.0162, bce=0.0069, dice_loss=0.0093, max_mem=3537.92 MB
+2026-06-16 23:27:17.532378 Epoch [163/200], Step [0096/0096], loss=0.0169, bce=0.0068, dice_loss=0.0101, max_mem=3537.92 MB
+[TIME] Epoch 163, time=14.35s, total=2346.42s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 164, lr=0.00010000
+2026-06-16 23:27:26.095364 Epoch [164/200], Step [0050/0096], loss=0.0165, bce=0.0066, dice_loss=0.0099, max_mem=3537.92 MB
+2026-06-16 23:27:32.313047 Epoch [164/200], Step [0096/0096], loss=0.0165, bce=0.0072, dice_loss=0.0093, max_mem=3537.92 MB
+[TIME] Epoch 164, time=14.38s, total=2360.80s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 165, lr=0.00010000
+2026-06-16 23:27:40.825964 Epoch [165/200], Step [0050/0096], loss=0.0161, bce=0.0072, dice_loss=0.0089, max_mem=3537.92 MB
+2026-06-16 23:27:47.031651 Epoch [165/200], Step [0096/0096], loss=0.0163, bce=0.0064, dice_loss=0.0099, max_mem=3537.92 MB
+[TIME] Epoch 165, time=14.33s, total=2375.13s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 166, lr=0.00010000
+2026-06-16 23:27:55.568173 Epoch [166/200], Step [0050/0096], loss=0.0165, bce=0.0071, dice_loss=0.0095, max_mem=3537.92 MB
+2026-06-16 23:28:01.779438 Epoch [166/200], Step [0096/0096], loss=0.0162, bce=0.0065, dice_loss=0.0097, max_mem=3537.92 MB
+[TIME] Epoch 166, time=14.38s, total=2389.52s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 167, lr=0.00010000
+2026-06-16 23:28:10.265942 Epoch [167/200], Step [0050/0096], loss=0.0157, bce=0.0068, dice_loss=0.0089, max_mem=3537.92 MB
+2026-06-16 23:28:16.476322 Epoch [167/200], Step [0096/0096], loss=0.0159, bce=0.0063, dice_loss=0.0096, max_mem=3537.92 MB
+[TIME] Epoch 167, time=14.33s, total=2403.85s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 168, lr=0.00010000
+2026-06-16 23:28:24.982838 Epoch [168/200], Step [0050/0096], loss=0.0155, bce=0.0068, dice_loss=0.0087, max_mem=3537.92 MB
+2026-06-16 23:28:31.216967 Epoch [168/200], Step [0096/0096], loss=0.0166, bce=0.0068, dice_loss=0.0098, max_mem=3537.92 MB
+[TIME] Epoch 168, time=14.37s, total=2418.22s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 169, lr=0.00010000
+2026-06-16 23:28:39.773870 Epoch [169/200], Step [0050/0096], loss=0.0161, bce=0.0069, dice_loss=0.0092, max_mem=3537.92 MB
+2026-06-16 23:28:45.989297 Epoch [169/200], Step [0096/0096], loss=0.0158, bce=0.0066, dice_loss=0.0092, max_mem=3537.92 MB
+[TIME] Epoch 169, time=14.37s, total=2432.60s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 170, lr=0.00010000
+2026-06-16 23:28:54.311259 Epoch [170/200], Step [0050/0096], loss=0.0713, bce=0.0380, dice_loss=0.0333, max_mem=3537.92 MB
+2026-06-16 23:29:00.534538 Epoch [170/200], Step [0096/0096], loss=0.1145, bce=0.0520, dice_loss=0.0625, max_mem=3537.92 MB
+[TIME] Epoch 170, time=14.17s, total=2446.77s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 171, lr=0.00010000
+2026-06-16 23:29:09.138468 Epoch [171/200], Step [0050/0096], loss=0.0741, bce=0.0398, dice_loss=0.0343, max_mem=3537.92 MB
+2026-06-16 23:29:15.357827 Epoch [171/200], Step [0096/0096], loss=0.0435, bce=0.0208, dice_loss=0.0227, max_mem=3537.92 MB
+[TIME] Epoch 171, time=14.48s, total=2461.25s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 172, lr=0.00010000
+2026-06-16 23:29:23.993296 Epoch [172/200], Step [0050/0096], loss=0.0263, bce=0.0110, dice_loss=0.0153, max_mem=3537.92 MB
+2026-06-16 23:29:30.224251 Epoch [172/200], Step [0096/0096], loss=0.0229, bce=0.0116, dice_loss=0.0113, max_mem=3537.92 MB
+[TIME] Epoch 172, time=14.49s, total=2475.74s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 173, lr=0.00010000
+2026-06-16 23:29:38.717734 Epoch [173/200], Step [0050/0096], loss=0.0220, bce=0.0101, dice_loss=0.0119, max_mem=3537.92 MB
+2026-06-16 23:29:44.941158 Epoch [173/200], Step [0096/0096], loss=0.0199, bce=0.0087, dice_loss=0.0112, max_mem=3537.92 MB
+[TIME] Epoch 173, time=14.38s, total=2490.11s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 174, lr=0.00010000
+2026-06-16 23:29:53.446157 Epoch [174/200], Step [0050/0096], loss=0.0175, bce=0.0078, dice_loss=0.0097, max_mem=3537.92 MB
+2026-06-16 23:29:59.661558 Epoch [174/200], Step [0096/0096], loss=0.0166, bce=0.0069, dice_loss=0.0097, max_mem=3537.92 MB
+[TIME] Epoch 174, time=14.35s, total=2504.47s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 175, lr=0.00010000
+2026-06-16 23:30:08.212396 Epoch [175/200], Step [0050/0096], loss=0.0164, bce=0.0073, dice_loss=0.0092, max_mem=3537.92 MB
+2026-06-16 23:30:14.421368 Epoch [175/200], Step [0096/0096], loss=0.0165, bce=0.0064, dice_loss=0.0101, max_mem=3537.92 MB
+[TIME] Epoch 175, time=14.40s, total=2518.87s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 176, lr=0.00010000
+2026-06-16 23:30:22.798767 Epoch [176/200], Step [0050/0096], loss=0.0162, bce=0.0066, dice_loss=0.0096, max_mem=3537.92 MB
+2026-06-16 23:30:29.013203 Epoch [176/200], Step [0096/0096], loss=0.0155, bce=0.0067, dice_loss=0.0088, max_mem=3537.92 MB
+[TIME] Epoch 176, time=14.27s, total=2533.14s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 177, lr=0.00010000
+2026-06-16 23:30:37.428206 Epoch [177/200], Step [0050/0096], loss=0.0152, bce=0.0072, dice_loss=0.0080, max_mem=3537.92 MB
+2026-06-16 23:30:43.648712 Epoch [177/200], Step [0096/0096], loss=0.0151, bce=0.0058, dice_loss=0.0093, max_mem=3537.92 MB
+[TIME] Epoch 177, time=14.27s, total=2547.41s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 178, lr=0.00010000
+2026-06-16 23:30:52.363868 Epoch [178/200], Step [0050/0096], loss=0.0156, bce=0.0068, dice_loss=0.0088, max_mem=3537.92 MB
+2026-06-16 23:30:58.582445 Epoch [178/200], Step [0096/0096], loss=0.0147, bce=0.0062, dice_loss=0.0085, max_mem=3537.92 MB
+[TIME] Epoch 178, time=14.58s, total=2561.99s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 179, lr=0.00010000
+2026-06-16 23:31:07.230983 Epoch [179/200], Step [0050/0096], loss=0.0156, bce=0.0064, dice_loss=0.0092, max_mem=3537.92 MB
+2026-06-16 23:31:13.451278 Epoch [179/200], Step [0096/0096], loss=0.0165, bce=0.0070, dice_loss=0.0094, max_mem=3537.92 MB
+[TIME] Epoch 179, time=14.43s, total=2576.42s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 180, lr=0.00010000
+2026-06-16 23:31:21.956876 Epoch [180/200], Step [0050/0096], loss=0.0163, bce=0.0070, dice_loss=0.0093, max_mem=3537.92 MB
+2026-06-16 23:31:28.183585 Epoch [180/200], Step [0096/0096], loss=0.0164, bce=0.0066, dice_loss=0.0098, max_mem=3537.92 MB
+[TIME] Epoch 180, time=14.34s, total=2590.76s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 181, lr=0.00010000
+2026-06-16 23:31:36.816507 Epoch [181/200], Step [0050/0096], loss=0.0152, bce=0.0064, dice_loss=0.0088, max_mem=3537.92 MB
+2026-06-16 23:31:43.036419 Epoch [181/200], Step [0096/0096], loss=0.0153, bce=0.0061, dice_loss=0.0092, max_mem=3537.92 MB
+[TIME] Epoch 181, time=14.49s, total=2605.25s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 182, lr=0.00010000
+2026-06-16 23:31:51.505470 Epoch [182/200], Step [0050/0096], loss=0.0154, bce=0.0063, dice_loss=0.0090, max_mem=3537.92 MB
+2026-06-16 23:31:57.727386 Epoch [182/200], Step [0096/0096], loss=0.0146, bce=0.0060, dice_loss=0.0086, max_mem=3537.92 MB
+[TIME] Epoch 182, time=14.35s, total=2619.59s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 183, lr=0.00010000
+2026-06-16 23:32:06.215775 Epoch [183/200], Step [0050/0096], loss=0.0140, bce=0.0063, dice_loss=0.0077, max_mem=3537.92 MB
+2026-06-16 23:32:12.433010 Epoch [183/200], Step [0096/0096], loss=0.0148, bce=0.0059, dice_loss=0.0089, max_mem=3537.92 MB
+[TIME] Epoch 183, time=14.32s, total=2633.92s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 184, lr=0.00010000
+2026-06-16 23:32:21.023991 Epoch [184/200], Step [0050/0096], loss=0.0145, bce=0.0063, dice_loss=0.0082, max_mem=3537.92 MB
+2026-06-16 23:32:27.246243 Epoch [184/200], Step [0096/0096], loss=0.0157, bce=0.0062, dice_loss=0.0095, max_mem=3537.92 MB
+[TIME] Epoch 184, time=14.40s, total=2648.32s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 185, lr=0.00010000
+2026-06-16 23:32:35.851087 Epoch [185/200], Step [0050/0096], loss=0.0145, bce=0.0059, dice_loss=0.0086, max_mem=3537.92 MB
+2026-06-16 23:32:42.061980 Epoch [185/200], Step [0096/0096], loss=0.0166, bce=0.0073, dice_loss=0.0093, max_mem=3537.92 MB
+[TIME] Epoch 185, time=14.51s, total=2662.83s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 186, lr=0.00010000
+2026-06-16 23:32:50.410545 Epoch [186/200], Step [0050/0096], loss=0.0279, bce=0.0144, dice_loss=0.0135, max_mem=3537.92 MB
+2026-06-16 23:32:56.616823 Epoch [186/200], Step [0096/0096], loss=0.1060, bce=0.0584, dice_loss=0.0476, max_mem=3537.92 MB
+[TIME] Epoch 186, time=14.27s, total=2677.10s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 187, lr=0.00010000
+2026-06-16 23:33:05.027236 Epoch [187/200], Step [0050/0096], loss=0.1268, bce=0.0647, dice_loss=0.0622, max_mem=3537.92 MB
+2026-06-16 23:33:11.233714 Epoch [187/200], Step [0096/0096], loss=0.0469, bce=0.0227, dice_loss=0.0242, max_mem=3537.92 MB
+[TIME] Epoch 187, time=14.26s, total=2691.36s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 188, lr=0.00010000
+2026-06-16 23:33:19.794223 Epoch [188/200], Step [0050/0096], loss=0.0276, bce=0.0118, dice_loss=0.0158, max_mem=3537.92 MB
+2026-06-16 23:33:26.014170 Epoch [188/200], Step [0096/0096], loss=0.0242, bce=0.0107, dice_loss=0.0135, max_mem=3537.92 MB
+[TIME] Epoch 188, time=14.45s, total=2705.81s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 189, lr=0.00010000
+2026-06-16 23:33:34.674178 Epoch [189/200], Step [0050/0096], loss=0.0192, bce=0.0081, dice_loss=0.0110, max_mem=3537.92 MB
+2026-06-16 23:33:40.892389 Epoch [189/200], Step [0096/0096], loss=0.0186, bce=0.0085, dice_loss=0.0100, max_mem=3537.92 MB
+[TIME] Epoch 189, time=14.46s, total=2720.28s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 190, lr=0.00010000
+2026-06-16 23:33:49.206561 Epoch [190/200], Step [0050/0096], loss=0.0172, bce=0.0073, dice_loss=0.0099, max_mem=3537.92 MB
+2026-06-16 23:33:55.539255 Epoch [190/200], Step [0096/0096], loss=0.0166, bce=0.0071, dice_loss=0.0095, max_mem=3537.92 MB
+[TIME] Epoch 190, time=14.35s, total=2734.63s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 191, lr=0.00010000
+2026-06-16 23:34:04.188648 Epoch [191/200], Step [0050/0096], loss=0.0157, bce=0.0071, dice_loss=0.0085, max_mem=3537.92 MB
+2026-06-16 23:34:10.397733 Epoch [191/200], Step [0096/0096], loss=0.0162, bce=0.0062, dice_loss=0.0100, max_mem=3537.92 MB
+[TIME] Epoch 191, time=14.52s, total=2749.15s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 192, lr=0.00010000
+2026-06-16 23:34:18.907962 Epoch [192/200], Step [0050/0096], loss=0.0159, bce=0.0067, dice_loss=0.0093, max_mem=3537.92 MB
+2026-06-16 23:34:25.125545 Epoch [192/200], Step [0096/0096], loss=0.0160, bce=0.0071, dice_loss=0.0090, max_mem=3537.92 MB
+[TIME] Epoch 192, time=14.33s, total=2763.48s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 193, lr=0.00010000
+2026-06-16 23:34:33.563476 Epoch [193/200], Step [0050/0096], loss=0.0151, bce=0.0062, dice_loss=0.0089, max_mem=3537.92 MB
+2026-06-16 23:34:39.783430 Epoch [193/200], Step [0096/0096], loss=0.0146, bce=0.0063, dice_loss=0.0083, max_mem=3537.92 MB
+[TIME] Epoch 193, time=14.24s, total=2777.72s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 194, lr=0.00010000
+2026-06-16 23:34:48.394344 Epoch [194/200], Step [0050/0096], loss=0.0149, bce=0.0065, dice_loss=0.0084, max_mem=3537.92 MB
+2026-06-16 23:34:54.614704 Epoch [194/200], Step [0096/0096], loss=0.0149, bce=0.0059, dice_loss=0.0090, max_mem=3537.92 MB
+[TIME] Epoch 194, time=14.50s, total=2792.22s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 195, lr=0.00010000
+2026-06-16 23:35:03.186663 Epoch [195/200], Step [0050/0096], loss=0.0146, bce=0.0065, dice_loss=0.0080, max_mem=3537.92 MB
+2026-06-16 23:35:09.398129 Epoch [195/200], Step [0096/0096], loss=0.0132, bce=0.0052, dice_loss=0.0080, max_mem=3537.92 MB
+[TIME] Epoch 195, time=14.35s, total=2806.57s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 196, lr=0.00010000
+2026-06-16 23:35:17.966575 Epoch [196/200], Step [0050/0096], loss=0.0137, bce=0.0055, dice_loss=0.0082, max_mem=3537.92 MB
+2026-06-16 23:35:24.185957 Epoch [196/200], Step [0096/0096], loss=0.0146, bce=0.0066, dice_loss=0.0080, max_mem=3537.92 MB
+[TIME] Epoch 196, time=14.42s, total=2820.99s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 197, lr=0.00010000
+2026-06-16 23:35:32.683883 Epoch [197/200], Step [0050/0096], loss=0.0139, bce=0.0061, dice_loss=0.0078, max_mem=3537.92 MB
+2026-06-16 23:35:38.902613 Epoch [197/200], Step [0096/0096], loss=0.0139, bce=0.0055, dice_loss=0.0084, max_mem=3537.92 MB
+[TIME] Epoch 197, time=14.36s, total=2835.35s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 198, lr=0.00010000
+2026-06-16 23:35:47.439548 Epoch [198/200], Step [0050/0096], loss=0.0137, bce=0.0055, dice_loss=0.0082, max_mem=3537.92 MB
+2026-06-16 23:35:53.666214 Epoch [198/200], Step [0096/0096], loss=0.0147, bce=0.0066, dice_loss=0.0081, max_mem=3537.92 MB
+[TIME] Epoch 198, time=14.36s, total=2849.71s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 199, lr=0.00010000
+2026-06-16 23:36:02.121072 Epoch [199/200], Step [0050/0096], loss=0.0140, bce=0.0059, dice_loss=0.0081, max_mem=3537.92 MB
+2026-06-16 23:36:08.334971 Epoch [199/200], Step [0096/0096], loss=0.0137, bce=0.0058, dice_loss=0.0079, max_mem=3537.92 MB
+[TIME] Epoch 199, time=14.34s, total=2864.05s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[LR] Epoch 200, lr=0.00010000
+2026-06-16 23:36:16.796748 Epoch [200/200], Step [0050/0096], loss=0.0130, bce=0.0055, dice_loss=0.0076, max_mem=3537.92 MB
+2026-06-16 23:36:23.014082 Epoch [200/200], Step [0096/0096], loss=0.0144, bce=0.0060, dice_loss=0.0084, max_mem=3537.92 MB
+[TIME] Epoch 200, time=14.31s, total=2878.35s
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : isic
+  ids=40, pairs=0, miss_img=0, miss_mask=40
+  missing mask examples:
+    id=IMD003, tried=['IMD003_segmentation', 'IMD003']
+    id=IMD010, tried=['IMD010_segmentation', 'IMD010']
+    id=IMD013, tried=['IMD013_segmentation', 'IMD013']
+    id=IMD014, tried=['IMD014_segmentation', 'IMD014']
+    id=IMD031, tried=['IMD031_segmentation', 'IMD031']
+[TEST DATASET] size=0
+[WARN] 测试数据集为空。请检查测试路径、test_list 和 test mode。
+[WARN] test_loader.size == 0，请检查 test_list、Images/Masks 路径、文件命名规则以及 test_mode
+[DONE] Best Dice: 0.000000
+[DONE] Best Epoch: 0
+[DONE] Avg train time per epoch: 14.39s

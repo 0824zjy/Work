@@ -1,0 +1,2242 @@
+[INFO] Using device: cuda:0
+[INFO] Model: unet
+[TXT LOAD] /data/zjy_work/data_txt/train_5p_seed0.txt
+  image_root: /data/zjy_work/ISIC2018/train/Images
+  gt_root   : /data/zjy_work/ISIC2018/train/Masks
+  mode      : isic
+  ids=129, pairs=129, miss_img=0, miss_mask=0
+[TXT LOAD] /data/zjy_work/data_txt/train_decoder_mod_real5_syn10.txt
+  image_root: /data/zjy_work/BGDiff/Ours/ablation_sbg/results/decoder_mod_real5_syn10/images
+  gt_root   : /data/zjy_work/BGDiff/Ours/ablation_sbg/results/decoder_mod_real5_syn10/masks
+  mode      : paired
+  ids=258, pairs=258, miss_img=0, miss_mask=0
+[FILTER] valid=387, drop_size_mismatch=0
+[TRAIN DATASET] augmentation=False
+[TRAIN DATASET] total size=387
+[INFO] image_roots = ['/data/zjy_work/ISIC2018/train/Images', '/data/zjy_work/BGDiff/Ours/ablation_sbg/results/decoder_mod_real5_syn10/images']
+[INFO] gt_roots    = ['/data/zjy_work/ISIC2018/train/Masks', '/data/zjy_work/BGDiff/Ours/ablation_sbg/results/decoder_mod_real5_syn10/masks']
+[INFO] list_txts   = ['/data/zjy_work/data_txt/train_5p_seed0.txt', '/data/zjy_work/data_txt/train_decoder_mod_real5_syn10.txt']
+[INFO] modes       = ['isic', 'paired']
+[INFO] total_step  = 96
+#################### Start Training unet ####################
+[LR] Epoch 001, lr=0.00010000
+2026-05-19 10:47:43.127996 Epoch [001/200], Step [0050/0096], loss=1.0029, bce=0.5322, dice_loss=0.4707, max_mem=9534.03 MB
+2026-05-19 10:47:49.318592 Epoch [001/200], Step [0096/0096], loss=0.8588, bce=0.4321, dice_loss=0.4267, max_mem=9534.03 MB
+[TIME] Epoch 001, time=20.48s, total=20.48s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 001, train_loss=0.858801, Dice=0.602308, n=1000
+[BEST] Dice improved 0.000000 -> 0.602308
+[LR] Epoch 002, lr=0.00010000
+2026-05-19 10:55:00.406896 Epoch [002/200], Step [0050/0096], loss=0.7650, bce=0.3895, dice_loss=0.3755, max_mem=3537.92 MB
+2026-05-19 10:55:06.782951 Epoch [002/200], Step [0096/0096], loss=0.7364, bce=0.3671, dice_loss=0.3693, max_mem=3537.92 MB
+[TIME] Epoch 002, time=16.33s, total=36.82s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 002, train_loss=0.736442, Dice=0.659794, n=1000
+[BEST] Dice improved 0.602308 -> 0.659794
+[LR] Epoch 003, lr=0.00010000
+2026-05-19 11:02:22.823590 Epoch [003/200], Step [0050/0096], loss=0.6300, bce=0.3232, dice_loss=0.3068, max_mem=3537.92 MB
+2026-05-19 11:02:29.155361 Epoch [003/200], Step [0096/0096], loss=0.6452, bce=0.3268, dice_loss=0.3185, max_mem=3537.92 MB
+[TIME] Epoch 003, time=15.03s, total=51.85s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 003, train_loss=0.645242, Dice=0.701581, n=1000
+[BEST] Dice improved 0.659794 -> 0.701581
+[LR] Epoch 004, lr=0.00010000
+2026-05-19 11:10:19.934587 Epoch [004/200], Step [0050/0096], loss=0.6430, bce=0.3344, dice_loss=0.3085, max_mem=3537.92 MB
+2026-05-19 11:10:26.156740 Epoch [004/200], Step [0096/0096], loss=0.5615, bce=0.2806, dice_loss=0.2809, max_mem=3537.92 MB
+[TIME] Epoch 004, time=15.43s, total=67.29s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 004, train_loss=0.561477, Dice=0.614990, n=1000
+[LR] Epoch 005, lr=0.00010000
+2026-05-19 11:18:19.355566 Epoch [005/200], Step [0050/0096], loss=0.5199, bce=0.2625, dice_loss=0.2574, max_mem=3537.92 MB
+2026-05-19 11:18:25.604216 Epoch [005/200], Step [0096/0096], loss=0.5234, bce=0.2783, dice_loss=0.2451, max_mem=3537.92 MB
+[TIME] Epoch 005, time=15.09s, total=82.37s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 005, train_loss=0.523437, Dice=0.726536, n=1000
+[BEST] Dice improved 0.701581 -> 0.726536
+[LR] Epoch 006, lr=0.00010000
+2026-05-19 11:26:01.897580 Epoch [006/200], Step [0050/0096], loss=0.5135, bce=0.2614, dice_loss=0.2521, max_mem=3537.92 MB
+2026-05-19 11:26:08.192192 Epoch [006/200], Step [0096/0096], loss=0.4481, bce=0.2373, dice_loss=0.2107, max_mem=3537.92 MB
+[TIME] Epoch 006, time=16.28s, total=98.66s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 006, train_loss=0.448089, Dice=0.735295, n=1000
+[BEST] Dice improved 0.726536 -> 0.735295
+[LR] Epoch 007, lr=0.00010000
+2026-05-19 11:32:54.258596 Epoch [007/200], Step [0050/0096], loss=0.4768, bce=0.2472, dice_loss=0.2297, max_mem=3537.92 MB
+2026-05-19 11:33:00.597304 Epoch [007/200], Step [0096/0096], loss=0.4683, bce=0.2458, dice_loss=0.2225, max_mem=3537.92 MB
+[TIME] Epoch 007, time=15.71s, total=114.36s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 007, train_loss=0.468317, Dice=0.754990, n=1000
+[BEST] Dice improved 0.735295 -> 0.754990
+[LR] Epoch 008, lr=0.00010000
+2026-05-19 11:39:43.823480 Epoch [008/200], Step [0050/0096], loss=0.5006, bce=0.2647, dice_loss=0.2360, max_mem=3537.92 MB
+2026-05-19 11:39:50.096118 Epoch [008/200], Step [0096/0096], loss=0.3652, bce=0.1953, dice_loss=0.1699, max_mem=3537.92 MB
+[TIME] Epoch 008, time=15.78s, total=130.15s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 008, train_loss=0.365181, Dice=0.736950, n=1000
+[LR] Epoch 009, lr=0.00010000
+2026-05-19 11:46:55.867056 Epoch [009/200], Step [0050/0096], loss=0.3962, bce=0.2126, dice_loss=0.1836, max_mem=3537.92 MB
+2026-05-19 11:47:02.142549 Epoch [009/200], Step [0096/0096], loss=0.4484, bce=0.2352, dice_loss=0.2133, max_mem=3537.92 MB
+[TIME] Epoch 009, time=15.44s, total=145.59s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 009, train_loss=0.448425, Dice=0.769640, n=1000
+[BEST] Dice improved 0.754990 -> 0.769640
+[LR] Epoch 010, lr=0.00010000
+2026-05-19 11:54:24.282310 Epoch [010/200], Step [0050/0096], loss=0.4404, bce=0.2449, dice_loss=0.1955, max_mem=3537.92 MB
+2026-05-19 11:54:30.489984 Epoch [010/200], Step [0096/0096], loss=0.3572, bce=0.1869, dice_loss=0.1703, max_mem=3537.92 MB
+[TIME] Epoch 010, time=15.00s, total=160.59s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 010, train_loss=0.357249, Dice=0.750705, n=1000
+[LR] Epoch 011, lr=0.00010000
+2026-05-19 12:01:23.526235 Epoch [011/200], Step [0050/0096], loss=0.4029, bce=0.2234, dice_loss=0.1795, max_mem=3537.92 MB
+2026-05-19 12:01:29.844627 Epoch [011/200], Step [0096/0096], loss=0.3625, bce=0.2002, dice_loss=0.1623, max_mem=3537.92 MB
+[TIME] Epoch 011, time=16.50s, total=177.10s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 011, train_loss=0.362525, Dice=0.754282, n=1000
+[LR] Epoch 012, lr=0.00010000
+2026-05-19 12:08:08.608921 Epoch [012/200], Step [0050/0096], loss=0.3913, bce=0.2129, dice_loss=0.1783, max_mem=3537.92 MB
+2026-05-19 12:08:15.039881 Epoch [012/200], Step [0096/0096], loss=0.3751, bce=0.2016, dice_loss=0.1735, max_mem=3537.92 MB
+[TIME] Epoch 012, time=16.17s, total=193.26s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 012, train_loss=0.375117, Dice=0.762192, n=1000
+[LR] Epoch 013, lr=0.00010000
+2026-05-19 12:15:03.898553 Epoch [013/200], Step [0050/0096], loss=0.3647, bce=0.1989, dice_loss=0.1657, max_mem=3537.92 MB
+2026-05-19 12:15:10.220920 Epoch [013/200], Step [0096/0096], loss=0.3246, bce=0.1704, dice_loss=0.1543, max_mem=3537.92 MB
+[TIME] Epoch 013, time=15.68s, total=208.94s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 013, train_loss=0.324641, Dice=0.771924, n=1000
+[BEST] Dice improved 0.769640 -> 0.771924
+[LR] Epoch 014, lr=0.00010000
+2026-05-19 12:22:30.945073 Epoch [014/200], Step [0050/0096], loss=0.3258, bce=0.1827, dice_loss=0.1432, max_mem=3537.92 MB
+2026-05-19 12:22:37.204601 Epoch [014/200], Step [0096/0096], loss=0.3106, bce=0.1601, dice_loss=0.1505, max_mem=3537.92 MB
+[TIME] Epoch 014, time=15.47s, total=224.41s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 014, train_loss=0.310577, Dice=0.762886, n=1000
+[LR] Epoch 015, lr=0.00010000
+2026-05-19 12:29:42.812539 Epoch [015/200], Step [0050/0096], loss=0.3579, bce=0.1995, dice_loss=0.1584, max_mem=3537.92 MB
+2026-05-19 12:29:49.209890 Epoch [015/200], Step [0096/0096], loss=0.3025, bce=0.1496, dice_loss=0.1529, max_mem=3537.92 MB
+[TIME] Epoch 015, time=15.51s, total=239.92s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 015, train_loss=0.302501, Dice=0.765461, n=1000
+[LR] Epoch 016, lr=0.00010000
+2026-05-19 12:36:47.974750 Epoch [016/200], Step [0050/0096], loss=0.2950, bce=0.1538, dice_loss=0.1412, max_mem=3537.92 MB
+2026-05-19 12:36:54.295831 Epoch [016/200], Step [0096/0096], loss=0.3116, bce=0.1851, dice_loss=0.1265, max_mem=3537.92 MB
+[TIME] Epoch 016, time=15.19s, total=255.11s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 016, train_loss=0.311611, Dice=0.780413, n=1000
+[BEST] Dice improved 0.771924 -> 0.780413
+[LR] Epoch 017, lr=0.00010000
+2026-05-19 12:43:52.833763 Epoch [017/200], Step [0050/0096], loss=0.3048, bce=0.1636, dice_loss=0.1412, max_mem=3537.92 MB
+2026-05-19 12:43:59.182890 Epoch [017/200], Step [0096/0096], loss=0.2918, bce=0.1583, dice_loss=0.1335, max_mem=3537.92 MB
+[TIME] Epoch 017, time=16.11s, total=271.22s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 017, train_loss=0.291763, Dice=0.778397, n=1000
+[LR] Epoch 018, lr=0.00010000
+2026-05-19 12:51:36.654211 Epoch [018/200], Step [0050/0096], loss=0.3415, bce=0.1871, dice_loss=0.1544, max_mem=3537.92 MB
+2026-05-19 12:51:43.007601 Epoch [018/200], Step [0096/0096], loss=0.3118, bce=0.1741, dice_loss=0.1376, max_mem=3537.92 MB
+[TIME] Epoch 018, time=15.45s, total=286.68s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 018, train_loss=0.311759, Dice=0.792333, n=1000
+[BEST] Dice improved 0.780413 -> 0.792333
+[LR] Epoch 019, lr=0.00010000
+2026-05-19 12:59:35.712319 Epoch [019/200], Step [0050/0096], loss=0.2872, bce=0.1596, dice_loss=0.1276, max_mem=3537.92 MB
+2026-05-19 12:59:41.925695 Epoch [019/200], Step [0096/0096], loss=0.2660, bce=0.1473, dice_loss=0.1187, max_mem=3537.92 MB
+[TIME] Epoch 019, time=15.25s, total=301.93s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 019, train_loss=0.266045, Dice=0.795109, n=1000
+[BEST] Dice improved 0.792333 -> 0.795109
+[LR] Epoch 020, lr=0.00010000
+2026-05-19 13:07:30.865232 Epoch [020/200], Step [0050/0096], loss=0.3045, bce=0.1866, dice_loss=0.1179, max_mem=3537.92 MB
+2026-05-19 13:07:37.127952 Epoch [020/200], Step [0096/0096], loss=0.2684, bce=0.1426, dice_loss=0.1257, max_mem=3537.92 MB
+[TIME] Epoch 020, time=16.21s, total=318.14s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 020, train_loss=0.268383, Dice=0.768765, n=1000
+[LR] Epoch 021, lr=0.00010000
+2026-05-19 13:14:59.357671 Epoch [021/200], Step [0050/0096], loss=0.3200, bce=0.1760, dice_loss=0.1440, max_mem=3537.92 MB
+2026-05-19 13:15:05.670860 Epoch [021/200], Step [0096/0096], loss=0.2621, bce=0.1575, dice_loss=0.1046, max_mem=3537.92 MB
+[TIME] Epoch 021, time=15.04s, total=333.18s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 021, train_loss=0.262114, Dice=0.797885, n=1000
+[BEST] Dice improved 0.795109 -> 0.797885
+[LR] Epoch 022, lr=0.00010000
+2026-05-19 13:22:21.047980 Epoch [022/200], Step [0050/0096], loss=0.2749, bce=0.1617, dice_loss=0.1132, max_mem=3537.92 MB
+2026-05-19 13:22:27.424739 Epoch [022/200], Step [0096/0096], loss=0.2586, bce=0.1328, dice_loss=0.1259, max_mem=3537.92 MB
+[TIME] Epoch 022, time=15.78s, total=348.97s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 022, train_loss=0.258608, Dice=0.786518, n=1000
+[LR] Epoch 023, lr=0.00010000
+2026-05-19 13:29:48.307091 Epoch [023/200], Step [0050/0096], loss=0.3005, bce=0.1599, dice_loss=0.1407, max_mem=3537.92 MB
+2026-05-19 13:29:54.560799 Epoch [023/200], Step [0096/0096], loss=0.3023, bce=0.1793, dice_loss=0.1230, max_mem=3537.92 MB
+[TIME] Epoch 023, time=15.30s, total=364.27s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 023, train_loss=0.302278, Dice=0.795507, n=1000
+[LR] Epoch 024, lr=0.00010000
+2026-05-19 13:37:19.229372 Epoch [024/200], Step [0050/0096], loss=0.2284, bce=0.1175, dice_loss=0.1109, max_mem=3537.92 MB
+2026-05-19 13:37:25.425075 Epoch [024/200], Step [0096/0096], loss=0.2750, bce=0.1590, dice_loss=0.1160, max_mem=3537.92 MB
+[TIME] Epoch 024, time=15.38s, total=379.66s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 024, train_loss=0.275033, Dice=0.802227, n=1000
+[BEST] Dice improved 0.797885 -> 0.802227
+[LR] Epoch 025, lr=0.00010000
+2026-05-19 13:44:37.947631 Epoch [025/200], Step [0050/0096], loss=0.2206, bce=0.1186, dice_loss=0.1020, max_mem=3537.92 MB
+2026-05-19 13:44:44.211446 Epoch [025/200], Step [0096/0096], loss=0.2754, bce=0.1644, dice_loss=0.1110, max_mem=3537.92 MB
+[TIME] Epoch 025, time=15.70s, total=395.36s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 025, train_loss=0.275383, Dice=0.784333, n=1000
+[LR] Epoch 026, lr=0.00010000
+2026-05-19 13:51:46.108737 Epoch [026/200], Step [0050/0096], loss=0.2166, bce=0.1181, dice_loss=0.0985, max_mem=3537.92 MB
+2026-05-19 13:51:52.396762 Epoch [026/200], Step [0096/0096], loss=0.2937, bce=0.1831, dice_loss=0.1106, max_mem=3537.92 MB
+[TIME] Epoch 026, time=15.58s, total=410.94s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 026, train_loss=0.293736, Dice=0.779449, n=1000
+[LR] Epoch 027, lr=0.00010000
+2026-05-19 13:58:46.060929 Epoch [027/200], Step [0050/0096], loss=0.2475, bce=0.1400, dice_loss=0.1075, max_mem=3537.92 MB
+2026-05-19 13:58:52.413507 Epoch [027/200], Step [0096/0096], loss=0.2598, bce=0.1468, dice_loss=0.1130, max_mem=3537.92 MB
+[TIME] Epoch 027, time=15.74s, total=426.68s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 027, train_loss=0.259812, Dice=0.780086, n=1000
+[LR] Epoch 028, lr=0.00010000
+2026-05-19 14:05:55.653851 Epoch [028/200], Step [0050/0096], loss=0.2133, bce=0.1191, dice_loss=0.0942, max_mem=3537.92 MB
+2026-05-19 14:06:01.849427 Epoch [028/200], Step [0096/0096], loss=0.2671, bce=0.1518, dice_loss=0.1152, max_mem=3537.92 MB
+[TIME] Epoch 028, time=14.80s, total=441.48s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 028, train_loss=0.267056, Dice=0.778088, n=1000
+[LR] Epoch 029, lr=0.00010000
+2026-05-19 14:13:19.367260 Epoch [029/200], Step [0050/0096], loss=0.2204, bce=0.1308, dice_loss=0.0896, max_mem=3537.92 MB
+2026-05-19 14:13:25.672194 Epoch [029/200], Step [0096/0096], loss=0.2248, bce=0.1252, dice_loss=0.0996, max_mem=3537.92 MB
+[TIME] Epoch 029, time=15.53s, total=457.00s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 029, train_loss=0.224773, Dice=0.793168, n=1000
+[LR] Epoch 030, lr=0.00010000
+2026-05-19 14:20:49.405525 Epoch [030/200], Step [0050/0096], loss=0.2338, bce=0.1272, dice_loss=0.1066, max_mem=3537.92 MB
+2026-05-19 14:20:55.696347 Epoch [030/200], Step [0096/0096], loss=0.2478, bce=0.1487, dice_loss=0.0991, max_mem=3537.92 MB
+[TIME] Epoch 030, time=15.61s, total=472.61s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 030, train_loss=0.247817, Dice=0.792649, n=1000
+[LR] Epoch 031, lr=0.00010000
+2026-05-19 14:28:06.623329 Epoch [031/200], Step [0050/0096], loss=0.2240, bce=0.1197, dice_loss=0.1042, max_mem=3537.92 MB
+2026-05-19 14:28:12.911268 Epoch [031/200], Step [0096/0096], loss=0.2515, bce=0.1442, dice_loss=0.1073, max_mem=3537.92 MB
+[TIME] Epoch 031, time=15.49s, total=488.10s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 031, train_loss=0.251485, Dice=0.802412, n=1000
+[BEST] Dice improved 0.802227 -> 0.802412
+[LR] Epoch 032, lr=0.00010000
+2026-05-19 14:35:16.474962 Epoch [032/200], Step [0050/0096], loss=0.2339, bce=0.1348, dice_loss=0.0991, max_mem=3537.92 MB
+2026-05-19 14:35:22.722339 Epoch [032/200], Step [0096/0096], loss=0.1983, bce=0.1038, dice_loss=0.0945, max_mem=3537.92 MB
+[TIME] Epoch 032, time=16.07s, total=504.17s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 032, train_loss=0.198272, Dice=0.802069, n=1000
+[LR] Epoch 033, lr=0.00010000
+2026-05-19 14:42:29.261963 Epoch [033/200], Step [0050/0096], loss=0.1796, bce=0.0954, dice_loss=0.0841, max_mem=3537.92 MB
+2026-05-19 14:42:35.500112 Epoch [033/200], Step [0096/0096], loss=0.2346, bce=0.1371, dice_loss=0.0975, max_mem=3537.92 MB
+[TIME] Epoch 033, time=14.92s, total=519.09s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 033, train_loss=0.234614, Dice=0.785261, n=1000
+[LR] Epoch 034, lr=0.00010000
+2026-05-19 14:50:03.205821 Epoch [034/200], Step [0050/0096], loss=0.2726, bce=0.1497, dice_loss=0.1229, max_mem=3537.92 MB
+2026-05-19 14:50:09.427667 Epoch [034/200], Step [0096/0096], loss=0.2075, bce=0.1197, dice_loss=0.0878, max_mem=3537.92 MB
+[TIME] Epoch 034, time=15.56s, total=534.65s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 034, train_loss=0.207453, Dice=0.796683, n=1000
+[LR] Epoch 035, lr=0.00010000
+2026-05-19 14:58:08.818075 Epoch [035/200], Step [0050/0096], loss=0.2015, bce=0.1076, dice_loss=0.0940, max_mem=3537.92 MB
+2026-05-19 14:58:14.979453 Epoch [035/200], Step [0096/0096], loss=0.2018, bce=0.1147, dice_loss=0.0871, max_mem=3537.92 MB
+[TIME] Epoch 035, time=15.41s, total=550.05s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 035, train_loss=0.201760, Dice=0.810367, n=1000
+[BEST] Dice improved 0.802412 -> 0.810367
+[LR] Epoch 036, lr=0.00010000
+2026-05-19 15:05:42.759958 Epoch [036/200], Step [0050/0096], loss=0.2148, bce=0.1266, dice_loss=0.0882, max_mem=3537.92 MB
+2026-05-19 15:05:49.129834 Epoch [036/200], Step [0096/0096], loss=0.1845, bce=0.0993, dice_loss=0.0852, max_mem=3537.92 MB
+[TIME] Epoch 036, time=15.52s, total=565.57s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 036, train_loss=0.184497, Dice=0.798671, n=1000
+[LR] Epoch 037, lr=0.00010000
+2026-05-19 15:13:16.249238 Epoch [037/200], Step [0050/0096], loss=0.1686, bce=0.0936, dice_loss=0.0750, max_mem=3537.92 MB
+2026-05-19 15:13:22.553424 Epoch [037/200], Step [0096/0096], loss=0.2310, bce=0.1365, dice_loss=0.0946, max_mem=3537.92 MB
+[TIME] Epoch 037, time=15.88s, total=581.46s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 037, train_loss=0.231031, Dice=0.803298, n=1000
+[LR] Epoch 038, lr=0.00010000
+2026-05-19 15:20:50.808099 Epoch [038/200], Step [0050/0096], loss=0.1757, bce=0.0948, dice_loss=0.0810, max_mem=3537.92 MB
+2026-05-19 15:20:57.088708 Epoch [038/200], Step [0096/0096], loss=0.2457, bce=0.1367, dice_loss=0.1090, max_mem=3537.92 MB
+[TIME] Epoch 038, time=16.03s, total=597.49s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 038, train_loss=0.245702, Dice=0.808948, n=1000
+[LR] Epoch 039, lr=0.00010000
+2026-05-19 15:28:39.430567 Epoch [039/200], Step [0050/0096], loss=0.2266, bce=0.1313, dice_loss=0.0953, max_mem=3537.92 MB
+2026-05-19 15:28:45.720669 Epoch [039/200], Step [0096/0096], loss=0.1908, bce=0.1083, dice_loss=0.0825, max_mem=3537.92 MB
+[TIME] Epoch 039, time=15.69s, total=613.18s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 039, train_loss=0.190835, Dice=0.777826, n=1000
+[LR] Epoch 040, lr=0.00010000
+2026-05-19 15:36:32.651652 Epoch [040/200], Step [0050/0096], loss=0.1670, bce=0.0966, dice_loss=0.0704, max_mem=3537.92 MB
+2026-05-19 15:36:38.910626 Epoch [040/200], Step [0096/0096], loss=0.2316, bce=0.1299, dice_loss=0.1018, max_mem=3537.92 MB
+[TIME] Epoch 040, time=16.37s, total=629.56s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 040, train_loss=0.231636, Dice=0.786658, n=1000
+[LR] Epoch 041, lr=0.00010000
+2026-05-19 15:44:13.043181 Epoch [041/200], Step [0050/0096], loss=0.2074, bce=0.1138, dice_loss=0.0936, max_mem=3537.92 MB
+2026-05-19 15:44:19.472444 Epoch [041/200], Step [0096/0096], loss=0.2077, bce=0.1216, dice_loss=0.0862, max_mem=3537.92 MB
+[TIME] Epoch 041, time=15.73s, total=645.28s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 041, train_loss=0.207723, Dice=0.808879, n=1000
+[LR] Epoch 042, lr=0.00010000
+2026-05-19 15:51:27.272782 Epoch [042/200], Step [0050/0096], loss=0.1861, bce=0.1039, dice_loss=0.0822, max_mem=3537.92 MB
+2026-05-19 15:51:33.620951 Epoch [042/200], Step [0096/0096], loss=0.1940, bce=0.1118, dice_loss=0.0822, max_mem=3537.92 MB
+[TIME] Epoch 042, time=17.12s, total=662.41s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 042, train_loss=0.193978, Dice=0.793512, n=1000
+[LR] Epoch 043, lr=0.00010000
+2026-05-19 15:58:28.552137 Epoch [043/200], Step [0050/0096], loss=0.1932, bce=0.1088, dice_loss=0.0844, max_mem=3537.92 MB
+2026-05-19 15:58:34.831045 Epoch [043/200], Step [0096/0096], loss=0.1694, bce=0.0905, dice_loss=0.0789, max_mem=3537.92 MB
+[TIME] Epoch 043, time=15.73s, total=678.14s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 043, train_loss=0.169351, Dice=0.767793, n=1000
+[LR] Epoch 044, lr=0.00010000
+2026-05-19 16:05:45.662827 Epoch [044/200], Step [0050/0096], loss=0.1497, bce=0.0843, dice_loss=0.0654, max_mem=3537.92 MB
+2026-05-19 16:05:51.904344 Epoch [044/200], Step [0096/0096], loss=0.2036, bce=0.1205, dice_loss=0.0831, max_mem=3537.92 MB
+[TIME] Epoch 044, time=15.00s, total=693.13s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 044, train_loss=0.203568, Dice=0.806909, n=1000
+[LR] Epoch 045, lr=0.00010000
+2026-05-19 16:13:22.482009 Epoch [045/200], Step [0050/0096], loss=0.1922, bce=0.1104, dice_loss=0.0818, max_mem=3537.92 MB
+2026-05-19 16:13:28.722055 Epoch [045/200], Step [0096/0096], loss=0.1524, bce=0.0852, dice_loss=0.0672, max_mem=3537.92 MB
+[TIME] Epoch 045, time=14.88s, total=708.01s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 045, train_loss=0.152404, Dice=0.826798, n=1000
+[BEST] Dice improved 0.810367 -> 0.826798
+[LR] Epoch 046, lr=0.00010000
+2026-05-19 16:20:53.998894 Epoch [046/200], Step [0050/0096], loss=0.1448, bce=0.0765, dice_loss=0.0683, max_mem=3537.92 MB
+2026-05-19 16:21:00.306545 Epoch [046/200], Step [0096/0096], loss=0.1972, bce=0.1158, dice_loss=0.0813, max_mem=3537.92 MB
+[TIME] Epoch 046, time=15.72s, total=723.73s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 046, train_loss=0.197191, Dice=0.802988, n=1000
+[LR] Epoch 047, lr=0.00010000
+2026-05-19 16:28:02.700979 Epoch [047/200], Step [0050/0096], loss=0.1958, bce=0.1063, dice_loss=0.0895, max_mem=3537.92 MB
+2026-05-19 16:28:09.080157 Epoch [047/200], Step [0096/0096], loss=0.1457, bce=0.0788, dice_loss=0.0670, max_mem=3537.92 MB
+[TIME] Epoch 047, time=15.53s, total=739.26s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 047, train_loss=0.145732, Dice=0.822159, n=1000
+[LR] Epoch 048, lr=0.00010000
+2026-05-19 16:35:07.738666 Epoch [048/200], Step [0050/0096], loss=0.1570, bce=0.0838, dice_loss=0.0733, max_mem=3537.92 MB
+2026-05-19 16:35:14.055086 Epoch [048/200], Step [0096/0096], loss=0.1790, bce=0.1038, dice_loss=0.0752, max_mem=3537.92 MB
+[TIME] Epoch 048, time=15.74s, total=755.00s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 048, train_loss=0.179049, Dice=0.810119, n=1000
+[LR] Epoch 049, lr=0.00010000
+2026-05-19 16:42:30.349580 Epoch [049/200], Step [0050/0096], loss=0.1386, bce=0.0709, dice_loss=0.0676, max_mem=3537.92 MB
+2026-05-19 16:42:36.614808 Epoch [049/200], Step [0096/0096], loss=0.1824, bce=0.1073, dice_loss=0.0750, max_mem=3537.92 MB
+[TIME] Epoch 049, time=15.25s, total=770.25s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 049, train_loss=0.182362, Dice=0.814413, n=1000
+[LR] Epoch 050, lr=0.00010000
+2026-05-19 16:49:52.952342 Epoch [050/200], Step [0050/0096], loss=0.1725, bce=0.0963, dice_loss=0.0762, max_mem=3537.92 MB
+2026-05-19 16:49:59.190711 Epoch [050/200], Step [0096/0096], loss=0.1924, bce=0.1004, dice_loss=0.0920, max_mem=3537.92 MB
+[TIME] Epoch 050, time=14.61s, total=784.86s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 050, train_loss=0.192427, Dice=0.806529, n=1000
+[LR] Epoch 051, lr=0.00010000
+2026-05-19 16:57:03.000570 Epoch [051/200], Step [0050/0096], loss=0.1928, bce=0.1029, dice_loss=0.0899, max_mem=3537.92 MB
+2026-05-19 16:57:09.321734 Epoch [051/200], Step [0096/0096], loss=0.1992, bce=0.1095, dice_loss=0.0897, max_mem=3537.92 MB
+[TIME] Epoch 051, time=16.63s, total=801.49s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 051, train_loss=0.199157, Dice=0.813663, n=1000
+[LR] Epoch 052, lr=0.00010000
+2026-05-19 17:04:00.034842 Epoch [052/200], Step [0050/0096], loss=0.1329, bce=0.0728, dice_loss=0.0601, max_mem=3537.92 MB
+2026-05-19 17:04:06.391252 Epoch [052/200], Step [0096/0096], loss=0.1573, bce=0.0905, dice_loss=0.0668, max_mem=3537.92 MB
+[TIME] Epoch 052, time=16.43s, total=817.92s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 052, train_loss=0.157264, Dice=0.822432, n=1000
+[LR] Epoch 053, lr=0.00010000
+2026-05-19 17:11:39.514391 Epoch [053/200], Step [0050/0096], loss=0.1333, bce=0.0765, dice_loss=0.0568, max_mem=3537.92 MB
+2026-05-19 17:11:45.806081 Epoch [053/200], Step [0096/0096], loss=0.1361, bce=0.0710, dice_loss=0.0651, max_mem=3537.92 MB
+[TIME] Epoch 053, time=15.43s, total=833.35s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 053, train_loss=0.136141, Dice=0.822412, n=1000
+[LR] Epoch 054, lr=0.00010000
+2026-05-19 17:19:36.626847 Epoch [054/200], Step [0050/0096], loss=0.1778, bce=0.0982, dice_loss=0.0796, max_mem=3537.92 MB
+2026-05-19 17:19:42.872661 Epoch [054/200], Step [0096/0096], loss=0.1348, bce=0.0728, dice_loss=0.0620, max_mem=3537.92 MB
+[TIME] Epoch 054, time=15.02s, total=848.37s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 054, train_loss=0.134777, Dice=0.816903, n=1000
+[LR] Epoch 055, lr=0.00010000
+2026-05-19 17:27:52.476497 Epoch [055/200], Step [0050/0096], loss=0.1434, bce=0.0759, dice_loss=0.0675, max_mem=3537.92 MB
+2026-05-19 17:27:58.767935 Epoch [055/200], Step [0096/0096], loss=0.1722, bce=0.0971, dice_loss=0.0751, max_mem=3537.92 MB
+[TIME] Epoch 055, time=15.42s, total=863.79s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 055, train_loss=0.172214, Dice=0.817624, n=1000
+[LR] Epoch 056, lr=0.00010000
+2026-05-19 17:35:00.433734 Epoch [056/200], Step [0050/0096], loss=0.1220, bce=0.0643, dice_loss=0.0576, max_mem=3537.92 MB
+2026-05-19 17:35:06.648787 Epoch [056/200], Step [0096/0096], loss=0.1390, bce=0.0767, dice_loss=0.0623, max_mem=3537.92 MB
+[TIME] Epoch 056, time=15.16s, total=878.94s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 056, train_loss=0.138999, Dice=0.825326, n=1000
+[LR] Epoch 057, lr=0.00010000
+2026-05-19 17:41:24.841103 Epoch [057/200], Step [0050/0096], loss=0.1246, bce=0.0655, dice_loss=0.0592, max_mem=3537.92 MB
+2026-05-19 17:41:31.144224 Epoch [057/200], Step [0096/0096], loss=0.1379, bce=0.0791, dice_loss=0.0588, max_mem=3537.92 MB
+[TIME] Epoch 057, time=15.39s, total=894.34s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 057, train_loss=0.137934, Dice=0.816216, n=1000
+[LR] Epoch 058, lr=0.00010000
+2026-05-19 17:47:46.740201 Epoch [058/200], Step [0050/0096], loss=0.1263, bce=0.0680, dice_loss=0.0582, max_mem=3537.92 MB
+2026-05-19 17:47:52.914524 Epoch [058/200], Step [0096/0096], loss=0.1088, bce=0.0585, dice_loss=0.0503, max_mem=3537.92 MB
+[TIME] Epoch 058, time=15.02s, total=909.36s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 058, train_loss=0.108754, Dice=0.824759, n=1000
+[LR] Epoch 059, lr=0.00010000
+2026-05-19 17:54:06.927469 Epoch [059/200], Step [0050/0096], loss=0.1145, bce=0.0635, dice_loss=0.0511, max_mem=3537.92 MB
+2026-05-19 17:54:13.111458 Epoch [059/200], Step [0096/0096], loss=0.1309, bce=0.0731, dice_loss=0.0578, max_mem=3537.92 MB
+[TIME] Epoch 059, time=14.92s, total=924.28s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 059, train_loss=0.130939, Dice=0.800605, n=1000
+[LR] Epoch 060, lr=0.00010000
+2026-05-19 18:00:40.426360 Epoch [060/200], Step [0050/0096], loss=0.1187, bce=0.0640, dice_loss=0.0548, max_mem=3537.92 MB
+2026-05-19 18:00:46.590480 Epoch [060/200], Step [0096/0096], loss=0.1105, bce=0.0542, dice_loss=0.0564, max_mem=3537.92 MB
+[TIME] Epoch 060, time=15.31s, total=939.59s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 060, train_loss=0.110534, Dice=0.787474, n=1000
+[LR] Epoch 061, lr=0.00010000
+2026-05-19 18:07:21.062133 Epoch [061/200], Step [0050/0096], loss=0.1612, bce=0.0899, dice_loss=0.0713, max_mem=3537.92 MB
+2026-05-19 18:07:27.351818 Epoch [061/200], Step [0096/0096], loss=0.1326, bce=0.0751, dice_loss=0.0575, max_mem=3537.92 MB
+[TIME] Epoch 061, time=15.05s, total=954.64s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 061, train_loss=0.132587, Dice=0.817145, n=1000
+[LR] Epoch 062, lr=0.00010000
+2026-05-19 18:13:42.258477 Epoch [062/200], Step [0050/0096], loss=0.0997, bce=0.0517, dice_loss=0.0481, max_mem=3537.92 MB
+2026-05-19 18:13:48.510395 Epoch [062/200], Step [0096/0096], loss=0.1020, bce=0.0553, dice_loss=0.0466, max_mem=3537.92 MB
+[TIME] Epoch 062, time=15.16s, total=969.81s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 062, train_loss=0.101965, Dice=0.819861, n=1000
+[LR] Epoch 063, lr=0.00010000
+2026-05-19 18:19:55.358158 Epoch [063/200], Step [0050/0096], loss=0.1087, bce=0.0565, dice_loss=0.0522, max_mem=3537.92 MB
+2026-05-19 18:20:01.597424 Epoch [063/200], Step [0096/0096], loss=0.1008, bce=0.0518, dice_loss=0.0490, max_mem=3537.92 MB
+[TIME] Epoch 063, time=15.62s, total=985.42s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 063, train_loss=0.100762, Dice=0.821209, n=1000
+[LR] Epoch 064, lr=0.00010000
+2026-05-19 18:26:18.879839 Epoch [064/200], Step [0050/0096], loss=0.0975, bce=0.0527, dice_loss=0.0448, max_mem=3537.92 MB
+2026-05-19 18:26:25.058735 Epoch [064/200], Step [0096/0096], loss=0.1173, bce=0.0619, dice_loss=0.0554, max_mem=3537.92 MB
+[TIME] Epoch 064, time=15.26s, total=1000.68s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 064, train_loss=0.117262, Dice=0.787860, n=1000
+[LR] Epoch 065, lr=0.00010000
+2026-05-19 18:32:47.506782 Epoch [065/200], Step [0050/0096], loss=0.0896, bce=0.0454, dice_loss=0.0441, max_mem=3537.92 MB
+2026-05-19 18:32:53.677112 Epoch [065/200], Step [0096/0096], loss=0.1062, bce=0.0558, dice_loss=0.0504, max_mem=3537.92 MB
+[TIME] Epoch 065, time=14.98s, total=1015.66s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 065, train_loss=0.106188, Dice=0.810153, n=1000
+[LR] Epoch 066, lr=0.00010000
+2026-05-19 18:39:10.570679 Epoch [066/200], Step [0050/0096], loss=0.1111, bce=0.0589, dice_loss=0.0521, max_mem=3537.92 MB
+2026-05-19 18:39:16.807956 Epoch [066/200], Step [0096/0096], loss=0.1077, bce=0.0544, dice_loss=0.0532, max_mem=3537.92 MB
+[TIME] Epoch 066, time=15.62s, total=1031.28s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 066, train_loss=0.107650, Dice=0.807724, n=1000
+[LR] Epoch 067, lr=0.00010000
+2026-05-19 18:45:15.353056 Epoch [067/200], Step [0050/0096], loss=0.1004, bce=0.0519, dice_loss=0.0486, max_mem=3537.92 MB
+2026-05-19 18:45:21.636390 Epoch [067/200], Step [0096/0096], loss=0.0975, bce=0.0505, dice_loss=0.0470, max_mem=3537.92 MB
+[TIME] Epoch 067, time=14.89s, total=1046.17s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 067, train_loss=0.097484, Dice=0.799206, n=1000
+[LR] Epoch 068, lr=0.00010000
+2026-05-19 18:51:14.469009 Epoch [068/200], Step [0050/0096], loss=0.0934, bce=0.0508, dice_loss=0.0426, max_mem=3537.92 MB
+2026-05-19 18:51:20.690763 Epoch [068/200], Step [0096/0096], loss=0.0889, bce=0.0460, dice_loss=0.0429, max_mem=3537.92 MB
+[TIME] Epoch 068, time=14.66s, total=1060.83s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 068, train_loss=0.088871, Dice=0.806045, n=1000
+[LR] Epoch 069, lr=0.00010000
+2026-05-19 18:57:36.438716 Epoch [069/200], Step [0050/0096], loss=0.0835, bce=0.0431, dice_loss=0.0404, max_mem=3537.92 MB
+2026-05-19 18:57:42.716049 Epoch [069/200], Step [0096/0096], loss=0.0894, bce=0.0467, dice_loss=0.0427, max_mem=3537.92 MB
+[TIME] Epoch 069, time=16.70s, total=1077.53s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 069, train_loss=0.089445, Dice=0.818731, n=1000
+[LR] Epoch 070, lr=0.00010000
+2026-05-19 19:04:11.015250 Epoch [070/200], Step [0050/0096], loss=0.1001, bce=0.0543, dice_loss=0.0458, max_mem=3537.92 MB
+2026-05-19 19:04:17.182014 Epoch [070/200], Step [0096/0096], loss=0.0817, bce=0.0413, dice_loss=0.0405, max_mem=3537.92 MB
+[TIME] Epoch 070, time=15.72s, total=1093.25s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 070, train_loss=0.081744, Dice=0.816222, n=1000
+[LR] Epoch 071, lr=0.00010000
+2026-05-19 19:10:31.828013 Epoch [071/200], Step [0050/0096], loss=0.0815, bce=0.0401, dice_loss=0.0415, max_mem=3537.92 MB
+2026-05-19 19:10:38.074586 Epoch [071/200], Step [0096/0096], loss=0.0895, bce=0.0472, dice_loss=0.0423, max_mem=3537.92 MB
+[TIME] Epoch 071, time=15.02s, total=1108.26s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 071, train_loss=0.089470, Dice=0.814773, n=1000
+[LR] Epoch 072, lr=0.00010000
+2026-05-19 19:16:36.895559 Epoch [072/200], Step [0050/0096], loss=0.0767, bce=0.0392, dice_loss=0.0375, max_mem=3537.92 MB
+2026-05-19 19:16:43.116381 Epoch [072/200], Step [0096/0096], loss=0.0772, bce=0.0381, dice_loss=0.0392, max_mem=3537.92 MB
+[TIME] Epoch 072, time=14.77s, total=1123.03s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 072, train_loss=0.077241, Dice=0.815075, n=1000
+[LR] Epoch 073, lr=0.00010000
+2026-05-19 19:22:42.003908 Epoch [073/200], Step [0050/0096], loss=0.0760, bce=0.0401, dice_loss=0.0359, max_mem=3537.92 MB
+2026-05-19 19:22:48.207759 Epoch [073/200], Step [0096/0096], loss=0.0887, bce=0.0479, dice_loss=0.0408, max_mem=3537.92 MB
+[TIME] Epoch 073, time=15.18s, total=1138.22s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 073, train_loss=0.088725, Dice=0.816508, n=1000
+[LR] Epoch 074, lr=0.00010000
+2026-05-19 19:29:01.509665 Epoch [074/200], Step [0050/0096], loss=0.0890, bce=0.0426, dice_loss=0.0464, max_mem=3537.92 MB
+2026-05-19 19:29:07.677473 Epoch [074/200], Step [0096/0096], loss=0.1257, bce=0.0707, dice_loss=0.0550, max_mem=3537.92 MB
+[TIME] Epoch 074, time=15.16s, total=1153.37s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 074, train_loss=0.125683, Dice=0.778268, n=1000
+[LR] Epoch 075, lr=0.00010000
+2026-05-19 19:35:34.050071 Epoch [075/200], Step [0050/0096], loss=0.0991, bce=0.0513, dice_loss=0.0478, max_mem=3537.92 MB
+2026-05-19 19:35:40.208843 Epoch [075/200], Step [0096/0096], loss=0.1310, bce=0.0722, dice_loss=0.0588, max_mem=3537.92 MB
+[TIME] Epoch 075, time=14.56s, total=1167.94s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 075, train_loss=0.130991, Dice=0.709798, n=1000
+[LR] Epoch 076, lr=0.00010000
+2026-05-19 19:41:54.779061 Epoch [076/200], Step [0050/0096], loss=0.1144, bce=0.0638, dice_loss=0.0506, max_mem=3537.92 MB
+2026-05-19 19:42:00.964101 Epoch [076/200], Step [0096/0096], loss=0.0887, bce=0.0447, dice_loss=0.0441, max_mem=3537.92 MB
+[TIME] Epoch 076, time=14.65s, total=1182.59s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 076, train_loss=0.088739, Dice=0.815294, n=1000
+[LR] Epoch 077, lr=0.00010000
+2026-05-19 19:47:56.043657 Epoch [077/200], Step [0050/0096], loss=0.0859, bce=0.0433, dice_loss=0.0426, max_mem=3537.92 MB
+2026-05-19 19:48:02.302403 Epoch [077/200], Step [0096/0096], loss=0.1146, bce=0.0599, dice_loss=0.0547, max_mem=3537.92 MB
+[TIME] Epoch 077, time=15.26s, total=1197.85s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 077, train_loss=0.114574, Dice=0.791753, n=1000
+[LR] Epoch 078, lr=0.00010000
+2026-05-19 19:53:58.168539 Epoch [078/200], Step [0050/0096], loss=0.1254, bce=0.0624, dice_loss=0.0630, max_mem=3537.92 MB
+2026-05-19 19:54:04.399180 Epoch [078/200], Step [0096/0096], loss=0.0864, bce=0.0430, dice_loss=0.0434, max_mem=3537.92 MB
+[TIME] Epoch 078, time=14.49s, total=1212.34s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 078, train_loss=0.086374, Dice=0.804934, n=1000
+[LR] Epoch 079, lr=0.00010000
+2026-05-19 20:00:15.674151 Epoch [079/200], Step [0050/0096], loss=0.0869, bce=0.0471, dice_loss=0.0398, max_mem=3537.92 MB
+2026-05-19 20:00:21.863289 Epoch [079/200], Step [0096/0096], loss=0.0760, bce=0.0374, dice_loss=0.0386, max_mem=3537.92 MB
+[TIME] Epoch 079, time=14.47s, total=1226.82s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 079, train_loss=0.075988, Dice=0.822222, n=1000
+[LR] Epoch 080, lr=0.00010000
+2026-05-19 20:06:45.547758 Epoch [080/200], Step [0050/0096], loss=0.0735, bce=0.0365, dice_loss=0.0370, max_mem=3537.92 MB
+2026-05-19 20:06:51.727650 Epoch [080/200], Step [0096/0096], loss=0.0688, bce=0.0344, dice_loss=0.0344, max_mem=3537.92 MB
+[TIME] Epoch 080, time=15.08s, total=1241.90s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 080, train_loss=0.068813, Dice=0.811718, n=1000
+[LR] Epoch 081, lr=0.00010000
+2026-05-19 20:13:27.271486 Epoch [081/200], Step [0050/0096], loss=0.0663, bce=0.0343, dice_loss=0.0320, max_mem=3537.92 MB
+2026-05-19 20:13:33.480378 Epoch [081/200], Step [0096/0096], loss=0.0649, bce=0.0326, dice_loss=0.0323, max_mem=3537.92 MB
+[TIME] Epoch 081, time=14.96s, total=1256.86s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 081, train_loss=0.064912, Dice=0.821420, n=1000
+[LR] Epoch 082, lr=0.00010000
+2026-05-19 20:19:53.569723 Epoch [082/200], Step [0050/0096], loss=0.0603, bce=0.0291, dice_loss=0.0312, max_mem=3537.92 MB
+2026-05-19 20:19:59.782588 Epoch [082/200], Step [0096/0096], loss=0.0613, bce=0.0302, dice_loss=0.0310, max_mem=3537.92 MB
+[TIME] Epoch 082, time=15.54s, total=1272.40s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 082, train_loss=0.061262, Dice=0.831786, n=1000
+[BEST] Dice improved 0.826798 -> 0.831786
+[LR] Epoch 083, lr=0.00010000
+2026-05-19 20:25:55.559314 Epoch [083/200], Step [0050/0096], loss=0.0587, bce=0.0281, dice_loss=0.0306, max_mem=3537.92 MB
+2026-05-19 20:26:01.775758 Epoch [083/200], Step [0096/0096], loss=0.0621, bce=0.0328, dice_loss=0.0293, max_mem=3537.92 MB
+[TIME] Epoch 083, time=14.88s, total=1287.28s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 083, train_loss=0.062128, Dice=0.821957, n=1000
+[LR] Epoch 084, lr=0.00010000
+2026-05-19 20:32:35.151006 Epoch [084/200], Step [0050/0096], loss=0.0593, bce=0.0286, dice_loss=0.0307, max_mem=3537.92 MB
+2026-05-19 20:32:41.331298 Epoch [084/200], Step [0096/0096], loss=0.0607, bce=0.0300, dice_loss=0.0306, max_mem=3537.92 MB
+[TIME] Epoch 084, time=15.87s, total=1303.15s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 084, train_loss=0.060671, Dice=0.824374, n=1000
+[LR] Epoch 085, lr=0.00010000
+2026-05-19 20:39:20.390330 Epoch [085/200], Step [0050/0096], loss=0.0558, bce=0.0265, dice_loss=0.0292, max_mem=3537.92 MB
+2026-05-19 20:39:26.580368 Epoch [085/200], Step [0096/0096], loss=0.0593, bce=0.0280, dice_loss=0.0313, max_mem=3537.92 MB
+[TIME] Epoch 085, time=14.58s, total=1317.73s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 085, train_loss=0.059291, Dice=0.816972, n=1000
+[LR] Epoch 086, lr=0.00010000
+2026-05-19 20:46:19.136313 Epoch [086/200], Step [0050/0096], loss=0.0568, bce=0.0273, dice_loss=0.0294, max_mem=3537.92 MB
+2026-05-19 20:46:25.540745 Epoch [086/200], Step [0096/0096], loss=0.0639, bce=0.0319, dice_loss=0.0320, max_mem=3537.92 MB
+[TIME] Epoch 086, time=15.86s, total=1333.59s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 086, train_loss=0.063879, Dice=0.805058, n=1000
+[LR] Epoch 087, lr=0.00010000
+2026-05-19 20:53:01.980123 Epoch [087/200], Step [0050/0096], loss=0.0569, bce=0.0270, dice_loss=0.0300, max_mem=3537.92 MB
+2026-05-19 20:53:08.260770 Epoch [087/200], Step [0096/0096], loss=0.0563, bce=0.0270, dice_loss=0.0293, max_mem=3537.92 MB
+[TIME] Epoch 087, time=15.72s, total=1349.31s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 087, train_loss=0.056262, Dice=0.827341, n=1000
+[LR] Epoch 088, lr=0.00010000
+2026-05-19 20:59:17.102312 Epoch [088/200], Step [0050/0096], loss=0.0546, bce=0.0286, dice_loss=0.0259, max_mem=3537.92 MB
+2026-05-19 20:59:23.381617 Epoch [088/200], Step [0096/0096], loss=0.0545, bce=0.0257, dice_loss=0.0288, max_mem=3537.92 MB
+[TIME] Epoch 088, time=15.65s, total=1364.96s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 088, train_loss=0.054474, Dice=0.813718, n=1000
+[LR] Epoch 089, lr=0.00010000
+2026-05-19 21:05:51.503918 Epoch [089/200], Step [0050/0096], loss=0.0816, bce=0.0439, dice_loss=0.0377, max_mem=3537.92 MB
+2026-05-19 21:05:57.709805 Epoch [089/200], Step [0096/0096], loss=0.0631, bce=0.0309, dice_loss=0.0321, max_mem=3537.92 MB
+[TIME] Epoch 089, time=15.09s, total=1380.05s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 089, train_loss=0.063071, Dice=0.821767, n=1000
+[LR] Epoch 090, lr=0.00010000
+2026-05-19 21:12:25.633794 Epoch [090/200], Step [0050/0096], loss=0.0673, bce=0.0318, dice_loss=0.0355, max_mem=3537.92 MB
+2026-05-19 21:12:31.816735 Epoch [090/200], Step [0096/0096], loss=0.0889, bce=0.0440, dice_loss=0.0449, max_mem=3537.92 MB
+[TIME] Epoch 090, time=14.83s, total=1394.88s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 090, train_loss=0.088897, Dice=0.825565, n=1000
+[LR] Epoch 091, lr=0.00010000
+2026-05-19 21:18:37.299308 Epoch [091/200], Step [0050/0096], loss=0.0811, bce=0.0366, dice_loss=0.0445, max_mem=3537.92 MB
+2026-05-19 21:18:43.540232 Epoch [091/200], Step [0096/0096], loss=0.0682, bce=0.0364, dice_loss=0.0319, max_mem=3537.92 MB
+[TIME] Epoch 091, time=15.01s, total=1409.89s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 091, train_loss=0.068208, Dice=0.815788, n=1000
+[LR] Epoch 092, lr=0.00010000
+2026-05-19 21:24:21.138202 Epoch [092/200], Step [0050/0096], loss=0.0553, bce=0.0283, dice_loss=0.0270, max_mem=3537.92 MB
+2026-05-19 21:24:27.432190 Epoch [092/200], Step [0096/0096], loss=0.0645, bce=0.0300, dice_loss=0.0346, max_mem=3537.92 MB
+[TIME] Epoch 092, time=15.44s, total=1425.33s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 092, train_loss=0.064544, Dice=0.813307, n=1000
+[LR] Epoch 093, lr=0.00010000
+2026-05-19 21:28:22.116454 Epoch [093/200], Step [0050/0096], loss=0.0666, bce=0.0322, dice_loss=0.0344, max_mem=3537.92 MB
+2026-05-19 21:28:28.270841 Epoch [093/200], Step [0096/0096], loss=0.0539, bce=0.0257, dice_loss=0.0282, max_mem=3537.92 MB
+[TIME] Epoch 093, time=15.41s, total=1440.74s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 093, train_loss=0.053868, Dice=0.823481, n=1000
+[LR] Epoch 094, lr=0.00010000
+2026-05-19 21:31:40.007500 Epoch [094/200], Step [0050/0096], loss=0.0586, bce=0.0309, dice_loss=0.0277, max_mem=3537.92 MB
+2026-05-19 21:31:46.160874 Epoch [094/200], Step [0096/0096], loss=0.0571, bce=0.0265, dice_loss=0.0306, max_mem=3537.92 MB
+[TIME] Epoch 094, time=15.14s, total=1455.88s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 094, train_loss=0.057114, Dice=0.819540, n=1000
+[LR] Epoch 095, lr=0.00010000
+2026-05-19 21:34:59.120126 Epoch [095/200], Step [0050/0096], loss=0.0524, bce=0.0244, dice_loss=0.0281, max_mem=3537.92 MB
+2026-05-19 21:35:05.290594 Epoch [095/200], Step [0096/0096], loss=0.0525, bce=0.0253, dice_loss=0.0272, max_mem=3537.92 MB
+[TIME] Epoch 095, time=14.57s, total=1470.45s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 095, train_loss=0.052476, Dice=0.823617, n=1000
+[LR] Epoch 096, lr=0.00010000
+2026-05-19 21:38:19.807079 Epoch [096/200], Step [0050/0096], loss=0.0479, bce=0.0239, dice_loss=0.0240, max_mem=3537.92 MB
+2026-05-19 21:38:25.963827 Epoch [096/200], Step [0096/0096], loss=0.0466, bce=0.0217, dice_loss=0.0248, max_mem=3537.92 MB
+[TIME] Epoch 096, time=14.67s, total=1485.12s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 096, train_loss=0.046557, Dice=0.826285, n=1000
+[LR] Epoch 097, lr=0.00010000
+2026-05-19 21:41:50.481090 Epoch [097/200], Step [0050/0096], loss=0.0473, bce=0.0239, dice_loss=0.0234, max_mem=3537.92 MB
+2026-05-19 21:41:56.651227 Epoch [097/200], Step [0096/0096], loss=0.0443, bce=0.0210, dice_loss=0.0233, max_mem=3537.92 MB
+[TIME] Epoch 097, time=14.82s, total=1499.94s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 097, train_loss=0.044288, Dice=0.826821, n=1000
+[LR] Epoch 098, lr=0.00010000
+2026-05-19 21:45:12.808896 Epoch [098/200], Step [0050/0096], loss=0.0447, bce=0.0209, dice_loss=0.0237, max_mem=3537.92 MB
+2026-05-19 21:45:18.969376 Epoch [098/200], Step [0096/0096], loss=0.0443, bce=0.0212, dice_loss=0.0231, max_mem=3537.92 MB
+[TIME] Epoch 098, time=14.78s, total=1514.72s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 098, train_loss=0.044324, Dice=0.825840, n=1000
+[LR] Epoch 099, lr=0.00010000
+2026-05-19 21:48:34.098820 Epoch [099/200], Step [0050/0096], loss=0.0457, bce=0.0229, dice_loss=0.0227, max_mem=3537.92 MB
+2026-05-19 21:48:40.253644 Epoch [099/200], Step [0096/0096], loss=0.0441, bce=0.0211, dice_loss=0.0230, max_mem=3537.92 MB
+[TIME] Epoch 099, time=14.83s, total=1529.55s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 099, train_loss=0.044119, Dice=0.820290, n=1000
+[LR] Epoch 100, lr=0.00010000
+2026-05-19 21:51:45.507046 Epoch [100/200], Step [0050/0096], loss=0.0411, bce=0.0189, dice_loss=0.0223, max_mem=3537.92 MB
+2026-05-19 21:51:51.675467 Epoch [100/200], Step [0096/0096], loss=0.0410, bce=0.0206, dice_loss=0.0204, max_mem=3537.92 MB
+[TIME] Epoch 100, time=14.54s, total=1544.09s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 100, train_loss=0.040981, Dice=0.831182, n=1000
+[LR] Epoch 101, lr=0.00010000
+2026-05-19 21:56:44.761218 Epoch [101/200], Step [0050/0096], loss=0.0394, bce=0.0181, dice_loss=0.0213, max_mem=3537.92 MB
+2026-05-19 21:56:50.954130 Epoch [101/200], Step [0096/0096], loss=0.0400, bce=0.0188, dice_loss=0.0212, max_mem=3537.92 MB
+[TIME] Epoch 101, time=14.70s, total=1558.79s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 101, train_loss=0.039999, Dice=0.824850, n=1000
+[LR] Epoch 102, lr=0.00010000
+2026-05-19 22:01:02.084190 Epoch [102/200], Step [0050/0096], loss=0.0409, bce=0.0205, dice_loss=0.0205, max_mem=3537.92 MB
+2026-05-19 22:01:08.231338 Epoch [102/200], Step [0096/0096], loss=0.0391, bce=0.0171, dice_loss=0.0220, max_mem=3537.92 MB
+[TIME] Epoch 102, time=14.66s, total=1573.45s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 102, train_loss=0.039141, Dice=0.822345, n=1000
+[LR] Epoch 103, lr=0.00010000
+2026-05-19 22:04:25.802813 Epoch [103/200], Step [0050/0096], loss=0.0418, bce=0.0205, dice_loss=0.0213, max_mem=3537.92 MB
+2026-05-19 22:04:31.980196 Epoch [103/200], Step [0096/0096], loss=0.0394, bce=0.0182, dice_loss=0.0212, max_mem=3537.92 MB
+[TIME] Epoch 103, time=15.68s, total=1589.13s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 103, train_loss=0.039413, Dice=0.824269, n=1000
+[LR] Epoch 104, lr=0.00010000
+2026-05-19 22:07:56.042285 Epoch [104/200], Step [0050/0096], loss=0.0416, bce=0.0199, dice_loss=0.0218, max_mem=3537.92 MB
+2026-05-19 22:08:02.205853 Epoch [104/200], Step [0096/0096], loss=0.0410, bce=0.0191, dice_loss=0.0220, max_mem=3537.92 MB
+[TIME] Epoch 104, time=15.15s, total=1604.27s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 104, train_loss=0.041004, Dice=0.829864, n=1000
+[LR] Epoch 105, lr=0.00010000
+2026-05-19 22:12:09.150095 Epoch [105/200], Step [0050/0096], loss=0.1057, bce=0.0575, dice_loss=0.0482, max_mem=3537.92 MB
+2026-05-19 22:12:15.325478 Epoch [105/200], Step [0096/0096], loss=0.0955, bce=0.0490, dice_loss=0.0465, max_mem=3537.92 MB
+[TIME] Epoch 105, time=14.87s, total=1619.15s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 105, train_loss=0.095474, Dice=0.786270, n=1000
+[LR] Epoch 106, lr=0.00010000
+2026-05-19 22:15:40.341131 Epoch [106/200], Step [0050/0096], loss=0.1524, bce=0.0790, dice_loss=0.0734, max_mem=3537.92 MB
+2026-05-19 22:15:46.500180 Epoch [106/200], Step [0096/0096], loss=0.0987, bce=0.0494, dice_loss=0.0493, max_mem=3537.92 MB
+[TIME] Epoch 106, time=14.92s, total=1634.07s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 106, train_loss=0.098735, Dice=0.795718, n=1000
+[LR] Epoch 107, lr=0.00010000
+2026-05-19 22:18:58.816567 Epoch [107/200], Step [0050/0096], loss=0.0818, bce=0.0397, dice_loss=0.0422, max_mem=3537.92 MB
+2026-05-19 22:19:04.980418 Epoch [107/200], Step [0096/0096], loss=0.0554, bce=0.0255, dice_loss=0.0299, max_mem=3537.92 MB
+[TIME] Epoch 107, time=14.40s, total=1648.47s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 107, train_loss=0.055401, Dice=0.781690, n=1000
+[LR] Epoch 108, lr=0.00010000
+2026-05-19 22:22:26.662150 Epoch [108/200], Step [0050/0096], loss=0.0565, bce=0.0286, dice_loss=0.0279, max_mem=3537.92 MB
+2026-05-19 22:22:32.832259 Epoch [108/200], Step [0096/0096], loss=0.0482, bce=0.0223, dice_loss=0.0259, max_mem=3537.92 MB
+[TIME] Epoch 108, time=15.57s, total=1664.04s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 108, train_loss=0.048171, Dice=0.820833, n=1000
+[LR] Epoch 109, lr=0.00010000
+2026-05-19 22:25:56.954024 Epoch [109/200], Step [0050/0096], loss=0.0540, bce=0.0270, dice_loss=0.0270, max_mem=3537.92 MB
+2026-05-19 22:26:03.120665 Epoch [109/200], Step [0096/0096], loss=0.0466, bce=0.0230, dice_loss=0.0236, max_mem=3537.92 MB
+[TIME] Epoch 109, time=15.28s, total=1679.32s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 109, train_loss=0.046620, Dice=0.818695, n=1000
+[LR] Epoch 110, lr=0.00010000
+2026-05-19 22:29:23.417533 Epoch [110/200], Step [0050/0096], loss=0.0401, bce=0.0196, dice_loss=0.0205, max_mem=3537.92 MB
+2026-05-19 22:29:29.571951 Epoch [110/200], Step [0096/0096], loss=0.0364, bce=0.0166, dice_loss=0.0198, max_mem=3537.92 MB
+[TIME] Epoch 110, time=14.64s, total=1693.96s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 110, train_loss=0.036397, Dice=0.815018, n=1000
+[LR] Epoch 111, lr=0.00010000
+2026-05-19 22:32:48.931025 Epoch [111/200], Step [0050/0096], loss=0.0373, bce=0.0175, dice_loss=0.0198, max_mem=3537.92 MB
+2026-05-19 22:32:55.114628 Epoch [111/200], Step [0096/0096], loss=0.0375, bce=0.0177, dice_loss=0.0198, max_mem=3537.92 MB
+[TIME] Epoch 111, time=15.37s, total=1709.33s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 111, train_loss=0.037453, Dice=0.816514, n=1000
+[LR] Epoch 112, lr=0.00010000
+2026-05-19 22:36:05.004581 Epoch [112/200], Step [0050/0096], loss=0.0347, bce=0.0166, dice_loss=0.0181, max_mem=3537.92 MB
+2026-05-19 22:36:11.184575 Epoch [112/200], Step [0096/0096], loss=0.0362, bce=0.0170, dice_loss=0.0192, max_mem=3537.92 MB
+[TIME] Epoch 112, time=14.45s, total=1723.78s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 112, train_loss=0.036159, Dice=0.818032, n=1000
+[LR] Epoch 113, lr=0.00010000
+2026-05-19 22:39:21.037322 Epoch [113/200], Step [0050/0096], loss=0.0379, bce=0.0188, dice_loss=0.0191, max_mem=3537.92 MB
+2026-05-19 22:39:27.199735 Epoch [113/200], Step [0096/0096], loss=0.0347, bce=0.0160, dice_loss=0.0187, max_mem=3537.92 MB
+[TIME] Epoch 113, time=14.63s, total=1738.41s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 113, train_loss=0.034697, Dice=0.818200, n=1000
+[LR] Epoch 114, lr=0.00010000
+2026-05-19 22:42:35.673225 Epoch [114/200], Step [0050/0096], loss=0.0346, bce=0.0160, dice_loss=0.0186, max_mem=3537.92 MB
+2026-05-19 22:42:41.836276 Epoch [114/200], Step [0096/0096], loss=0.0417, bce=0.0201, dice_loss=0.0215, max_mem=3537.92 MB
+[TIME] Epoch 114, time=14.94s, total=1753.35s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 114, train_loss=0.041671, Dice=0.767612, n=1000
+[LR] Epoch 115, lr=0.00010000
+2026-05-19 22:45:49.585593 Epoch [115/200], Step [0050/0096], loss=0.0367, bce=0.0174, dice_loss=0.0192, max_mem=3537.92 MB
+2026-05-19 22:45:55.728060 Epoch [115/200], Step [0096/0096], loss=0.0353, bce=0.0168, dice_loss=0.0185, max_mem=3537.92 MB
+[TIME] Epoch 115, time=14.35s, total=1767.70s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 115, train_loss=0.035319, Dice=0.816586, n=1000
+[LR] Epoch 116, lr=0.00010000
+2026-05-19 22:49:04.104872 Epoch [116/200], Step [0050/0096], loss=0.0336, bce=0.0160, dice_loss=0.0176, max_mem=3537.92 MB
+2026-05-19 22:49:10.280529 Epoch [116/200], Step [0096/0096], loss=0.0329, bce=0.0151, dice_loss=0.0178, max_mem=3537.92 MB
+[TIME] Epoch 116, time=15.03s, total=1782.73s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 116, train_loss=0.032928, Dice=0.817430, n=1000
+[LR] Epoch 117, lr=0.00010000
+2026-05-19 22:52:24.522160 Epoch [117/200], Step [0050/0096], loss=0.0347, bce=0.0160, dice_loss=0.0188, max_mem=3537.92 MB
+2026-05-19 22:52:30.675889 Epoch [117/200], Step [0096/0096], loss=0.0338, bce=0.0162, dice_loss=0.0176, max_mem=3537.92 MB
+[TIME] Epoch 117, time=15.92s, total=1798.65s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 117, train_loss=0.033769, Dice=0.814024, n=1000
+[LR] Epoch 118, lr=0.00010000
+2026-05-19 22:56:37.646057 Epoch [118/200], Step [0050/0096], loss=0.0332, bce=0.0168, dice_loss=0.0165, max_mem=3537.92 MB
+2026-05-19 22:56:43.819448 Epoch [118/200], Step [0096/0096], loss=0.0320, bce=0.0145, dice_loss=0.0175, max_mem=3537.92 MB
+[TIME] Epoch 118, time=14.66s, total=1813.31s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 118, train_loss=0.031990, Dice=0.827577, n=1000
+[LR] Epoch 119, lr=0.00010000
+2026-05-19 23:01:10.838222 Epoch [119/200], Step [0050/0096], loss=0.0304, bce=0.0134, dice_loss=0.0171, max_mem=3537.92 MB
+2026-05-19 23:01:17.020110 Epoch [119/200], Step [0096/0096], loss=0.0311, bce=0.0146, dice_loss=0.0165, max_mem=3537.92 MB
+[TIME] Epoch 119, time=14.85s, total=1828.16s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 119, train_loss=0.031112, Dice=0.822769, n=1000
+[LR] Epoch 120, lr=0.00010000
+2026-05-19 23:06:19.335506 Epoch [120/200], Step [0050/0096], loss=0.0301, bce=0.0135, dice_loss=0.0166, max_mem=3537.92 MB
+2026-05-19 23:06:25.500564 Epoch [120/200], Step [0096/0096], loss=0.0323, bce=0.0151, dice_loss=0.0172, max_mem=3537.92 MB
+[TIME] Epoch 120, time=14.43s, total=1842.59s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 120, train_loss=0.032269, Dice=0.822592, n=1000
+[LR] Epoch 121, lr=0.00010000
+2026-05-19 23:10:19.274169 Epoch [121/200], Step [0050/0096], loss=0.0308, bce=0.0137, dice_loss=0.0171, max_mem=3537.92 MB
+2026-05-19 23:10:25.438801 Epoch [121/200], Step [0096/0096], loss=0.0321, bce=0.0148, dice_loss=0.0173, max_mem=3537.92 MB
+[TIME] Epoch 121, time=15.35s, total=1857.94s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 121, train_loss=0.032096, Dice=0.820472, n=1000
+[LR] Epoch 122, lr=0.00010000
+2026-05-19 23:15:45.885406 Epoch [122/200], Step [0050/0096], loss=0.0308, bce=0.0140, dice_loss=0.0168, max_mem=3537.92 MB
+2026-05-19 23:15:52.049269 Epoch [122/200], Step [0096/0096], loss=0.0311, bce=0.0146, dice_loss=0.0164, max_mem=3537.92 MB
+[TIME] Epoch 122, time=14.66s, total=1872.60s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 122, train_loss=0.031076, Dice=0.820907, n=1000
+[LR] Epoch 123, lr=0.00010000
+2026-05-19 23:21:17.828376 Epoch [123/200], Step [0050/0096], loss=0.0298, bce=0.0133, dice_loss=0.0165, max_mem=3537.92 MB
+2026-05-19 23:21:24.016221 Epoch [123/200], Step [0096/0096], loss=0.0921, bce=0.0492, dice_loss=0.0429, max_mem=3537.92 MB
+[TIME] Epoch 123, time=15.19s, total=1887.79s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 123, train_loss=0.092145, Dice=0.703927, n=1000
+[LR] Epoch 124, lr=0.00010000
+2026-05-19 23:26:49.539040 Epoch [124/200], Step [0050/0096], loss=0.1561, bce=0.0816, dice_loss=0.0745, max_mem=3537.92 MB
+2026-05-19 23:26:55.705379 Epoch [124/200], Step [0096/0096], loss=0.0952, bce=0.0481, dice_loss=0.0471, max_mem=3537.92 MB
+[TIME] Epoch 124, time=15.72s, total=1903.51s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 124, train_loss=0.095188, Dice=0.818170, n=1000
+[LR] Epoch 125, lr=0.00010000
+2026-05-19 23:32:15.027955 Epoch [125/200], Step [0050/0096], loss=0.0597, bce=0.0310, dice_loss=0.0287, max_mem=3537.92 MB
+2026-05-19 23:32:21.214277 Epoch [125/200], Step [0096/0096], loss=0.0472, bce=0.0232, dice_loss=0.0239, max_mem=3537.92 MB
+[TIME] Epoch 125, time=14.52s, total=1918.03s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 125, train_loss=0.047162, Dice=0.820745, n=1000
+[LR] Epoch 126, lr=0.00010000
+2026-05-19 23:37:45.259214 Epoch [126/200], Step [0050/0096], loss=0.0361, bce=0.0173, dice_loss=0.0189, max_mem=3537.92 MB
+2026-05-19 23:37:51.432516 Epoch [126/200], Step [0096/0096], loss=0.0401, bce=0.0193, dice_loss=0.0208, max_mem=3537.92 MB
+[TIME] Epoch 126, time=15.28s, total=1933.31s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 126, train_loss=0.040101, Dice=0.826975, n=1000
+[LR] Epoch 127, lr=0.00010000
+2026-05-19 23:43:06.734982 Epoch [127/200], Step [0050/0096], loss=0.0363, bce=0.0176, dice_loss=0.0187, max_mem=3537.92 MB
+2026-05-19 23:43:12.887375 Epoch [127/200], Step [0096/0096], loss=0.0341, bce=0.0149, dice_loss=0.0192, max_mem=3537.92 MB
+[TIME] Epoch 127, time=14.93s, total=1948.23s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 127, train_loss=0.034148, Dice=0.811217, n=1000
+[LR] Epoch 128, lr=0.00010000
+2026-05-19 23:48:35.865732 Epoch [128/200], Step [0050/0096], loss=0.0331, bce=0.0153, dice_loss=0.0177, max_mem=3537.92 MB
+2026-05-19 23:48:42.060488 Epoch [128/200], Step [0096/0096], loss=0.0302, bce=0.0137, dice_loss=0.0165, max_mem=3537.92 MB
+[TIME] Epoch 128, time=15.16s, total=1963.40s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 128, train_loss=0.030179, Dice=0.823156, n=1000
+[LR] Epoch 129, lr=0.00010000
+2026-05-19 23:54:05.883218 Epoch [129/200], Step [0050/0096], loss=0.0318, bce=0.0146, dice_loss=0.0172, max_mem=3537.92 MB
+2026-05-19 23:54:12.045149 Epoch [129/200], Step [0096/0096], loss=0.0303, bce=0.0139, dice_loss=0.0164, max_mem=3537.92 MB
+[TIME] Epoch 129, time=15.13s, total=1978.53s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 129, train_loss=0.030290, Dice=0.826304, n=1000
+[LR] Epoch 130, lr=0.00010000
+2026-05-19 23:59:26.977482 Epoch [130/200], Step [0050/0096], loss=0.0298, bce=0.0137, dice_loss=0.0161, max_mem=3537.92 MB
+2026-05-19 23:59:33.140721 Epoch [130/200], Step [0096/0096], loss=0.0294, bce=0.0134, dice_loss=0.0160, max_mem=3537.92 MB
+[TIME] Epoch 130, time=15.16s, total=1993.69s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 130, train_loss=0.029449, Dice=0.815680, n=1000
+[LR] Epoch 131, lr=0.00010000
+2026-05-20 00:04:26.638728 Epoch [131/200], Step [0050/0096], loss=0.0297, bce=0.0127, dice_loss=0.0170, max_mem=3537.92 MB
+2026-05-20 00:04:32.802359 Epoch [131/200], Step [0096/0096], loss=0.0296, bce=0.0145, dice_loss=0.0151, max_mem=3537.92 MB
+[TIME] Epoch 131, time=15.23s, total=2008.92s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 131, train_loss=0.029577, Dice=0.820369, n=1000
+[LR] Epoch 132, lr=0.00010000
+2026-05-20 00:09:40.561479 Epoch [132/200], Step [0050/0096], loss=0.0280, bce=0.0131, dice_loss=0.0149, max_mem=3537.92 MB
+2026-05-20 00:09:46.729656 Epoch [132/200], Step [0096/0096], loss=0.0328, bce=0.0146, dice_loss=0.0181, max_mem=3537.92 MB
+[TIME] Epoch 132, time=14.93s, total=2023.85s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 132, train_loss=0.032755, Dice=0.820844, n=1000
+[LR] Epoch 133, lr=0.00010000
+2026-05-20 00:14:49.143595 Epoch [133/200], Step [0050/0096], loss=0.0866, bce=0.0483, dice_loss=0.0383, max_mem=3537.92 MB
+2026-05-20 00:14:55.303644 Epoch [133/200], Step [0096/0096], loss=0.0564, bce=0.0276, dice_loss=0.0289, max_mem=3537.92 MB
+[TIME] Epoch 133, time=14.52s, total=2038.37s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 133, train_loss=0.056426, Dice=0.780263, n=1000
+[LR] Epoch 134, lr=0.00010000
+2026-05-20 00:19:53.454266 Epoch [134/200], Step [0050/0096], loss=0.0395, bce=0.0195, dice_loss=0.0200, max_mem=3537.92 MB
+2026-05-20 00:19:59.611913 Epoch [134/200], Step [0096/0096], loss=0.0351, bce=0.0170, dice_loss=0.0181, max_mem=3537.92 MB
+[TIME] Epoch 134, time=14.82s, total=2053.19s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 134, train_loss=0.035079, Dice=0.815853, n=1000
+[LR] Epoch 135, lr=0.00010000
+2026-05-20 00:24:59.146405 Epoch [135/200], Step [0050/0096], loss=0.0330, bce=0.0154, dice_loss=0.0175, max_mem=3537.92 MB
+2026-05-20 00:25:05.307070 Epoch [135/200], Step [0096/0096], loss=0.0380, bce=0.0177, dice_loss=0.0203, max_mem=3537.92 MB
+[TIME] Epoch 135, time=14.30s, total=2067.49s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 135, train_loss=0.038024, Dice=0.806179, n=1000
+[LR] Epoch 136, lr=0.00010000
+2026-05-20 00:29:11.363550 Epoch [136/200], Step [0050/0096], loss=0.0320, bce=0.0154, dice_loss=0.0166, max_mem=3537.92 MB
+2026-05-20 00:29:17.541825 Epoch [136/200], Step [0096/0096], loss=0.0307, bce=0.0136, dice_loss=0.0171, max_mem=3537.92 MB
+[TIME] Epoch 136, time=15.05s, total=2082.54s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 136, train_loss=0.030694, Dice=0.822448, n=1000
+[LR] Epoch 137, lr=0.00010000
+2026-05-20 00:32:34.799432 Epoch [137/200], Step [0050/0096], loss=0.0281, bce=0.0126, dice_loss=0.0155, max_mem=3537.92 MB
+2026-05-20 00:32:40.982129 Epoch [137/200], Step [0096/0096], loss=0.0293, bce=0.0139, dice_loss=0.0153, max_mem=3537.92 MB
+[TIME] Epoch 137, time=14.50s, total=2097.05s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 137, train_loss=0.029256, Dice=0.819898, n=1000
+[LR] Epoch 138, lr=0.00010000
+2026-05-20 00:35:56.797669 Epoch [138/200], Step [0050/0096], loss=0.0272, bce=0.0122, dice_loss=0.0150, max_mem=3537.92 MB
+2026-05-20 00:36:02.967667 Epoch [138/200], Step [0096/0096], loss=0.0332, bce=0.0160, dice_loss=0.0172, max_mem=3537.92 MB
+[TIME] Epoch 138, time=14.62s, total=2111.66s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 138, train_loss=0.033216, Dice=0.797339, n=1000
+[LR] Epoch 139, lr=0.00010000
+2026-05-20 00:39:19.887387 Epoch [139/200], Step [0050/0096], loss=0.0377, bce=0.0190, dice_loss=0.0187, max_mem=3537.92 MB
+2026-05-20 00:39:26.066230 Epoch [139/200], Step [0096/0096], loss=0.0318, bce=0.0147, dice_loss=0.0171, max_mem=3537.92 MB
+[TIME] Epoch 139, time=15.19s, total=2126.85s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 139, train_loss=0.031815, Dice=0.812858, n=1000
+[LR] Epoch 140, lr=0.00010000
+2026-05-20 00:42:58.123903 Epoch [140/200], Step [0050/0096], loss=0.0295, bce=0.0134, dice_loss=0.0161, max_mem=3537.92 MB
+2026-05-20 00:43:04.293331 Epoch [140/200], Step [0096/0096], loss=0.0297, bce=0.0143, dice_loss=0.0154, max_mem=3537.92 MB
+[TIME] Epoch 140, time=15.75s, total=2142.60s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 140, train_loss=0.029706, Dice=0.828594, n=1000
+[LR] Epoch 141, lr=0.00010000
+2026-05-20 00:46:07.578966 Epoch [141/200], Step [0050/0096], loss=0.0323, bce=0.0153, dice_loss=0.0170, max_mem=3537.92 MB
+2026-05-20 00:46:13.738441 Epoch [141/200], Step [0096/0096], loss=0.0313, bce=0.0152, dice_loss=0.0161, max_mem=3537.92 MB
+[TIME] Epoch 141, time=14.96s, total=2157.56s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 141, train_loss=0.031272, Dice=0.828893, n=1000
+[LR] Epoch 142, lr=0.00010000
+2026-05-20 00:49:32.468874 Epoch [142/200], Step [0050/0096], loss=0.0291, bce=0.0133, dice_loss=0.0158, max_mem=3537.92 MB
+2026-05-20 00:49:38.653591 Epoch [142/200], Step [0096/0096], loss=0.0278, bce=0.0126, dice_loss=0.0153, max_mem=3537.92 MB
+[TIME] Epoch 142, time=15.90s, total=2173.47s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 142, train_loss=0.027848, Dice=0.819118, n=1000
+[LR] Epoch 143, lr=0.00010000
+2026-05-20 00:52:53.436358 Epoch [143/200], Step [0050/0096], loss=0.0266, bce=0.0114, dice_loss=0.0151, max_mem=3537.92 MB
+2026-05-20 00:52:59.577056 Epoch [143/200], Step [0096/0096], loss=0.0258, bce=0.0122, dice_loss=0.0136, max_mem=3537.92 MB
+[TIME] Epoch 143, time=14.67s, total=2188.14s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 143, train_loss=0.025808, Dice=0.828793, n=1000
+[LR] Epoch 144, lr=0.00010000
+2026-05-20 00:56:12.379560 Epoch [144/200], Step [0050/0096], loss=0.0260, bce=0.0117, dice_loss=0.0143, max_mem=3537.92 MB
+2026-05-20 00:56:18.550672 Epoch [144/200], Step [0096/0096], loss=0.0253, bce=0.0122, dice_loss=0.0130, max_mem=3537.92 MB
+[TIME] Epoch 144, time=15.33s, total=2203.47s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 144, train_loss=0.025281, Dice=0.828540, n=1000
+[LR] Epoch 145, lr=0.00010000
+2026-05-20 00:59:34.418824 Epoch [145/200], Step [0050/0096], loss=0.0269, bce=0.0123, dice_loss=0.0147, max_mem=3537.92 MB
+2026-05-20 00:59:40.574661 Epoch [145/200], Step [0096/0096], loss=0.0273, bce=0.0127, dice_loss=0.0146, max_mem=3537.92 MB
+[TIME] Epoch 145, time=14.76s, total=2218.23s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 145, train_loss=0.027310, Dice=0.825989, n=1000
+[LR] Epoch 146, lr=0.00010000
+2026-05-20 01:03:04.393258 Epoch [146/200], Step [0050/0096], loss=0.0249, bce=0.0103, dice_loss=0.0146, max_mem=3537.92 MB
+2026-05-20 01:03:10.568953 Epoch [146/200], Step [0096/0096], loss=0.0268, bce=0.0131, dice_loss=0.0137, max_mem=3537.92 MB
+[TIME] Epoch 146, time=15.44s, total=2233.66s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 146, train_loss=0.026798, Dice=0.828557, n=1000
+[LR] Epoch 147, lr=0.00010000
+2026-05-20 01:06:35.294256 Epoch [147/200], Step [0050/0096], loss=0.0258, bce=0.0127, dice_loss=0.0131, max_mem=3537.92 MB
+2026-05-20 01:06:41.471485 Epoch [147/200], Step [0096/0096], loss=0.0253, bce=0.0108, dice_loss=0.0145, max_mem=3537.92 MB
+[TIME] Epoch 147, time=14.51s, total=2248.17s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 147, train_loss=0.025269, Dice=0.831397, n=1000
+[LR] Epoch 148, lr=0.00010000
+2026-05-20 01:10:00.573192 Epoch [148/200], Step [0050/0096], loss=0.0248, bce=0.0111, dice_loss=0.0137, max_mem=3537.92 MB
+2026-05-20 01:10:06.755022 Epoch [148/200], Step [0096/0096], loss=0.0259, bce=0.0118, dice_loss=0.0141, max_mem=3537.92 MB
+[TIME] Epoch 148, time=15.33s, total=2263.50s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 148, train_loss=0.025885, Dice=0.828188, n=1000
+[LR] Epoch 149, lr=0.00010000
+2026-05-20 01:13:23.772281 Epoch [149/200], Step [0050/0096], loss=0.0266, bce=0.0126, dice_loss=0.0140, max_mem=3537.92 MB
+2026-05-20 01:13:29.930448 Epoch [149/200], Step [0096/0096], loss=0.0263, bce=0.0121, dice_loss=0.0142, max_mem=3537.92 MB
+[TIME] Epoch 149, time=14.70s, total=2278.20s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 149, train_loss=0.026344, Dice=0.827591, n=1000
+[LR] Epoch 150, lr=0.00010000
+2026-05-20 01:17:01.380170 Epoch [150/200], Step [0050/0096], loss=0.0270, bce=0.0128, dice_loss=0.0142, max_mem=3537.92 MB
+2026-05-20 01:17:07.563634 Epoch [150/200], Step [0096/0096], loss=0.0280, bce=0.0127, dice_loss=0.0153, max_mem=3537.92 MB
+[TIME] Epoch 150, time=15.16s, total=2293.36s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 150, train_loss=0.027972, Dice=0.811529, n=1000
+[LR] Epoch 151, lr=0.00010000
+2026-05-20 01:20:23.048258 Epoch [151/200], Step [0050/0096], loss=0.0864, bce=0.0481, dice_loss=0.0383, max_mem=3537.92 MB
+2026-05-20 01:20:29.236967 Epoch [151/200], Step [0096/0096], loss=0.1962, bce=0.1072, dice_loss=0.0889, max_mem=3537.92 MB
+[TIME] Epoch 151, time=14.63s, total=2307.99s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 151, train_loss=0.196153, Dice=0.680026, n=1000
+[LR] Epoch 152, lr=0.00010000
+2026-05-20 01:23:57.071754 Epoch [152/200], Step [0050/0096], loss=0.0673, bce=0.0341, dice_loss=0.0332, max_mem=3537.92 MB
+2026-05-20 01:24:03.229480 Epoch [152/200], Step [0096/0096], loss=0.0487, bce=0.0260, dice_loss=0.0228, max_mem=3537.92 MB
+[TIME] Epoch 152, time=14.69s, total=2322.68s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 152, train_loss=0.048734, Dice=0.811590, n=1000
+[LR] Epoch 153, lr=0.00010000
+2026-05-20 01:27:26.458681 Epoch [153/200], Step [0050/0096], loss=0.0358, bce=0.0173, dice_loss=0.0184, max_mem=3537.92 MB
+2026-05-20 01:27:32.622500 Epoch [153/200], Step [0096/0096], loss=0.0335, bce=0.0162, dice_loss=0.0172, max_mem=3537.92 MB
+[TIME] Epoch 153, time=14.57s, total=2337.25s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 153, train_loss=0.033458, Dice=0.815422, n=1000
+[LR] Epoch 154, lr=0.00010000
+2026-05-20 01:31:01.721890 Epoch [154/200], Step [0050/0096], loss=0.0306, bce=0.0152, dice_loss=0.0153, max_mem=3537.92 MB
+2026-05-20 01:31:07.898152 Epoch [154/200], Step [0096/0096], loss=0.0296, bce=0.0134, dice_loss=0.0162, max_mem=3537.92 MB
+[TIME] Epoch 154, time=14.64s, total=2351.89s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 154, train_loss=0.029564, Dice=0.821163, n=1000
+[LR] Epoch 155, lr=0.00010000
+2026-05-20 01:34:22.201954 Epoch [155/200], Step [0050/0096], loss=0.0265, bce=0.0123, dice_loss=0.0142, max_mem=3537.92 MB
+2026-05-20 01:34:28.372484 Epoch [155/200], Step [0096/0096], loss=0.0272, bce=0.0127, dice_loss=0.0145, max_mem=3537.92 MB
+[TIME] Epoch 155, time=14.74s, total=2366.62s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 155, train_loss=0.027240, Dice=0.825842, n=1000
+[LR] Epoch 156, lr=0.00010000
+2026-05-20 01:37:43.413580 Epoch [156/200], Step [0050/0096], loss=0.0297, bce=0.0144, dice_loss=0.0153, max_mem=3537.92 MB
+2026-05-20 01:37:49.575269 Epoch [156/200], Step [0096/0096], loss=0.0484, bce=0.0258, dice_loss=0.0226, max_mem=3537.92 MB
+[TIME] Epoch 156, time=14.84s, total=2381.46s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 156, train_loss=0.048371, Dice=0.820021, n=1000
+[LR] Epoch 157, lr=0.00010000
+2026-05-20 01:41:00.912858 Epoch [157/200], Step [0050/0096], loss=0.0332, bce=0.0171, dice_loss=0.0161, max_mem=3537.92 MB
+2026-05-20 01:41:07.091892 Epoch [157/200], Step [0096/0096], loss=0.0280, bce=0.0127, dice_loss=0.0152, max_mem=3537.92 MB
+[TIME] Epoch 157, time=15.78s, total=2397.24s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 157, train_loss=0.027968, Dice=0.822600, n=1000
+[LR] Epoch 158, lr=0.00010000
+2026-05-20 01:44:21.321193 Epoch [158/200], Step [0050/0096], loss=0.0260, bce=0.0111, dice_loss=0.0149, max_mem=3537.92 MB
+2026-05-20 01:44:27.479590 Epoch [158/200], Step [0096/0096], loss=0.0262, bce=0.0125, dice_loss=0.0137, max_mem=3537.92 MB
+[TIME] Epoch 158, time=14.50s, total=2411.74s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 158, train_loss=0.026153, Dice=0.808398, n=1000
+[LR] Epoch 159, lr=0.00010000
+2026-05-20 01:47:56.779710 Epoch [159/200], Step [0050/0096], loss=0.0255, bce=0.0118, dice_loss=0.0137, max_mem=3537.92 MB
+2026-05-20 01:48:02.943866 Epoch [159/200], Step [0096/0096], loss=0.0257, bce=0.0113, dice_loss=0.0145, max_mem=3537.92 MB
+[TIME] Epoch 159, time=14.64s, total=2426.38s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 159, train_loss=0.025724, Dice=0.826765, n=1000
+[LR] Epoch 160, lr=0.00010000
+2026-05-20 01:51:18.134330 Epoch [160/200], Step [0050/0096], loss=0.0246, bce=0.0110, dice_loss=0.0136, max_mem=3537.92 MB
+2026-05-20 01:51:24.322723 Epoch [160/200], Step [0096/0096], loss=0.0233, bce=0.0106, dice_loss=0.0127, max_mem=3537.92 MB
+[TIME] Epoch 160, time=14.81s, total=2441.19s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 160, train_loss=0.023287, Dice=0.826784, n=1000
+[LR] Epoch 161, lr=0.00010000
+2026-05-20 01:54:48.508488 Epoch [161/200], Step [0050/0096], loss=0.0233, bce=0.0110, dice_loss=0.0123, max_mem=3537.92 MB
+2026-05-20 01:54:54.674050 Epoch [161/200], Step [0096/0096], loss=0.0251, bce=0.0111, dice_loss=0.0140, max_mem=3537.92 MB
+[TIME] Epoch 161, time=14.53s, total=2455.72s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 161, train_loss=0.025111, Dice=0.825498, n=1000
+[LR] Epoch 162, lr=0.00010000
+2026-05-20 01:58:22.177823 Epoch [162/200], Step [0050/0096], loss=0.0238, bce=0.0110, dice_loss=0.0128, max_mem=3537.92 MB
+2026-05-20 01:58:28.328062 Epoch [162/200], Step [0096/0096], loss=0.0285, bce=0.0136, dice_loss=0.0149, max_mem=3537.92 MB
+[TIME] Epoch 162, time=14.70s, total=2470.42s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 162, train_loss=0.028475, Dice=0.782730, n=1000
+[LR] Epoch 163, lr=0.00010000
+2026-05-20 02:01:54.229822 Epoch [163/200], Step [0050/0096], loss=0.0344, bce=0.0167, dice_loss=0.0177, max_mem=3537.92 MB
+2026-05-20 02:02:00.384746 Epoch [163/200], Step [0096/0096], loss=0.0289, bce=0.0130, dice_loss=0.0158, max_mem=3537.92 MB
+[TIME] Epoch 163, time=14.95s, total=2485.37s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 163, train_loss=0.028872, Dice=0.822318, n=1000
+[LR] Epoch 164, lr=0.00010000
+2026-05-20 02:05:22.161244 Epoch [164/200], Step [0050/0096], loss=0.0242, bce=0.0104, dice_loss=0.0138, max_mem=3537.92 MB
+2026-05-20 02:05:28.341349 Epoch [164/200], Step [0096/0096], loss=0.0250, bce=0.0120, dice_loss=0.0130, max_mem=3537.92 MB
+[TIME] Epoch 164, time=14.47s, total=2499.84s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 164, train_loss=0.025026, Dice=0.824108, n=1000
+[LR] Epoch 165, lr=0.00010000
+2026-05-20 02:08:54.928806 Epoch [165/200], Step [0050/0096], loss=0.0232, bce=0.0103, dice_loss=0.0129, max_mem=3537.92 MB
+2026-05-20 02:09:01.087041 Epoch [165/200], Step [0096/0096], loss=0.0249, bce=0.0109, dice_loss=0.0140, max_mem=3537.92 MB
+[TIME] Epoch 165, time=14.64s, total=2514.48s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 165, train_loss=0.024859, Dice=0.825040, n=1000
+[LR] Epoch 166, lr=0.00010000
+2026-05-20 02:12:17.483757 Epoch [166/200], Step [0050/0096], loss=0.0221, bce=0.0093, dice_loss=0.0128, max_mem=3537.92 MB
+2026-05-20 02:12:23.653856 Epoch [166/200], Step [0096/0096], loss=0.0252, bce=0.0115, dice_loss=0.0138, max_mem=3537.92 MB
+[TIME] Epoch 166, time=14.91s, total=2529.38s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 166, train_loss=0.025235, Dice=0.832187, n=1000
+[BEST] Dice improved 0.831786 -> 0.832187
+[LR] Epoch 167, lr=0.00010000
+2026-05-20 02:15:38.050937 Epoch [167/200], Step [0050/0096], loss=0.0238, bce=0.0114, dice_loss=0.0124, max_mem=3537.92 MB
+2026-05-20 02:15:44.213611 Epoch [167/200], Step [0096/0096], loss=0.0234, bce=0.0100, dice_loss=0.0134, max_mem=3537.92 MB
+[TIME] Epoch 167, time=14.40s, total=2543.79s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 167, train_loss=0.023390, Dice=0.831257, n=1000
+[LR] Epoch 168, lr=0.00010000
+2026-05-20 02:19:06.182673 Epoch [168/200], Step [0050/0096], loss=0.0236, bce=0.0107, dice_loss=0.0130, max_mem=3537.92 MB
+2026-05-20 02:19:12.347145 Epoch [168/200], Step [0096/0096], loss=0.0228, bce=0.0102, dice_loss=0.0126, max_mem=3537.92 MB
+[TIME] Epoch 168, time=14.70s, total=2558.48s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 168, train_loss=0.022781, Dice=0.826245, n=1000
+[LR] Epoch 169, lr=0.00010000
+2026-05-20 02:22:39.735647 Epoch [169/200], Step [0050/0096], loss=0.0234, bce=0.0106, dice_loss=0.0129, max_mem=3537.92 MB
+2026-05-20 02:22:45.922432 Epoch [169/200], Step [0096/0096], loss=0.0229, bce=0.0100, dice_loss=0.0130, max_mem=3537.92 MB
+[TIME] Epoch 169, time=15.51s, total=2574.00s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 169, train_loss=0.022949, Dice=0.826524, n=1000
+[LR] Epoch 170, lr=0.00010000
+2026-05-20 02:26:03.339275 Epoch [170/200], Step [0050/0096], loss=0.0220, bce=0.0103, dice_loss=0.0117, max_mem=3537.92 MB
+2026-05-20 02:26:09.504073 Epoch [170/200], Step [0096/0096], loss=0.0529, bce=0.0268, dice_loss=0.0262, max_mem=3537.92 MB
+[TIME] Epoch 170, time=15.03s, total=2589.02s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 170, train_loss=0.052920, Dice=0.773350, n=1000
+[LR] Epoch 171, lr=0.00010000
+2026-05-20 02:29:31.372206 Epoch [171/200], Step [0050/0096], loss=0.0676, bce=0.0347, dice_loss=0.0329, max_mem=3537.92 MB
+2026-05-20 02:29:37.536631 Epoch [171/200], Step [0096/0096], loss=0.0486, bce=0.0232, dice_loss=0.0254, max_mem=3537.92 MB
+[TIME] Epoch 171, time=14.61s, total=2603.64s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 171, train_loss=0.048550, Dice=0.812231, n=1000
+[LR] Epoch 172, lr=0.00010000
+2026-05-20 02:32:48.366060 Epoch [172/200], Step [0050/0096], loss=0.0288, bce=0.0126, dice_loss=0.0161, max_mem=3537.92 MB
+2026-05-20 02:32:54.524659 Epoch [172/200], Step [0096/0096], loss=0.0277, bce=0.0134, dice_loss=0.0144, max_mem=3537.92 MB
+[TIME] Epoch 172, time=14.77s, total=2618.41s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 172, train_loss=0.027750, Dice=0.825074, n=1000
+[LR] Epoch 173, lr=0.00010000
+2026-05-20 02:36:07.621565 Epoch [173/200], Step [0050/0096], loss=0.0247, bce=0.0115, dice_loss=0.0133, max_mem=3537.92 MB
+2026-05-20 02:36:13.798769 Epoch [173/200], Step [0096/0096], loss=0.0245, bce=0.0108, dice_loss=0.0137, max_mem=3537.92 MB
+[TIME] Epoch 173, time=14.92s, total=2633.32s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 173, train_loss=0.024528, Dice=0.821513, n=1000
+[LR] Epoch 174, lr=0.00010000
+2026-05-20 02:39:37.751312 Epoch [174/200], Step [0050/0096], loss=0.0232, bce=0.0101, dice_loss=0.0131, max_mem=3537.92 MB
+2026-05-20 02:39:43.940384 Epoch [174/200], Step [0096/0096], loss=0.0227, bce=0.0109, dice_loss=0.0118, max_mem=3537.92 MB
+[TIME] Epoch 174, time=15.75s, total=2649.07s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 174, train_loss=0.022717, Dice=0.821926, n=1000
+[LR] Epoch 175, lr=0.00010000
+2026-05-20 02:43:09.291146 Epoch [175/200], Step [0050/0096], loss=0.0224, bce=0.0100, dice_loss=0.0125, max_mem=3537.92 MB
+2026-05-20 02:43:15.448846 Epoch [175/200], Step [0096/0096], loss=0.0231, bce=0.0106, dice_loss=0.0125, max_mem=3537.92 MB
+[TIME] Epoch 175, time=14.56s, total=2663.64s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 175, train_loss=0.023076, Dice=0.826880, n=1000
+[LR] Epoch 176, lr=0.00010000
+2026-05-20 02:46:39.453689 Epoch [176/200], Step [0050/0096], loss=0.0218, bce=0.0098, dice_loss=0.0120, max_mem=3537.92 MB
+2026-05-20 02:46:45.612922 Epoch [176/200], Step [0096/0096], loss=0.0226, bce=0.0105, dice_loss=0.0121, max_mem=3537.92 MB
+[TIME] Epoch 176, time=15.58s, total=2679.22s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 176, train_loss=0.022564, Dice=0.825723, n=1000
+[LR] Epoch 177, lr=0.00010000
+2026-05-20 02:50:10.097728 Epoch [177/200], Step [0050/0096], loss=0.0334, bce=0.0172, dice_loss=0.0162, max_mem=3537.92 MB
+2026-05-20 02:50:16.261798 Epoch [177/200], Step [0096/0096], loss=0.0289, bce=0.0129, dice_loss=0.0160, max_mem=3537.92 MB
+[TIME] Epoch 177, time=15.08s, total=2694.30s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 177, train_loss=0.028927, Dice=0.797863, n=1000
+[LR] Epoch 178, lr=0.00010000
+2026-05-20 02:53:35.587376 Epoch [178/200], Step [0050/0096], loss=0.0236, bce=0.0107, dice_loss=0.0128, max_mem=3537.92 MB
+2026-05-20 02:53:41.751953 Epoch [178/200], Step [0096/0096], loss=0.0258, bce=0.0122, dice_loss=0.0136, max_mem=3537.92 MB
+[TIME] Epoch 178, time=14.52s, total=2708.82s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 178, train_loss=0.025798, Dice=0.809657, n=1000
+[LR] Epoch 179, lr=0.00010000
+2026-05-20 02:57:00.781489 Epoch [179/200], Step [0050/0096], loss=0.0241, bce=0.0110, dice_loss=0.0131, max_mem=3537.92 MB
+2026-05-20 02:57:06.958263 Epoch [179/200], Step [0096/0096], loss=0.0234, bce=0.0100, dice_loss=0.0135, max_mem=3537.92 MB
+[TIME] Epoch 179, time=15.12s, total=2723.94s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 179, train_loss=0.023435, Dice=0.824592, n=1000
+[LR] Epoch 180, lr=0.00010000
+2026-05-20 03:00:22.523892 Epoch [180/200], Step [0050/0096], loss=0.0210, bce=0.0100, dice_loss=0.0109, max_mem=3537.92 MB
+2026-05-20 03:00:28.687888 Epoch [180/200], Step [0096/0096], loss=0.0230, bce=0.0100, dice_loss=0.0130, max_mem=3537.92 MB
+[TIME] Epoch 180, time=14.97s, total=2738.91s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 180, train_loss=0.023010, Dice=0.827632, n=1000
+[LR] Epoch 181, lr=0.00010000
+2026-05-20 03:03:51.733682 Epoch [181/200], Step [0050/0096], loss=0.0201, bce=0.0087, dice_loss=0.0115, max_mem=3537.92 MB
+2026-05-20 03:03:57.884689 Epoch [181/200], Step [0096/0096], loss=0.0214, bce=0.0103, dice_loss=0.0111, max_mem=3537.92 MB
+[TIME] Epoch 181, time=14.43s, total=2753.35s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 181, train_loss=0.021376, Dice=0.823705, n=1000
+[LR] Epoch 182, lr=0.00010000
+2026-05-20 03:07:20.789836 Epoch [182/200], Step [0050/0096], loss=0.0208, bce=0.0091, dice_loss=0.0118, max_mem=3537.92 MB
+2026-05-20 03:07:26.968387 Epoch [182/200], Step [0096/0096], loss=0.0219, bce=0.0101, dice_loss=0.0117, max_mem=3537.92 MB
+[TIME] Epoch 182, time=15.24s, total=2768.59s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 182, train_loss=0.021872, Dice=0.822354, n=1000
+[LR] Epoch 183, lr=0.00010000
+2026-05-20 03:10:52.475234 Epoch [183/200], Step [0050/0096], loss=0.0209, bce=0.0098, dice_loss=0.0111, max_mem=3537.92 MB
+2026-05-20 03:10:58.640704 Epoch [183/200], Step [0096/0096], loss=0.0208, bce=0.0090, dice_loss=0.0118, max_mem=3537.92 MB
+[TIME] Epoch 183, time=14.98s, total=2783.57s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 183, train_loss=0.020807, Dice=0.832721, n=1000
+[BEST] Dice improved 0.832187 -> 0.832721
+[LR] Epoch 184, lr=0.00010000
+2026-05-20 03:14:25.449497 Epoch [184/200], Step [0050/0096], loss=0.0219, bce=0.0093, dice_loss=0.0126, max_mem=3537.92 MB
+2026-05-20 03:14:31.630330 Epoch [184/200], Step [0096/0096], loss=0.0221, bce=0.0101, dice_loss=0.0119, max_mem=3537.92 MB
+[TIME] Epoch 184, time=15.47s, total=2799.04s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 184, train_loss=0.022075, Dice=0.827919, n=1000
+[LR] Epoch 185, lr=0.00010000
+2026-05-20 03:17:56.973051 Epoch [185/200], Step [0050/0096], loss=0.0208, bce=0.0090, dice_loss=0.0118, max_mem=3537.92 MB
+2026-05-20 03:18:03.119963 Epoch [185/200], Step [0096/0096], loss=0.0214, bce=0.0093, dice_loss=0.0122, max_mem=3537.92 MB
+[TIME] Epoch 185, time=14.87s, total=2813.91s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 185, train_loss=0.021415, Dice=0.821773, n=1000
+[LR] Epoch 186, lr=0.00010000
+2026-05-20 03:21:28.496288 Epoch [186/200], Step [0050/0096], loss=0.0218, bce=0.0098, dice_loss=0.0119, max_mem=3537.92 MB
+2026-05-20 03:21:34.669848 Epoch [186/200], Step [0096/0096], loss=0.0218, bce=0.0097, dice_loss=0.0121, max_mem=3537.92 MB
+[TIME] Epoch 186, time=15.34s, total=2829.25s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 186, train_loss=0.021802, Dice=0.822510, n=1000
+[LR] Epoch 187, lr=0.00010000
+2026-05-20 03:24:59.604853 Epoch [187/200], Step [0050/0096], loss=0.0204, bce=0.0094, dice_loss=0.0109, max_mem=3537.92 MB
+2026-05-20 03:25:05.774643 Epoch [187/200], Step [0096/0096], loss=0.0223, bce=0.0097, dice_loss=0.0126, max_mem=3537.92 MB
+[TIME] Epoch 187, time=14.37s, total=2843.62s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 187, train_loss=0.022252, Dice=0.826257, n=1000
+[LR] Epoch 188, lr=0.00010000
+2026-05-20 03:28:28.273450 Epoch [188/200], Step [0050/0096], loss=0.0220, bce=0.0093, dice_loss=0.0127, max_mem=3537.92 MB
+2026-05-20 03:28:34.419021 Epoch [188/200], Step [0096/0096], loss=0.0227, bce=0.0108, dice_loss=0.0119, max_mem=3537.92 MB
+[TIME] Epoch 188, time=14.79s, total=2858.41s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 188, train_loss=0.022676, Dice=0.830398, n=1000
+[LR] Epoch 189, lr=0.00010000
+2026-05-20 03:31:58.338559 Epoch [189/200], Step [0050/0096], loss=0.0218, bce=0.0096, dice_loss=0.0122, max_mem=3537.92 MB
+2026-05-20 03:32:04.518144 Epoch [189/200], Step [0096/0096], loss=0.0218, bce=0.0099, dice_loss=0.0119, max_mem=3537.92 MB
+[TIME] Epoch 189, time=14.77s, total=2873.18s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 189, train_loss=0.021762, Dice=0.828905, n=1000
+[LR] Epoch 190, lr=0.00010000
+2026-05-20 03:35:20.643891 Epoch [190/200], Step [0050/0096], loss=0.0217, bce=0.0096, dice_loss=0.0121, max_mem=3537.92 MB
+2026-05-20 03:35:26.834532 Epoch [190/200], Step [0096/0096], loss=0.0212, bce=0.0091, dice_loss=0.0122, max_mem=3537.92 MB
+[TIME] Epoch 190, time=14.69s, total=2887.87s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 190, train_loss=0.021213, Dice=0.822652, n=1000
+[LR] Epoch 191, lr=0.00010000
+2026-05-20 03:38:45.138368 Epoch [191/200], Step [0050/0096], loss=0.0205, bce=0.0092, dice_loss=0.0113, max_mem=3537.92 MB
+2026-05-20 03:38:51.317316 Epoch [191/200], Step [0096/0096], loss=0.0209, bce=0.0093, dice_loss=0.0116, max_mem=3537.92 MB
+[TIME] Epoch 191, time=14.85s, total=2902.72s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 191, train_loss=0.020896, Dice=0.829201, n=1000
+[LR] Epoch 192, lr=0.00010000
+2026-05-20 03:42:12.998945 Epoch [192/200], Step [0050/0096], loss=0.0216, bce=0.0098, dice_loss=0.0118, max_mem=3537.92 MB
+2026-05-20 03:42:19.164479 Epoch [192/200], Step [0096/0096], loss=0.0196, bce=0.0088, dice_loss=0.0108, max_mem=3537.92 MB
+[TIME] Epoch 192, time=14.59s, total=2917.31s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 192, train_loss=0.019573, Dice=0.818208, n=1000
+[LR] Epoch 193, lr=0.00010000
+2026-05-20 03:45:34.370993 Epoch [193/200], Step [0050/0096], loss=0.0210, bce=0.0093, dice_loss=0.0117, max_mem=3537.92 MB
+2026-05-20 03:45:40.535432 Epoch [193/200], Step [0096/0096], loss=0.0204, bce=0.0091, dice_loss=0.0113, max_mem=3537.92 MB
+[TIME] Epoch 193, time=14.61s, total=2931.92s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 193, train_loss=0.020441, Dice=0.826448, n=1000
+[LR] Epoch 194, lr=0.00010000
+2026-05-20 03:48:58.027963 Epoch [194/200], Step [0050/0096], loss=0.0211, bce=0.0096, dice_loss=0.0115, max_mem=3537.92 MB
+2026-05-20 03:49:04.179025 Epoch [194/200], Step [0096/0096], loss=0.0206, bce=0.0096, dice_loss=0.0110, max_mem=3537.92 MB
+[TIME] Epoch 194, time=14.94s, total=2946.86s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 194, train_loss=0.020635, Dice=0.813160, n=1000
+[LR] Epoch 195, lr=0.00010000
+2026-05-20 03:52:21.594186 Epoch [195/200], Step [0050/0096], loss=0.0212, bce=0.0096, dice_loss=0.0116, max_mem=3537.92 MB
+2026-05-20 03:52:27.772479 Epoch [195/200], Step [0096/0096], loss=0.0192, bce=0.0085, dice_loss=0.0107, max_mem=3537.92 MB
+[TIME] Epoch 195, time=14.60s, total=2961.46s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 195, train_loss=0.019213, Dice=0.822959, n=1000
+[LR] Epoch 196, lr=0.00010000
+2026-05-20 03:55:41.706634 Epoch [196/200], Step [0050/0096], loss=0.0215, bce=0.0101, dice_loss=0.0114, max_mem=3537.92 MB
+2026-05-20 03:55:47.888079 Epoch [196/200], Step [0096/0096], loss=0.0216, bce=0.0094, dice_loss=0.0122, max_mem=3537.92 MB
+[TIME] Epoch 196, time=15.04s, total=2976.50s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 196, train_loss=0.021634, Dice=0.823806, n=1000
+[LR] Epoch 197, lr=0.00010000
+2026-05-20 03:59:05.776164 Epoch [197/200], Step [0050/0096], loss=0.0224, bce=0.0097, dice_loss=0.0127, max_mem=3537.92 MB
+2026-05-20 03:59:11.935486 Epoch [197/200], Step [0096/0096], loss=0.0233, bce=0.0111, dice_loss=0.0122, max_mem=3537.92 MB
+[TIME] Epoch 197, time=14.89s, total=2991.39s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 197, train_loss=0.023295, Dice=0.827308, n=1000
+[LR] Epoch 198, lr=0.00010000
+2026-05-20 04:02:32.615987 Epoch [198/200], Step [0050/0096], loss=0.0205, bce=0.0087, dice_loss=0.0119, max_mem=3537.92 MB
+2026-05-20 04:02:38.803114 Epoch [198/200], Step [0096/0096], loss=0.0224, bce=0.0104, dice_loss=0.0121, max_mem=3537.92 MB
+[TIME] Epoch 198, time=15.21s, total=3006.61s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 198, train_loss=0.022449, Dice=0.824865, n=1000
+[LR] Epoch 199, lr=0.00010000
+2026-05-20 04:05:52.015595 Epoch [199/200], Step [0050/0096], loss=0.0220, bce=0.0096, dice_loss=0.0124, max_mem=3537.92 MB
+2026-05-20 04:05:58.189292 Epoch [199/200], Step [0096/0096], loss=0.0224, bce=0.0100, dice_loss=0.0124, max_mem=3537.92 MB
+[TIME] Epoch 199, time=14.59s, total=3021.20s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 199, train_loss=0.022397, Dice=0.811523, n=1000
+[LR] Epoch 200, lr=0.00001000
+2026-05-20 04:09:09.039717 Epoch [200/200], Step [0050/0096], loss=0.0197, bce=0.0086, dice_loss=0.0111, max_mem=3537.92 MB
+2026-05-20 04:09:15.196214 Epoch [200/200], Step [0096/0096], loss=0.0189, bce=0.0086, dice_loss=0.0103, max_mem=3537.92 MB
+[TIME] Epoch 200, time=14.76s, total=3035.96s
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+[EVAL] Epoch 200, train_loss=0.018855, Dice=0.818731, n=1000
+[DONE] Best Dice: 0.832721
+[DONE] Avg train time per epoch: 15.18s
