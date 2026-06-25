@@ -386,14 +386,12 @@
 | `splits/ISIC2018_seed0/low_20p_*.txt` | seed0 下 20% 低标注数据的 all/fold train/fold val 列表。 |
 | `splits/ISIC2018_seed0/low_100p_*.txt` | seed0 下全量数据的 all/fold train/fold val 列表。 |
 
-## 主要风险与待确认点
+## 主要风险
 
 | 项目 | 说明 |
 | --- | --- |
-| 路径不一致 | 当前工作区为 Windows 路径，但脚本大量硬编码 `/data/zjy_work/...`。运行前需要确认 WSL/容器路径映射。 |
-| 目录命名不一致 | 实际目录为 `SBG-Diff`、`BEF_SBG`，脚本常用 `BGDiff`、`Work3_BEF_SBG`。需要确认是否存在软链接。 |
+| 路径不一致 | 脚本使用了大量硬编码 `/data/zjy_work/...`。运行前需要确认 对应路径映射。 |
+| 目录命名不一致 | 实际目录为 `SBG-Diff`、`BEF_SBG`，脚本常用 `BGDiff` 即对应 `SBG-Diff`、`Work3_BEF_SBG` 即对应 `BEF_SBG`。 |
 | 后台任务 | 大量脚本使用 `nohup ... &`，会持续占用 GPU 并写日志、checkpoint 和结果。 |
 | 权重覆盖 | `tool_add_control.py`、`tool_merge_control.py`、训练脚本可能生成或覆盖 `.pth/.ckpt` 文件。 |
-| 脚本缺陷 | `SBG-Diff/Ours/scripts/eval.sh` 中 `$LOG_DIR` 定义被注释；`BGDNet/scripts/02_train_stage1-2.sh` 的 `--train_list2` 续行符前缺空格。 |
-| 重复目录 | `Ours/ablation_sbg_1779496819259` 与 `Ours/ablation_sbg` 基本重复，应确认是否需要保留两个版本。 |
-| 空说明文件 | `BGDNet/BGDNet.md` 为空，不能提供实际项目信息。 |
+
