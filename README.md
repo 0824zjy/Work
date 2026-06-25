@@ -7,24 +7,7 @@
 - `SBG-Diff`：基于 Stable Diffusion / ControlNet 的 mask-to-image 合成，包含 SBP-PG、边界先验、两阶段训练、推理和生成质量评估。
 - `BGDNet`：下游病灶分割模型训练与测试，可使用真实数据或真实数据加合成数据训练。
 - `BEF_SBG`：BEF-SBG 实验流水线，包含低标注划分、OOF teacher、边界误差反馈、扩散生成、样本评分、加权分割训练和最终评估。
-
-## 技术栈
-
-- Python
-- Bash
-- PyTorch / TorchVision
-- PyTorch Lightning
-- CUDA
-- DeepSpeed / DDP
-- OpenCV
-- PIL / Pillow
-- NumPy / Pandas
-- Albumentations
-- Transformers / OpenCLIP
-- Kornia / Timm
-- TensorBoard
-- Stable Diffusion / ControlNet / Latent Diffusion
-
+- 
 ## 目录结构
 
 ```text
