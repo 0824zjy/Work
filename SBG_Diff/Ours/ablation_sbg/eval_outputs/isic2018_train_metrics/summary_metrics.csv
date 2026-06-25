@@ -1,0 +1,6 @@
+method,real_root,result_dir,image_dir,num_real,num_syn,num_pairs,FID_down,KID_down,CLIP-I_up,LPIPS_down,CMMD_down,MOS_up
+decoder_mod,/data/zjy_work/ISIC2018/train,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/decoder_mod_real5_syn10,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/decoder_mod_real5_syn10/images,2594,258,258,98.931786,0.033675,0.842772,,0.082949,
+hard,/data/zjy_work/ISIC2018/train,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/hard_real5_syn10,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/hard_real5_syn10/images,2594,258,258,105.625935,0.042363,0.819344,,0.109423,
+maskonly,/data/zjy_work/ISIC2018/train,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/maskonly_real5_syn10,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/maskonly_real5_syn10/images,2594,258,258,105.625935,0.042363,0.819344,,0.109423,
+progressive,/data/zjy_work/ISIC2018/train,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/progressive_real5_syn10,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/progressive_real5_syn10/images,2594,258,258,105.625935,0.042363,0.819344,,0.109423,
+softonly,/data/zjy_work/ISIC2018/train,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/softonly_real5_syn10,/data/zjy_work/BGDiff/Ours/ablation_sbg/results/softonly_real5_syn10/images,2594,258,258,105.625935,0.042363,0.819344,NA,0.109423,NA
