@@ -1,0 +1,319 @@
+import os
+import sys
+import time
+import argparse
+import logging
+import warnings
+from datetime import datetime
+from collections import Counter
+
+sys.path.insert(0, "/data/zjy_work/BGDNet")
+sys.path.insert(0, "/data/zjy_work/Work3_BEF_SBG/segmentation")
+
+import numpy as np
+import torch
+
+# Work3 BEF-SBG cuDNN safe switch
+import os
+if os.environ.get("BGDNET_DISABLE_CUDNN", "0") == "1":
+    torch.backends.cudnn.enabled = False
+    print("[WARN] cuDNN disabled by BGDNET_DISABLE_CUDNN=1")
+else:
+    torch.backends.cudnn.enabled = True
+
+torch.backends.cudnn.benchmark = False
+
+import torch.nn as nn
+import torch.nn.functional as F
+
+from models.BGDNet import BGDNet
+from utils.dataloader_BGDiff import test_dataset
+from utils.utils import clip_gradient, adjust_lr, AvgMeter
+
+from dataloader_BEF import get_weighted_loader
+
+
+warnings.filterwarnings("ignore")
+
+
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    return str(v).lower() in ["1", "true", "yes", "y", "on"]
+
+
+def weighted_joint_loss(pred_m, gts, pred_b, bnds, weights, alpha=1.0, beta=0.4, eps=1e-8):
+    """
+    Per-sample weighted BCE loss:
+      loss_i = alpha * BCE_seg_i + beta * BCE_bnd_i
+      final = sum(w_i * loss_i) / (sum(w_i) + eps)
+    """
+    pred_m = F.interpolate(pred_m, size=gts.shape[2:], mode="bilinear", align_corners=False)
+    pred_b = F.interpolate(pred_b, size=bnds.shape[2:], mode="bilinear", align_corners=False)
+
+    bce_seg = F.binary_cross_entropy_with_logits(
+        pred_m,
+        gts,
+        reduction="none",
+    ).mean(dim=(1, 2, 3))
+
+    bce_bnd = F.binary_cross_entropy_with_logits(
+        pred_b,
+        bnds,
+        reduction="none",
+    ).mean(dim=(1, 2, 3))
+
+    loss_i = float(alpha) * bce_seg + float(beta) * bce_bnd
+
+    weights = weights.view(-1).to(device=loss_i.device, dtype=loss_i.dtype)
+    final_loss = (weights * loss_i).sum() / (weights.sum() + eps)
+
+    return final_loss, bce_seg.detach().mean(), bce_bnd.detach().mean(), loss_i.detach().mean()
+
+
+@torch.no_grad()
+def test(model, data_path, img_size, test_list=None):
+    image_root = os.path.join(data_path, "Images")
+    gt_root = os.path.join(data_path, "Masks")
+
+    model.eval()
+
+    test_loader = test_dataset(
+        image_root=image_root,
+        gt_root=gt_root,
+        testsize=img_size,
+        list_txt=test_list,
+        mode="isic",
+    )
+
+    num1 = test_loader.size
+    if num1 == 0:
+        print("[WARN] test_loader.size == 0, please check test_list and paths.")
+        return 0.0, 0
+
+    DSC = torch.zeros((), device="cuda", dtype=torch.float32)
+    smooth = 1.0
+
+    for _ in range(num1):
+        image, gt, name = test_loader.load_data()
+
+        gt_np = np.asarray(gt, np.float32)
+        gt_t = torch.from_numpy(gt_np).to(device="cuda", dtype=torch.float32)
+        gt_t = gt_t / (gt_t.max() + 1e-8)
+
+        image = image.cuda(non_blocking=True)
+
+        out = model(image)
+        res = out[0] if isinstance(out, (tuple, list)) else out
+
+        res = F.interpolate(res, size=gt_t.shape, mode="bilinear", align_corners=False)
+        res = torch.sigmoid(res).squeeze()
+
+        res_min = res.min()
+        res_max = res.max()
+        res = (res - res_min) / (res_max - res_min + 1e-8)
+
+        input_bin = (res >= 0.5).float()
+        target_bin = (gt_t >= 0.5).float()
+
+        intersection = (input_bin * target_bin).sum()
+        dice = (2.0 * intersection + smooth) / (input_bin.sum() + target_bin.sum() + smooth)
+
+        DSC += dice
+
+    return (DSC / num1).item(), num1
+
+
+def train_one_epoch(train_loader, model, optimizer, epoch, args):
+    model.train()
+
+    loss_record = AvgMeter()
+    loss_seg_meter = AvgMeter()
+    loss_bnd_meter = AvgMeter()
+    loss_raw_meter = AvgMeter()
+
+    skipped_batches = 0
+    source_counter = Counter()
+
+    time_before = time.time()
+    max_memory_usage = 0
+
+    total_step = len(train_loader)
+
+    for i, pack in enumerate(train_loader, start=1):
+        images, gts, bnds, weights, sources = pack
+
+        weights = weights.cuda(non_blocking=True).float()
+
+        if weights.sum().item() <= 1e-8:
+            skipped_batches += 1
+            continue
+
+        images = images.cuda(non_blocking=True)
+        gts = gts.cuda(non_blocking=True)
+        bnds = bnds.cuda(non_blocking=True)
+
+        if isinstance(sources, (list, tuple)):
+            source_counter.update(list(sources))
+
+        optimizer.zero_grad()
+
+        pred_m, pred_b = model(images)
+
+        loss, l_seg, l_bnd, l_raw = weighted_joint_loss(
+            pred_m=pred_m,
+            gts=gts,
+            pred_b=pred_b,
+            bnds=bnds,
+            weights=weights,
+            alpha=args.alpha,
+            beta=args.beta,
+        )
+
+        loss.backward()
+        clip_gradient(optimizer, args.clip)
+        optimizer.step()
+
+        loss_record.update(loss.detach(), images.size(0))
+        loss_seg_meter.update(l_seg.detach(), images.size(0))
+        loss_bnd_meter.update(l_bnd.detach(), images.size(0))
+        loss_raw_meter.update(l_raw.detach(), images.size(0))
+
+        if torch.cuda.is_available():
+            current_memory = torch.cuda.max_memory_allocated()
+            max_memory_usage = max(max_memory_usage, current_memory)
+
+        if i % 50 == 0 or i == total_step:
+            msg = (
+                f"{datetime.now()} Epoch [{epoch:03d}/{args.epoch:03d}], "
+                f"Step [{i:04d}/{total_step:04d}], "
+                f"loss: {loss_record.show():.4f} "
+                f"(seg {loss_seg_meter.show():.4f} | "
+                f"bnd {loss_bnd_meter.show():.4f} | "
+                f"raw {loss_raw_meter.show():.4f}), "
+                f"skipped_batches={skipped_batches}, "
+                f"sources={dict(source_counter)}, "
+                f"max_mem={max_memory_usage / (1024 ** 2):.2f} MB"
+            )
+            print(msg)
+            logging.info(msg)
+
+    epoch_time = time.time() - time_before
+    print(f"[Epoch {epoch}] train time: {epoch_time:.2f}s, skipped_batches={skipped_batches}")
+    logging.info(f"[Epoch {epoch}] train time: {epoch_time:.2f}s, skipped_batches={skipped_batches}")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--weighted_train_json", type=str, required=True)
+    parser.add_argument("--test_path", type=str, default="/data/zjy_work/ISIC2018/test/")
+    parser.add_argument("--test_list", type=str, default=None)
+
+    parser.add_argument("--epoch", type=int, default=200)
+    parser.add_argument("--lr", type=float, default=1e-4)
+    parser.add_argument("--batchsize", type=int, default=4)
+    parser.add_argument("--img_size", type=int, default=352)
+
+    parser.add_argument("--train_save", type=str, default="/data/zjy_work/Work3_BEF_SBG/results/final_bgdnet_bef/")
+    parser.add_argument("--alpha", type=float, default=1.0)
+    parser.add_argument("--beta", type=float, default=0.4)
+    parser.add_argument("--clip", type=float, default=0.5)
+
+    parser.add_argument("--augmentation", type=str2bool, default=False)
+    parser.add_argument("--num_workers", type=int, default=8)
+
+    parser.add_argument("--optimizer", type=str, default="AdamW")
+    parser.add_argument("--decay_rate", type=float, default=0.1)
+    parser.add_argument("--decay_epoch", type=int, default=200)
+
+    args = parser.parse_args()
+
+    os.makedirs(args.train_save, exist_ok=True)
+
+    logging.basicConfig(
+        filename=os.path.join(args.train_save, "train.log"),
+        format="[%(asctime)s-%(filename)s-%(levelname)s:%(message)s]",
+        level=logging.INFO,
+        filemode="a",
+        datefmt="%Y-%m-%d %I:%M:%S %p",
+    )
+
+    print("[Train BGDNet-BEF Config]")
+    for k, v in vars(args).items():
+        print(f"  {k}: {v}")
+        logging.info(f"{k}: {v}")
+
+    model = BGDNet(num_classes=1).cuda(0)
+
+    if torch.cuda.device_count() > 1:
+        model = nn.DataParallel(model)
+
+    if args.optimizer == "AdamW":
+        optimizer = torch.optim.AdamW(model.parameters(), args.lr, weight_decay=1e-4)
+    else:
+        optimizer = torch.optim.SGD(
+            model.parameters(),
+            args.lr,
+            weight_decay=1e-4,
+            momentum=0.9,
+        )
+
+    train_loader = get_weighted_loader(
+        weighted_jsonl=args.weighted_train_json,
+        batchsize=args.batchsize,
+        trainsize=args.img_size,
+        shuffle=True,
+        num_workers=args.num_workers,
+        pin_memory=True,
+        augmentation=args.augmentation,
+        drop_last=True,
+    )
+
+    best = 0.0
+    total_train_time = 0.0
+
+    print("#" * 20, "Start Training BGDNet-BEF", "#" * 20)
+    logging.info("Start Training BGDNet-BEF")
+
+    for epoch in range(1, args.epoch + 1):
+        adjust_lr(optimizer, args.lr, epoch, args.decay_rate, args.decay_epoch)
+
+        time_start = time.time()
+        train_one_epoch(train_loader, model, optimizer, epoch, args)
+        total_train_time += time.time() - time_start
+
+        save_last = os.path.join(args.train_save, "BGDNet-BEF-last.pth")
+        torch.save(model.state_dict(), save_last)
+
+        dataset_dice, n_images = test(
+            model=model,
+            data_path=args.test_path,
+            img_size=args.img_size,
+            test_list=args.test_list,
+        )
+
+        if n_images > 0:
+            print(f"[Epoch {epoch}] Test Dice: {dataset_dice:.6f}")
+            logging.info(f"[Epoch {epoch}] Test Dice: {dataset_dice:.6f}")
+
+            if dataset_dice > best:
+                print(f"######## Dice improved {best:.6f} -> {dataset_dice:.6f}")
+                logging.info(f"######## Dice improved {best:.6f} -> {dataset_dice:.6f}")
+
+                best = dataset_dice
+                save_best = os.path.join(args.train_save, "BGDNet-BEF-best.pth")
+                torch.save(model.state_dict(), save_best)
+
+        if torch.cuda.is_available():
+            torch.cuda.reset_peak_memory_stats()
+
+    avg_time = total_train_time / max(args.epoch, 1)
+    print(f"[DONE] avg train time: {avg_time:.2f}s")
+    logging.info(f"[DONE] avg train time: {avg_time:.2f}s")
+    print(f"[DONE] best dice: {best:.6f}")
+    logging.info(f"[DONE] best dice: {best:.6f}")
+
+
+if __name__ == "__main__":
+    main()
