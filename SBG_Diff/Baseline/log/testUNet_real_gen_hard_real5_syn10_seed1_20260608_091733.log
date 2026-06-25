@@ -1,0 +1,19 @@
+[INFO] Evaluating model: unet
+[INFO] pth_path: /data/zjy_work/Baseline/model_out/ISIC2018_ours_Seed1/UNet_real_gen_hard_real5_syn10_seed1/unet-best.pth
+[INFO] test_data_path: /data/zjy_work/ISIC2018/test/
+[INFO] device: cuda:0
+[INFO] HD95 spacing: None, unit = pixels
+[TXT LOAD] /data/zjy_work/data_txt/test.txt
+  image_root: /data/zjy_work/ISIC2018/test/Images
+  gt_root   : /data/zjy_work/ISIC2018/test/Masks
+  mode      : isic
+  ids=1000, pairs=1000, miss_img=0, miss_mask=0
+[TEST DATASET] size=1000
+*****************************************************
+Dice Score: 0.8355829400862567
+Jacard Score: 0.7420737788530533
+HD95: 315.39993660169347
+Finish!
+*****************************************************
+Per-image metrics saved to: /data/zjy_work/Baseline/model_out/ISIC2018_eval_seed1/UNet_real_gen_hard_real5_syn10_seed1/per_image_metrics.csv
+Summary metrics saved to: /data/zjy_work/Baseline/model_out/ISIC2018_eval_seed1/UNet_real_gen_hard_real5_syn10_seed1/summary_metrics.csv

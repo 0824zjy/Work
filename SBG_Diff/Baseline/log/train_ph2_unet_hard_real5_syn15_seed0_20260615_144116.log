@@ -1,0 +1,48 @@
+[INFO] Using device: cuda:0
+[INFO] Model: unet
+[TXT LOAD] /data/zjy_work/data_txt/train_PH2_5p.txt
+  image_root: /data/zjy_work/PH2/train/Images
+  gt_root   : /data/zjy_work/PH2/train/Masks
+  mode      : isic
+  ids=160, pairs=0, miss_img=0, miss_mask=160
+[TXT LOAD] /data/zjy_work/data_txt/train_PH2_hard_real5_syn15_seed0.txt
+  image_root: /data/zjy_work/BGDiff/Ours/ablation_sbg/results/hard_real5_syn15/images
+  gt_root   : /data/zjy_work/BGDiff/Ours/ablation_sbg/results/hard_real5_syn15/masks
+  mode      : paired
+  ids=387, pairs=387, miss_img=0, miss_mask=0
+[FILTER] valid=387, drop_size_mismatch=0
+[TRAIN DATASET] augmentation=False
+[TRAIN DATASET] total size=387
+[INFO] image_roots = ['/data/zjy_work/PH2/train/Images', '/data/zjy_work/BGDiff/Ours/ablation_sbg/results/hard_real5_syn15/images']
+[INFO] gt_roots    = ['/data/zjy_work/PH2/train/Masks', '/data/zjy_work/BGDiff/Ours/ablation_sbg/results/hard_real5_syn15/masks']
+[INFO] list_txts   = ['/data/zjy_work/data_txt/train_PH2_5p.txt', '/data/zjy_work/data_txt/train_PH2_hard_real5_syn15_seed0.txt']
+[INFO] modes       = ['isic', 'paired']
+[INFO] total_step  = 96
+#################### Start Training unet ####################
+[LR] Epoch 001, lr=0.00010000
+Traceback (most recent call last):
+  File "train_seg_baseline.py", line 497, in <module>
+    main()
+  File "train_seg_baseline.py", line 443, in main
+    scaler=scaler,
+  File "train_seg_baseline.py", line 217, in train_one_epoch
+    output = model(images)
+  File "/opt/conda/envs/ISIC/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/zjy_work/Baseline/seg_baselines.py", line 91, in forward
+    x = self.conv3(x)
+  File "/opt/conda/envs/ISIC/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/data/zjy_work/Baseline/seg_baselines.py", line 26, in forward
+    return self.net(x)
+  File "/opt/conda/envs/ISIC/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/ISIC/lib/python3.7/site-packages/torch/nn/modules/container.py", line 204, in forward
+    input = module(input)
+  File "/opt/conda/envs/ISIC/lib/python3.7/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/opt/conda/envs/ISIC/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 182, in forward
+    self.eps,
+  File "/opt/conda/envs/ISIC/lib/python3.7/site-packages/torch/nn/functional.py", line 2451, in batch_norm
+    input, weight, bias, running_mean, running_var, training, momentum, eps, torch.backends.cudnn.enabled
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 62.00 MiB (GPU 0; 15.77 GiB total capacity; 1.65 GiB already allocated; 17.12 MiB free; 1.70 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

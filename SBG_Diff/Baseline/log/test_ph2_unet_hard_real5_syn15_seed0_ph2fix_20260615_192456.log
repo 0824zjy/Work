@@ -1,0 +1,39 @@
+[INFO] Evaluating model: unet
+[INFO] pth_path: /data/zjy_work/Baseline/model_out/PH2_ours_Seed0/UNet_real_gen_hard_real5_syn15_seed0_ph2fix/unet-best.pth
+[INFO] test_data_path: /data/zjy_work/PH2/test/
+[INFO] test_list: /data/zjy_work/data_txt/test_PH2.txt
+[INFO] test_mode: ph2
+[INFO] threshold: 0.5
+[INFO] device: cuda:0
+[INFO] AMP: False
+[INFO] HD95 spacing: None, unit = pixels
+[INFO] Successfully loaded checkpoint: /data/zjy_work/Baseline/model_out/PH2_ours_Seed0/UNet_real_gen_hard_real5_syn15_seed0_ph2fix/unet-best.pth
+[TXT LOAD] /data/zjy_work/data_txt/test_PH2.txt
+  image_root: /data/zjy_work/PH2/test/Images
+  gt_root   : /data/zjy_work/PH2/test/Masks
+  mode      : ph2
+  ids=40, pairs=40, miss_img=0, miss_mask=0
+[TEST DATASET] size=40
+[INFO] Number of test images: 40
+[TEST] [0010/0040] name=IMD050.bmp, Dice=0.964547, IoU=0.931521, HD95=12.425543
+[TEST] [0020/0040] name=IMD159.bmp, Dice=0.980015, IoU=0.960813, HD95=9.433981
+[TEST] [0030/0040] name=IMD383.bmp, Dice=0.945005, IoU=0.895744, HD95=136.932830
+[TEST] [0040/0040] name=IMD435.bmp, Dice=0.879942, IoU=0.785622, HD95=103.127059
+*****************************************************
+Number of images: 40
+Dice Score: 0.930903
+Jaccard Score: 0.874925
+HD95: 46.429949
+Sensitivity: 0.928691
+Specificity: 0.977064
+Accuracy: 0.950254
+Precision: 0.942465
+F1: 0.930902
+MCC: 0.877444
+Average inference time: 73.4362 ms/image
+Finish!
+*****************************************************
+Per-image metrics saved to: /data/zjy_work/Baseline/model_out/PH2_eval_Seed0/UNet_real_gen_hard_real5_syn15_seed0_ph2fix/per_image_metrics.csv
+Summary metrics saved to: /data/zjy_work/Baseline/model_out/PH2_eval_Seed0/UNet_real_gen_hard_real5_syn15_seed0_ph2fix/summary_metrics.csv
+Probability masks saved to: /data/zjy_work/Baseline/model_out/PH2_eval_Seed0/UNet_real_gen_hard_real5_syn15_seed0_ph2fix/probability_masks
+Binary masks saved to: /data/zjy_work/Baseline/model_out/PH2_eval_Seed0/UNet_real_gen_hard_real5_syn15_seed0_ph2fix/binary_masks
