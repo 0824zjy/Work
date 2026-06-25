@@ -118,13 +118,7 @@ bash /data/zjy_work/Work3_BEF_SBG/scripts/13_test_final_bgdnet_bef.sh
 
 ## 依赖文件
 
-当前仅发现一个明确的依赖环境文件：
 
-```text
-code/SBG-Diff/or/environment.yaml
-```
-
-说明文件中还提到需要安装 `xformers` 和 `deepspeed`。`BGDNet` 和 `BEF_SBG` 未发现独立的 `requirements.txt` 或 `pyproject.toml`，实际运行时可能复用 `BGDiff` 环境。
 
 ## 配置文件
 
@@ -138,37 +132,4 @@ code/SBG-Diff/or/environment.yaml
 | `code/BEF_SBG/scripts/00_common.sh` | BEF-SBG 主流程公共路径、GPU、输出目录配置。 |
 | `code/BEF_SBG/feedback/prompt_bef_train_5p.json` | BEF-SBG 训练 prompt 示例。 |
 
-## 可用命令
 
-常见 Python 入口包括：
-
-```bash
-python /data/zjy_work/BGDiff/make_prompt_json.py
-python /data/zjy_work/BGDiff/tool_add_control.py
-python /data/zjy_work/BGDiff/tool_merge_control.py
-python /data/zjy_work/BGDiff/tutorial_train.py
-python /data/zjy_work/BGDiff/tutorial_inference.py
-python /data/zjy_work/BGDNet/BGDiff_train.py
-python /data/zjy_work/BGDNet/BGDiff_test.py
-python /data/zjy_work/Work3_BEF_SBG/splits/make_low_label_splits.py
-python /data/zjy_work/Work3_BEF_SBG/feedback/build_boundary_feedback.py
-python /data/zjy_work/Work3_BEF_SBG/scoring/score_generated_samples.py
-python /data/zjy_work/Work3_BEF_SBG/segmentation/train_BGDNet_BEF.py
-python /data/zjy_work/Work3_BEF_SBG/segmentation/test_BGDNet_BEF.py
-```
-
-## 风险命令
-
-- 大多数训练和推理脚本使用 `nohup ... &` 后台运行，会持续占用 GPU。
-- 训练、推理和评估脚本会写入 `logs/`、`checkpoints/`、`results/`、`model_out/` 等目录。
-- `tool_add_control.py` 和 `tool_merge_control.py` 会生成或覆盖模型权重。
-- `code/BEF_SBG/scripts/kill_by_pid.sh` 会根据 pid 文件终止进程。
-- `code/SBG-Diff/Ours/scripts/eval.sh` 中 active 部分使用 `$LOG_DIR`，但当前脚本内 `LOG_DIR` 定义被注释，运行前需要检查。
-- `code/BGDNet/scripts/02_train_stage1-2.sh` 中 `--train_list2` 行的续行符前缺少空格，可能导致参数拼接异常。
-
-## 待确认事项
-
-- 当前文件系统路径是 Windows 风格，但脚本大量硬编码为 `/data/zjy_work/...`，需要确认实际运行环境是否为 Linux、WSL 或容器。
-- 实际目录名是 `SBG-Diff` 和 `BEF_SBG`，脚本中常用 `BGDiff` 和 `Work3_BEF_SBG`，需要确认是否存在软链接或路径映射。
-- `PH2 Dataset` 与脚本中的 `/data/zjy_work/PH2` 命名不一致，运行 PH2 相关流程前需要确认路径。
-- `BGDNet` 和 `BEF_SBG` 没有独立依赖清单，环境复用关系需要确认。
